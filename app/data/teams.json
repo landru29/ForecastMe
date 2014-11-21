@@ -1,0 +1,48 @@
+{
+	"group1": {
+		"A": "nz",
+		"B": "no",
+		"C": "za",
+		"D": "wales"
+	},
+	"group12": {
+		"A": "fr",
+		"B": "ch",
+		"C": "br",
+		"D": "pt"
+	},
+	"group3": {
+		"A": "se",
+		"B": "in",
+		"C": "jp",
+		"D": "cl"
+	},
+	"group4": {
+		"A": "fi",
+		"B": "scotland",
+		"C": "co",
+		"D": "mx"
+	},
+	"group5": {
+		"A": "au",
+		"B": "it",
+		"C": "be",
+		"D": "gr"
+	},
+	"group6": {
+		"A": "en",
+		"B": "de",
+		"C": "sp",
+		"D": "ir"
+	},
+	"group7": {
+		"A": "ca",
+		"B": "dk",
+		"C": "ar"
+	},
+	"group8": {
+		"A": "us",
+		"B": "pr",
+		"C": "nl"
+	}
+}
