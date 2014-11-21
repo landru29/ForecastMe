@@ -351,9 +351,19 @@ module.exports = function(grunt) {
           src: ['generated/*']
         }, {
           expand: true,
+          cwd: '<%= yeoman.app %>/bower_components/flag-icon-css',
+          dest: '<%= yeoman.dist %>',
+          src: ['flags/**']
+        }, {
+          expand: true,
           cwd: '.',
           src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
           dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.dist %>',
+          src: ['flags/**']
         }]
       },
       styles: {

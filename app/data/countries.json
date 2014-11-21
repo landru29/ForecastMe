@@ -1,0 +1,2010 @@
+{
+    "af": {
+        "name": "Afghanistan",
+        "code": "af",
+        "flagIcon": "icons/af.png",
+        "flagSmall": "smalls/af.png",
+        "flagMedium": "mediums/af.png",
+        "flagLarge": "larges/af.png"
+    },
+    "ax": {
+        "name": "Åland Islands",
+        "code": "ax",
+        "flagIcon": "icons/ax.png",
+        "flagSmall": "smalls/ax.png",
+        "flagMedium": "mediums/ax.png",
+        "flagLarge": "larges/ax.png"
+    },
+    "al": {
+        "name": "Albania",
+        "code": "al",
+        "flagIcon": "icons/al.png",
+        "flagSmall": "smalls/al.png",
+        "flagMedium": "mediums/al.png",
+        "flagLarge": "larges/al.png"
+    },
+    "dz": {
+        "name": "Algeria",
+        "code": "dz",
+        "flagIcon": "icons/dz.png",
+        "flagSmall": "smalls/dz.png",
+        "flagMedium": "mediums/dz.png",
+        "flagLarge": "larges/dz.png"
+    },
+    "as": {
+        "name": "American Samoa",
+        "code": "as",
+        "flagIcon": "icons/as.png",
+        "flagSmall": "smalls/as.png",
+        "flagMedium": "mediums/as.png",
+        "flagLarge": "larges/as.png"
+    },
+    "ad": {
+        "name": "Andorra",
+        "code": "ad",
+        "flagIcon": "icons/ad.png",
+        "flagSmall": "smalls/ad.png",
+        "flagMedium": "mediums/ad.png",
+        "flagLarge": "larges/ad.png"
+    },
+    "ao": {
+        "name": "Angola",
+        "code": "ao",
+        "flagIcon": "icons/ao.png",
+        "flagSmall": "smalls/ao.png",
+        "flagMedium": "mediums/ao.png",
+        "flagLarge": "larges/ao.png"
+    },
+    "ai": {
+        "name": "Anguilla",
+        "code": "ai",
+        "flagIcon": "icons/ai.png",
+        "flagSmall": "smalls/ai.png",
+        "flagMedium": "mediums/ai.png",
+        "flagLarge": "larges/ai.png"
+    },
+    "aq": {
+        "name": "Antarctica",
+        "code": "aq",
+        "flagIcon": "icons/aq.png",
+        "flagSmall": "smalls/aq.png",
+        "flagMedium": "mediums/aq.png",
+        "flagLarge": "larges/aq.png"
+    },
+    "ag": {
+        "name": "Antigua And Barbuda",
+        "code": "ag",
+        "flagIcon": "icons/ag.png",
+        "flagSmall": "smalls/ag.png",
+        "flagMedium": "mediums/ag.png",
+        "flagLarge": "larges/ag.png"
+    },
+    "ar": {
+        "name": "Argentina",
+        "code": "ar",
+        "flagIcon": "icons/ar.png",
+        "flagSmall": "smalls/ar.png",
+        "flagMedium": "mediums/ar.png",
+        "flagLarge": "larges/ar.png"
+    },
+    "am": {
+        "name": "Armenia",
+        "code": "am",
+        "flagIcon": "icons/am.png",
+        "flagSmall": "smalls/am.png",
+        "flagMedium": "mediums/am.png",
+        "flagLarge": "larges/am.png"
+    },
+    "aw": {
+        "name": "Aruba",
+        "code": "aw",
+        "flagIcon": "icons/aw.png",
+        "flagSmall": "smalls/aw.png",
+        "flagMedium": "mediums/aw.png",
+        "flagLarge": "larges/aw.png"
+    },
+    "au": {
+        "name": "Australia",
+        "code": "au",
+        "flagIcon": "icons/au.png",
+        "flagSmall": "smalls/au.png",
+        "flagMedium": "mediums/au.png",
+        "flagLarge": "larges/au.png"
+    },
+    "at": {
+        "name": "Austria",
+        "code": "at",
+        "flagIcon": "icons/at.png",
+        "flagSmall": "smalls/at.png",
+        "flagMedium": "mediums/at.png",
+        "flagLarge": "larges/at.png"
+    },
+    "az": {
+        "name": "Azerbaijan",
+        "code": "az",
+        "flagIcon": "icons/az.png",
+        "flagSmall": "smalls/az.png",
+        "flagMedium": "mediums/az.png",
+        "flagLarge": "larges/az.png"
+    },
+    "bs": {
+        "name": "Bahamas",
+        "code": "bs",
+        "flagIcon": "icons/bs.png",
+        "flagSmall": "smalls/bs.png",
+        "flagMedium": "mediums/bs.png",
+        "flagLarge": "larges/bs.png"
+    },
+    "bh": {
+        "name": "Bahrain",
+        "code": "bh",
+        "flagIcon": "icons/bh.png",
+        "flagSmall": "smalls/bh.png",
+        "flagMedium": "mediums/bh.png",
+        "flagLarge": "larges/bh.png"
+    },
+    "bd": {
+        "name": "Bangladesh",
+        "code": "bd",
+        "flagIcon": "icons/bd.png",
+        "flagSmall": "smalls/bd.png",
+        "flagMedium": "mediums/bd.png",
+        "flagLarge": "larges/bd.png"
+    },
+    "bb": {
+        "name": "Barbados",
+        "code": "bb",
+        "flagIcon": "icons/bb.png",
+        "flagSmall": "smalls/bb.png",
+        "flagMedium": "mediums/bb.png",
+        "flagLarge": "larges/bb.png"
+    },
+    "by": {
+        "name": "Belarus",
+        "code": "by",
+        "flagIcon": "icons/by.png",
+        "flagSmall": "smalls/by.png",
+        "flagMedium": "mediums/by.png",
+        "flagLarge": "larges/by.png"
+    },
+    "be": {
+        "name": "Belgium",
+        "code": "be",
+        "flagIcon": "icons/be.png",
+        "flagSmall": "smalls/be.png",
+        "flagMedium": "mediums/be.png",
+        "flagLarge": "larges/be.png"
+    },
+    "bz": {
+        "name": "Belize",
+        "code": "bz",
+        "flagIcon": "icons/bz.png",
+        "flagSmall": "smalls/bz.png",
+        "flagMedium": "mediums/bz.png",
+        "flagLarge": "larges/bz.png"
+    },
+    "bj": {
+        "name": "Benin",
+        "code": "bj",
+        "flagIcon": "icons/bj.png",
+        "flagSmall": "smalls/bj.png",
+        "flagMedium": "mediums/bj.png",
+        "flagLarge": "larges/bj.png"
+    },
+    "bm": {
+        "name": "Bermuda",
+        "code": "bm",
+        "flagIcon": "icons/bm.png",
+        "flagSmall": "smalls/bm.png",
+        "flagMedium": "mediums/bm.png",
+        "flagLarge": "larges/bm.png"
+    },
+    "bt": {
+        "name": "Bhutan",
+        "code": "bt",
+        "flagIcon": "icons/bt.png",
+        "flagSmall": "smalls/bt.png",
+        "flagMedium": "mediums/bt.png",
+        "flagLarge": "larges/bt.png"
+    },
+    "bo": {
+        "name": "Plurinational State Of Bolivia",
+        "code": "bo",
+        "flagIcon": "icons/bo.png",
+        "flagSmall": "smalls/bo.png",
+        "flagMedium": "mediums/bo.png",
+        "flagLarge": "larges/bo.png"
+    },
+    "bq": {
+        "name": "Bonaire, Sint Eustatius And Saba",
+        "code": "bq",
+        "flagIcon": "icons/bq.png",
+        "flagSmall": "smalls/bq.png",
+        "flagMedium": "mediums/bq.png",
+        "flagLarge": "larges/bq.png"
+    },
+    "ba": {
+        "name": "Bosnia And Herzegovina",
+        "code": "ba",
+        "flagIcon": "icons/ba.png",
+        "flagSmall": "smalls/ba.png",
+        "flagMedium": "mediums/ba.png",
+        "flagLarge": "larges/ba.png"
+    },
+    "bw": {
+        "name": "Botswana",
+        "code": "bw",
+        "flagIcon": "icons/bw.png",
+        "flagSmall": "smalls/bw.png",
+        "flagMedium": "mediums/bw.png",
+        "flagLarge": "larges/bw.png"
+    },
+    "bv": {
+        "name": "Bouvet Island",
+        "code": "bv",
+        "flagIcon": "icons/bv.png",
+        "flagSmall": "smalls/bv.png",
+        "flagMedium": "mediums/bv.png",
+        "flagLarge": "larges/bv.png"
+    },
+    "br": {
+        "name": "Brazil",
+        "code": "br",
+        "flagIcon": "icons/br.png",
+        "flagSmall": "smalls/br.png",
+        "flagMedium": "mediums/br.png",
+        "flagLarge": "larges/br.png"
+    },
+    "io": {
+        "name": "British Indian Ocean Territory",
+        "code": "io",
+        "flagIcon": "icons/io.png",
+        "flagSmall": "smalls/io.png",
+        "flagMedium": "mediums/io.png",
+        "flagLarge": "larges/io.png"
+    },
+    "bn": {
+        "name": "Brunei Darussalam",
+        "code": "bn",
+        "flagIcon": "icons/bn.png",
+        "flagSmall": "smalls/bn.png",
+        "flagMedium": "mediums/bn.png",
+        "flagLarge": "larges/bn.png"
+    },
+    "bg": {
+        "name": "Bulgaria",
+        "code": "bg",
+        "flagIcon": "icons/bg.png",
+        "flagSmall": "smalls/bg.png",
+        "flagMedium": "mediums/bg.png",
+        "flagLarge": "larges/bg.png"
+    },
+    "bf": {
+        "name": "Burkina Faso",
+        "code": "bf",
+        "flagIcon": "icons/bf.png",
+        "flagSmall": "smalls/bf.png",
+        "flagMedium": "mediums/bf.png",
+        "flagLarge": "larges/bf.png"
+    },
+    "bi": {
+        "name": "Burundi",
+        "code": "bi",
+        "flagIcon": "icons/bi.png",
+        "flagSmall": "smalls/bi.png",
+        "flagMedium": "mediums/bi.png",
+        "flagLarge": "larges/bi.png"
+    },
+    "kh": {
+        "name": "Cambodia",
+        "code": "kh",
+        "flagIcon": "icons/kh.png",
+        "flagSmall": "smalls/kh.png",
+        "flagMedium": "mediums/kh.png",
+        "flagLarge": "larges/kh.png"
+    },
+    "cm": {
+        "name": "Cameroon",
+        "code": "cm",
+        "flagIcon": "icons/cm.png",
+        "flagSmall": "smalls/cm.png",
+        "flagMedium": "mediums/cm.png",
+        "flagLarge": "larges/cm.png"
+    },
+    "ca": {
+        "name": "Canada",
+        "code": "ca",
+        "flagIcon": "icons/ca.png",
+        "flagSmall": "smalls/ca.png",
+        "flagMedium": "mediums/ca.png",
+        "flagLarge": "larges/ca.png"
+    },
+    "cv": {
+        "name": "Cape Verde",
+        "code": "cv",
+        "flagIcon": "icons/cv.png",
+        "flagSmall": "smalls/cv.png",
+        "flagMedium": "mediums/cv.png",
+        "flagLarge": "larges/cv.png"
+    },
+    "ky": {
+        "name": "Cayman Islands",
+        "code": "ky",
+        "flagIcon": "icons/ky.png",
+        "flagSmall": "smalls/ky.png",
+        "flagMedium": "mediums/ky.png",
+        "flagLarge": "larges/ky.png"
+    },
+    "cf": {
+        "name": "Central African Republic",
+        "code": "cf",
+        "flagIcon": "icons/cf.png",
+        "flagSmall": "smalls/cf.png",
+        "flagMedium": "mediums/cf.png",
+        "flagLarge": "larges/cf.png"
+    },
+    "td": {
+        "name": "Chad",
+        "code": "td",
+        "flagIcon": "icons/td.png",
+        "flagSmall": "smalls/td.png",
+        "flagMedium": "mediums/td.png",
+        "flagLarge": "larges/td.png"
+    },
+    "cl": {
+        "name": "Chile",
+        "code": "cl",
+        "flagIcon": "icons/cl.png",
+        "flagSmall": "smalls/cl.png",
+        "flagMedium": "mediums/cl.png",
+        "flagLarge": "larges/cl.png"
+    },
+    "cn": {
+        "name": "China",
+        "code": "cn",
+        "flagIcon": "icons/cn.png",
+        "flagSmall": "smalls/cn.png",
+        "flagMedium": "mediums/cn.png",
+        "flagLarge": "larges/cn.png"
+    },
+    "cx": {
+        "name": "Christmas Island",
+        "code": "cx",
+        "flagIcon": "icons/cx.png",
+        "flagSmall": "smalls/cx.png",
+        "flagMedium": "mediums/cx.png",
+        "flagLarge": "larges/cx.png"
+    },
+    "cc": {
+        "name": "Cocos (keeling) Islands",
+        "code": "cc",
+        "flagIcon": "icons/cc.png",
+        "flagSmall": "smalls/cc.png",
+        "flagMedium": "mediums/cc.png",
+        "flagLarge": "larges/cc.png"
+    },
+    "co": {
+        "name": "Colombia",
+        "code": "co",
+        "flagIcon": "icons/co.png",
+        "flagSmall": "smalls/co.png",
+        "flagMedium": "mediums/co.png",
+        "flagLarge": "larges/co.png"
+    },
+    "km": {
+        "name": "Comoros",
+        "code": "km",
+        "flagIcon": "icons/km.png",
+        "flagSmall": "smalls/km.png",
+        "flagMedium": "mediums/km.png",
+        "flagLarge": "larges/km.png"
+    },
+    "cg": {
+        "name": "Congo",
+        "code": "cg",
+        "flagIcon": "icons/cg.png",
+        "flagSmall": "smalls/cg.png",
+        "flagMedium": "mediums/cg.png",
+        "flagLarge": "larges/cg.png"
+    },
+    "cd": {
+        "name": "The Democratic Republic Of The Congo",
+        "code": "cd",
+        "flagIcon": "icons/cd.png",
+        "flagSmall": "smalls/cd.png",
+        "flagMedium": "mediums/cd.png",
+        "flagLarge": "larges/cd.png"
+    },
+    "ck": {
+        "name": "Cook Islands",
+        "code": "ck",
+        "flagIcon": "icons/ck.png",
+        "flagSmall": "smalls/ck.png",
+        "flagMedium": "mediums/ck.png",
+        "flagLarge": "larges/ck.png"
+    },
+    "cr": {
+        "name": "Costa Rica",
+        "code": "cr",
+        "flagIcon": "icons/cr.png",
+        "flagSmall": "smalls/cr.png",
+        "flagMedium": "mediums/cr.png",
+        "flagLarge": "larges/cr.png"
+    },
+    "ci": {
+        "name": "Côte d\"Ivoire",
+        "code": "ci",
+        "flagIcon": "icons/ci.png",
+        "flagSmall": "smalls/ci.png",
+        "flagMedium": "mediums/ci.png",
+        "flagLarge": "larges/ci.png"
+    },
+    "hr": {
+        "name": "Croatia",
+        "code": "hr",
+        "flagIcon": "icons/hr.png",
+        "flagSmall": "smalls/hr.png",
+        "flagMedium": "mediums/hr.png",
+        "flagLarge": "larges/hr.png"
+    },
+    "cu": {
+        "name": "Cuba",
+        "code": "cu",
+        "flagIcon": "icons/cu.png",
+        "flagSmall": "smalls/cu.png",
+        "flagMedium": "mediums/cu.png",
+        "flagLarge": "larges/cu.png"
+    },
+    "cw": {
+        "name": "CuraÇao",
+        "code": "cw",
+        "flagIcon": "icons/cw.png",
+        "flagSmall": "smalls/cw.png",
+        "flagMedium": "mediums/cw.png",
+        "flagLarge": "larges/cw.png"
+    },
+    "cyN": {
+        "name": "Cyprus Northern",
+        "code": "cyN",
+        "flagIcon": "icons/cy_n.png",
+        "flagSmall": "smalls/cy_n.png",
+        "flagMedium": "mediums/cy_n.png",
+        "flagLarge": "larges/cy_n.png"
+    },
+    "cy": {
+        "name": "Cyprus",
+        "code": "cy",
+        "flagIcon": "icons/cy.png",
+        "flagSmall": "smalls/cy.png",
+        "flagMedium": "mediums/cy.png",
+        "flagLarge": "larges/cy.png"
+    },
+    "cz": {
+        "name": "Czech Republic",
+        "code": "cz",
+        "flagIcon": "icons/cz.png",
+        "flagSmall": "smalls/cz.png",
+        "flagMedium": "mediums/cz.png",
+        "flagLarge": "larges/cz.png"
+    },
+    "dk": {
+        "name": "Denmark",
+        "code": "dk",
+        "flagIcon": "icons/dk.png",
+        "flagSmall": "smalls/dk.png",
+        "flagMedium": "mediums/dk.png",
+        "flagLarge": "larges/dk.png"
+    },
+    "dj": {
+        "name": "Djibouti",
+        "code": "dj",
+        "flagIcon": "icons/dj.png",
+        "flagSmall": "smalls/dj.png",
+        "flagMedium": "mediums/dj.png",
+        "flagLarge": "larges/dj.png"
+    },
+    "dm": {
+        "name": "Dominica",
+        "code": "dm",
+        "flagIcon": "icons/dm.png",
+        "flagSmall": "smalls/dm.png",
+        "flagMedium": "mediums/dm.png",
+        "flagLarge": "larges/dm.png"
+    },
+    "do": {
+        "name": "Dominican Republic",
+        "code": "do",
+        "flagIcon": "icons/do.png",
+        "flagSmall": "smalls/do.png",
+        "flagMedium": "mediums/do.png",
+        "flagLarge": "larges/do.png"
+    },
+    "ec": {
+        "name": "Ecuador",
+        "code": "ec",
+        "flagIcon": "icons/ec.png",
+        "flagSmall": "smalls/ec.png",
+        "flagMedium": "mediums/ec.png",
+        "flagLarge": "larges/ec.png"
+    },
+    "eg": {
+        "name": "Egypt",
+        "code": "eg",
+        "flagIcon": "icons/eg.png",
+        "flagSmall": "smalls/eg.png",
+        "flagMedium": "mediums/eg.png",
+        "flagLarge": "larges/eg.png"
+    },
+    "en": {
+        "name": "England",
+        "code": "en",
+        "flagIcon": "icons/en.png",
+        "flagSmall": "smalls/en.png",
+        "flagMedium": "mediums/en.png",
+        "flagLarge": "larges/en.png"
+    },
+    "sv": {
+        "name": "El Salvador",
+        "code": "sv",
+        "flagIcon": "icons/sv.png",
+        "flagSmall": "smalls/sv.png",
+        "flagMedium": "mediums/sv.png",
+        "flagLarge": "larges/sv.png"
+    },
+    "gq": {
+        "name": "Equatorial Guinea",
+        "code": "gq",
+        "flagIcon": "icons/gq.png",
+        "flagSmall": "smalls/gq.png",
+        "flagMedium": "mediums/gq.png",
+        "flagLarge": "larges/gq.png"
+    },
+    "er": {
+        "name": "Eritrea",
+        "code": "er",
+        "flagIcon": "icons/er.png",
+        "flagSmall": "smalls/er.png",
+        "flagMedium": "mediums/er.png",
+        "flagLarge": "larges/er.png"
+    },
+    "ee": {
+        "name": "Estonia",
+        "code": "ee",
+        "flagIcon": "icons/ee.png",
+        "flagSmall": "smalls/ee.png",
+        "flagMedium": "mediums/ee.png",
+        "flagLarge": "larges/ee.png"
+    },
+    "et": {
+        "name": "Ethiopia",
+        "code": "et",
+        "flagIcon": "icons/et.png",
+        "flagSmall": "smalls/et.png",
+        "flagMedium": "mediums/et.png",
+        "flagLarge": "larges/et.png"
+    },
+    "fk": {
+        "name": "Falkland Islands (malvinas)",
+        "code": "fk",
+        "flagIcon": "icons/fk.png",
+        "flagSmall": "smalls/fk.png",
+        "flagMedium": "mediums/fk.png",
+        "flagLarge": "larges/fk.png"
+    },
+    "fo": {
+        "name": "Faroe Islands",
+        "code": "fo",
+        "flagIcon": "icons/fo.png",
+        "flagSmall": "smalls/fo.png",
+        "flagMedium": "mediums/fo.png",
+        "flagLarge": "larges/fo.png"
+    },
+    "fj": {
+        "name": "Fiji",
+        "code": "fj",
+        "flagIcon": "icons/fj.png",
+        "flagSmall": "smalls/fj.png",
+        "flagMedium": "mediums/fj.png",
+        "flagLarge": "larges/fj.png"
+    },
+    "fi": {
+        "name": "Finland",
+        "code": "fi",
+        "flagIcon": "icons/fi.png",
+        "flagSmall": "smalls/fi.png",
+        "flagMedium": "mediums/fi.png",
+        "flagLarge": "larges/fi.png"
+    },
+    "fr": {
+        "name": "France",
+        "code": "fr",
+        "flagIcon": "icons/fr.png",
+        "flagSmall": "smalls/fr.png",
+        "flagMedium": "mediums/fr.png",
+        "flagLarge": "larges/fr.png"
+    },
+    "gf": {
+        "name": "French Guiana",
+        "code": "gf",
+        "flagIcon": "icons/gf.png",
+        "flagSmall": "smalls/gf.png",
+        "flagMedium": "mediums/gf.png",
+        "flagLarge": "larges/gf.png"
+    },
+    "pf": {
+        "name": "French Polynesia",
+        "code": "pf",
+        "flagIcon": "icons/pf.png",
+        "flagSmall": "smalls/pf.png",
+        "flagMedium": "mediums/pf.png",
+        "flagLarge": "larges/pf.png"
+    },
+    "tf": {
+        "name": "French Southern Territories",
+        "code": "tf",
+        "flagIcon": "icons/tf.png",
+        "flagSmall": "smalls/tf.png",
+        "flagMedium": "mediums/tf.png",
+        "flagLarge": "larges/tf.png"
+    },
+    "ga": {
+        "name": "Gabon",
+        "code": "ga",
+        "flagIcon": "icons/ga.png",
+        "flagSmall": "smalls/ga.png",
+        "flagMedium": "mediums/ga.png",
+        "flagLarge": "larges/ga.png"
+    },
+    "gm": {
+        "name": "Gambia",
+        "code": "gm",
+        "flagIcon": "icons/gm.png",
+        "flagSmall": "smalls/gm.png",
+        "flagMedium": "mediums/gm.png",
+        "flagLarge": "larges/gm.png"
+    },
+    "ge": {
+        "name": "Georgia",
+        "code": "ge",
+        "flagIcon": "icons/ge.png",
+        "flagSmall": "smalls/ge.png",
+        "flagMedium": "mediums/ge.png",
+        "flagLarge": "larges/ge.png"
+    },
+    "de": {
+        "name": "Germany",
+        "code": "de",
+        "flagIcon": "icons/de.png",
+        "flagSmall": "smalls/de.png",
+        "flagMedium": "mediums/de.png",
+        "flagLarge": "larges/de.png"
+    },
+    "gh": {
+        "name": "Ghana",
+        "code": "gh",
+        "flagIcon": "icons/gh.png",
+        "flagSmall": "smalls/gh.png",
+        "flagMedium": "mediums/gh.png",
+        "flagLarge": "larges/gh.png"
+    },
+    "gi": {
+        "name": "Gibraltar",
+        "code": "gi",
+        "flagIcon": "icons/gi.png",
+        "flagSmall": "smalls/gi.png",
+        "flagMedium": "mediums/gi.png",
+        "flagLarge": "larges/gi.png"
+    },
+    "gr": {
+        "name": "Greece",
+        "code": "gr",
+        "flagIcon": "icons/gr.png",
+        "flagSmall": "smalls/gr.png",
+        "flagMedium": "mediums/gr.png",
+        "flagLarge": "larges/gr.png"
+    },
+    "gl": {
+        "name": "Greenland",
+        "code": "gl",
+        "flagIcon": "icons/gl.png",
+        "flagSmall": "smalls/gl.png",
+        "flagMedium": "mediums/gl.png",
+        "flagLarge": "larges/gl.png"
+    },
+    "gd": {
+        "name": "Grenada",
+        "code": "gd",
+        "flagIcon": "icons/gd.png",
+        "flagSmall": "smalls/gd.png",
+        "flagMedium": "mediums/gd.png",
+        "flagLarge": "larges/gd.png"
+    },
+    "gp": {
+        "name": "Guadeloupe",
+        "code": "gp",
+        "flagIcon": "icons/gp.png",
+        "flagSmall": "smalls/gp.png",
+        "flagMedium": "mediums/gp.png",
+        "flagLarge": "larges/gp.png"
+    },
+    "gu": {
+        "name": "Guam",
+        "code": "gu",
+        "flagIcon": "icons/gu.png",
+        "flagSmall": "smalls/gu.png",
+        "flagMedium": "mediums/gu.png",
+        "flagLarge": "larges/gu.png"
+    },
+    "gt": {
+        "name": "Guatemala",
+        "code": "gt",
+        "flagIcon": "icons/gt.png",
+        "flagSmall": "smalls/gt.png",
+        "flagMedium": "mediums/gt.png",
+        "flagLarge": "larges/gt.png"
+    },
+    "gg": {
+        "name": "Guernsey",
+        "code": "gg",
+        "flagIcon": "icons/gg.png",
+        "flagSmall": "smalls/gg.png",
+        "flagMedium": "mediums/gg.png",
+        "flagLarge": "larges/gg.png"
+    },
+    "gn": {
+        "name": "Guinea",
+        "code": "gn",
+        "flagIcon": "icons/gn.png",
+        "flagSmall": "smalls/gn.png",
+        "flagMedium": "mediums/gn.png",
+        "flagLarge": "larges/gn.png"
+    },
+    "gw": {
+        "name": "Guinea-bissau",
+        "code": "gw",
+        "flagIcon": "icons/gw.png",
+        "flagSmall": "smalls/gw.png",
+        "flagMedium": "mediums/gw.png",
+        "flagLarge": "larges/gw.png"
+    },
+    "gy": {
+        "name": "Guyana",
+        "code": "gy",
+        "flagIcon": "icons/gy.png",
+        "flagSmall": "smalls/gy.png",
+        "flagMedium": "mediums/gy.png",
+        "flagLarge": "larges/gy.png"
+    },
+    "ht": {
+        "name": "Haiti",
+        "code": "ht",
+        "flagIcon": "icons/ht.png",
+        "flagSmall": "smalls/ht.png",
+        "flagMedium": "mediums/ht.png",
+        "flagLarge": "larges/ht.png"
+    },
+    "hm": {
+        "name": "Heard Island And Mcdonald Islands",
+        "code": "hm",
+        "flagIcon": "icons/hm.png",
+        "flagSmall": "smalls/hm.png",
+        "flagMedium": "mediums/hm.png",
+        "flagLarge": "larges/hm.png"
+    },
+    "va": {
+        "name": "Holy See (vatican City State)",
+        "code": "va",
+        "flagIcon": "icons/va.png",
+        "flagSmall": "smalls/va.png",
+        "flagMedium": "mediums/va.png",
+        "flagLarge": "larges/va.png"
+    },
+    "hn": {
+        "name": "Honduras",
+        "code": "hn",
+        "flagIcon": "icons/hn.png",
+        "flagSmall": "smalls/hn.png",
+        "flagMedium": "mediums/hn.png",
+        "flagLarge": "larges/hn.png"
+    },
+    "hk": {
+        "name": "Hong Kong",
+        "code": "hk",
+        "flagIcon": "icons/hk.png",
+        "flagSmall": "smalls/hk.png",
+        "flagMedium": "mediums/hk.png",
+        "flagLarge": "larges/hk.png"
+    },
+    "hu": {
+        "name": "Hungary",
+        "code": "hu",
+        "flagIcon": "icons/hu.png",
+        "flagSmall": "smalls/hu.png",
+        "flagMedium": "mediums/hu.png",
+        "flagLarge": "larges/hu.png"
+    },
+    "is": {
+        "name": "Iceland",
+        "code": "is",
+        "flagIcon": "icons/is.png",
+        "flagSmall": "smalls/is.png",
+        "flagMedium": "mediums/is.png",
+        "flagLarge": "larges/is.png"
+    },
+    "in": {
+        "name": "India",
+        "code": "in",
+        "flagIcon": "icons/in.png",
+        "flagSmall": "smalls/in.png",
+        "flagMedium": "mediums/in.png",
+        "flagLarge": "larges/in.png"
+    },
+    "id": {
+        "name": "Indonesia",
+        "code": "id",
+        "flagIcon": "icons/id.png",
+        "flagSmall": "smalls/id.png",
+        "flagMedium": "mediums/id.png",
+        "flagLarge": "larges/id.png"
+    },
+    "ir": {
+        "name": "Islamic Republic Of Iran",
+        "code": "ir",
+        "flagIcon": "icons/ir.png",
+        "flagSmall": "smalls/ir.png",
+        "flagMedium": "mediums/ir.png",
+        "flagLarge": "larges/ir.png"
+    },
+    "iq": {
+        "name": "Iraq",
+        "code": "iq",
+        "flagIcon": "icons/iq.png",
+        "flagSmall": "smalls/iq.png",
+        "flagMedium": "mediums/iq.png",
+        "flagLarge": "larges/iq.png"
+    },
+    "ie": {
+        "name": "Ireland",
+        "code": "ie",
+        "flagIcon": "icons/ie.png",
+        "flagSmall": "smalls/ie.png",
+        "flagMedium": "mediums/ie.png",
+        "flagLarge": "larges/ie.png"
+    },
+    "im": {
+        "name": "Isle Of Man",
+        "code": "im",
+        "flagIcon": "icons/im.png",
+        "flagSmall": "smalls/im.png",
+        "flagMedium": "mediums/im.png",
+        "flagLarge": "larges/im.png"
+    },
+    "il": {
+        "name": "Israel",
+        "code": "il",
+        "flagIcon": "icons/il.png",
+        "flagSmall": "smalls/il.png",
+        "flagMedium": "mediums/il.png",
+        "flagLarge": "larges/il.png"
+    },
+    "it": {
+        "name": "Italy",
+        "code": "it",
+        "flagIcon": "icons/it.png",
+        "flagSmall": "smalls/it.png",
+        "flagMedium": "mediums/it.png",
+        "flagLarge": "larges/it.png"
+    },
+    "jm": {
+        "name": "Jamaica",
+        "code": "jm",
+        "flagIcon": "icons/jm.png",
+        "flagSmall": "smalls/jm.png",
+        "flagMedium": "mediums/jm.png",
+        "flagLarge": "larges/jm.png"
+    },
+    "jp": {
+        "name": "Japan",
+        "code": "jp",
+        "flagIcon": "icons/jp.png",
+        "flagSmall": "smalls/jp.png",
+        "flagMedium": "mediums/jp.png",
+        "flagLarge": "larges/jp.png"
+    },
+    "je": {
+        "name": "Jersey",
+        "code": "je",
+        "flagIcon": "icons/je.png",
+        "flagSmall": "smalls/je.png",
+        "flagMedium": "mediums/je.png",
+        "flagLarge": "larges/je.png"
+    },
+    "jo": {
+        "name": "Jordan",
+        "code": "jo",
+        "flagIcon": "icons/jo.png",
+        "flagSmall": "smalls/jo.png",
+        "flagMedium": "mediums/jo.png",
+        "flagLarge": "larges/jo.png"
+    },
+    "kz": {
+        "name": "Kazakhstan",
+        "code": "kz",
+        "flagIcon": "icons/kz.png",
+        "flagSmall": "smalls/kz.png",
+        "flagMedium": "mediums/kz.png",
+        "flagLarge": "larges/kz.png"
+    },
+    "ke": {
+        "name": "Kenya",
+        "code": "ke",
+        "flagIcon": "icons/ke.png",
+        "flagSmall": "smalls/ke.png",
+        "flagMedium": "mediums/ke.png",
+        "flagLarge": "larges/ke.png"
+    },
+    "ki": {
+        "name": "Kiribati",
+        "code": "ki",
+        "flagIcon": "icons/ki.png",
+        "flagSmall": "smalls/ki.png",
+        "flagMedium": "mediums/ki.png",
+        "flagLarge": "larges/ki.png"
+    },
+    "kp": {
+        "name": "Democratic People\"s Republic Of Korea",
+        "code": "kp",
+        "flagIcon": "icons/kp.png",
+        "flagSmall": "smalls/kp.png",
+        "flagMedium": "mediums/kp.png",
+        "flagLarge": "larges/kp.png"
+    },
+    "kr": {
+        "name": "Republic Of Korea",
+        "code": "kr",
+        "flagIcon": "icons/kr.png",
+        "flagSmall": "smalls/kr.png",
+        "flagMedium": "mediums/kr.png",
+        "flagLarge": "larges/kr.png"
+    },
+    "kw": {
+        "name": "Kuwait",
+        "code": "kw",
+        "flagIcon": "icons/kw.png",
+        "flagSmall": "smalls/kw.png",
+        "flagMedium": "mediums/kw.png",
+        "flagLarge": "larges/kw.png"
+    },
+    "kg": {
+        "name": "Kyrgyzstan",
+        "code": "kg",
+        "flagIcon": "icons/kg.png",
+        "flagSmall": "smalls/kg.png",
+        "flagMedium": "mediums/kg.png",
+        "flagLarge": "larges/kg.png"
+    },
+    "la": {
+        "name": "Lao People\"s Democratic Republic",
+        "code": "la",
+        "flagIcon": "icons/la.png",
+        "flagSmall": "smalls/la.png",
+        "flagMedium": "mediums/la.png",
+        "flagLarge": "larges/la.png"
+    },
+    "lv": {
+        "name": "Latvia",
+        "code": "lv",
+        "flagIcon": "icons/lv.png",
+        "flagSmall": "smalls/lv.png",
+        "flagMedium": "mediums/lv.png",
+        "flagLarge": "larges/lv.png"
+    },
+    "lb": {
+        "name": "Lebanon",
+        "code": "lb",
+        "flagIcon": "icons/lb.png",
+        "flagSmall": "smalls/lb.png",
+        "flagMedium": "mediums/lb.png",
+        "flagLarge": "larges/lb.png"
+    },
+    "ls": {
+        "name": "Lesotho",
+        "code": "ls",
+        "flagIcon": "icons/ls.png",
+        "flagSmall": "smalls/ls.png",
+        "flagMedium": "mediums/ls.png",
+        "flagLarge": "larges/ls.png"
+    },
+    "lr": {
+        "name": "Liberia",
+        "code": "lr",
+        "flagIcon": "icons/lr.png",
+        "flagSmall": "smalls/lr.png",
+        "flagMedium": "mediums/lr.png",
+        "flagLarge": "larges/lr.png"
+    },
+    "ly": {
+        "name": "Libya",
+        "code": "ly",
+        "flagIcon": "icons/ly.png",
+        "flagSmall": "smalls/ly.png",
+        "flagMedium": "mediums/ly.png",
+        "flagLarge": "larges/ly.png"
+    },
+    "li": {
+        "name": "Liechtenstein",
+        "code": "li",
+        "flagIcon": "icons/li.png",
+        "flagSmall": "smalls/li.png",
+        "flagMedium": "mediums/li.png",
+        "flagLarge": "larges/li.png"
+    },
+    "lt": {
+        "name": "Lithuania",
+        "code": "lt",
+        "flagIcon": "icons/lt.png",
+        "flagSmall": "smalls/lt.png",
+        "flagMedium": "mediums/lt.png",
+        "flagLarge": "larges/lt.png"
+    },
+    "lu": {
+        "name": "Luxembourg",
+        "code": "lu",
+        "flagIcon": "icons/lu.png",
+        "flagSmall": "smalls/lu.png",
+        "flagMedium": "mediums/lu.png",
+        "flagLarge": "larges/lu.png"
+    },
+    "mo": {
+        "name": "Macao",
+        "code": "mo",
+        "flagIcon": "icons/mo.png",
+        "flagSmall": "smalls/mo.png",
+        "flagMedium": "mediums/mo.png",
+        "flagLarge": "larges/mo.png"
+    },
+    "mk": {
+        "name": "The Former Yugoslav Republic Of Macedonia",
+        "code": "mk",
+        "flagIcon": "icons/mk.png",
+        "flagSmall": "smalls/mk.png",
+        "flagMedium": "mediums/mk.png",
+        "flagLarge": "larges/mk.png"
+    },
+    "mg": {
+        "name": "Madagascar",
+        "code": "mg",
+        "flagIcon": "icons/mg.png",
+        "flagSmall": "smalls/mg.png",
+        "flagMedium": "mediums/mg.png",
+        "flagLarge": "larges/mg.png"
+    },
+    "mw": {
+        "name": "Malawi",
+        "code": "mw",
+        "flagIcon": "icons/mw.png",
+        "flagSmall": "smalls/mw.png",
+        "flagMedium": "mediums/mw.png",
+        "flagLarge": "larges/mw.png"
+    },
+    "my": {
+        "name": "Malaysia",
+        "code": "my",
+        "flagIcon": "icons/my.png",
+        "flagSmall": "smalls/my.png",
+        "flagMedium": "mediums/my.png",
+        "flagLarge": "larges/my.png"
+    },
+    "mv": {
+        "name": "Maldives",
+        "code": "mv",
+        "flagIcon": "icons/mv.png",
+        "flagSmall": "smalls/mv.png",
+        "flagMedium": "mediums/mv.png",
+        "flagLarge": "larges/mv.png"
+    },
+    "ml": {
+        "name": "Mali",
+        "code": "ml",
+        "flagIcon": "icons/ml.png",
+        "flagSmall": "smalls/ml.png",
+        "flagMedium": "mediums/ml.png",
+        "flagLarge": "larges/ml.png"
+    },
+    "mt": {
+        "name": "Malta",
+        "code": "mt",
+        "flagIcon": "icons/mt.png",
+        "flagSmall": "smalls/mt.png",
+        "flagMedium": "mediums/mt.png",
+        "flagLarge": "larges/mt.png"
+    },
+    "mh": {
+        "name": "Marshall Islands",
+        "code": "mh",
+        "flagIcon": "icons/mh.png",
+        "flagSmall": "smalls/mh.png",
+        "flagMedium": "mediums/mh.png",
+        "flagLarge": "larges/mh.png"
+    },
+    "mq": {
+        "name": "Martinique",
+        "code": "mq",
+        "flagIcon": "icons/mq.png",
+        "flagSmall": "smalls/mq.png",
+        "flagMedium": "mediums/mq.png",
+        "flagLarge": "larges/mq.png"
+    },
+    "mr": {
+        "name": "Mauritania",
+        "code": "mr",
+        "flagIcon": "icons/mr.png",
+        "flagSmall": "smalls/mr.png",
+        "flagMedium": "mediums/mr.png",
+        "flagLarge": "larges/mr.png"
+    },
+    "mu": {
+        "name": "Mauritius",
+        "code": "mu",
+        "flagIcon": "icons/mu.png",
+        "flagSmall": "smalls/mu.png",
+        "flagMedium": "mediums/mu.png",
+        "flagLarge": "larges/mu.png"
+    },
+    "yt": {
+        "name": "Mayotte",
+        "code": "yt",
+        "flagIcon": "icons/yt.png",
+        "flagSmall": "smalls/yt.png",
+        "flagMedium": "mediums/yt.png",
+        "flagLarge": "larges/yt.png"
+    },
+    "mx": {
+        "name": "Mexico",
+        "code": "mx",
+        "flagIcon": "icons/mx.png",
+        "flagSmall": "smalls/mx.png",
+        "flagMedium": "mediums/mx.png",
+        "flagLarge": "larges/mx.png"
+    },
+    "fm": {
+        "name": "Federated States Of Micronesia",
+        "code": "fm",
+        "flagIcon": "icons/fm.png",
+        "flagSmall": "smalls/fm.png",
+        "flagMedium": "mediums/fm.png",
+        "flagLarge": "larges/fm.png"
+    },
+    "md": {
+        "name": "Republic Of Moldova",
+        "code": "md",
+        "flagIcon": "icons/md.png",
+        "flagSmall": "smalls/md.png",
+        "flagMedium": "mediums/md.png",
+        "flagLarge": "larges/md.png"
+    },
+    "mc": {
+        "name": "Monaco",
+        "code": "mc",
+        "flagIcon": "icons/mc.png",
+        "flagSmall": "smalls/mc.png",
+        "flagMedium": "mediums/mc.png",
+        "flagLarge": "larges/mc.png"
+    },
+    "mn": {
+        "name": "Mongolia",
+        "code": "mn",
+        "flagIcon": "icons/mn.png",
+        "flagSmall": "smalls/mn.png",
+        "flagMedium": "mediums/mn.png",
+        "flagLarge": "larges/mn.png"
+    },
+    "me": {
+        "name": "Montenegro",
+        "code": "me",
+        "flagIcon": "icons/me.png",
+        "flagSmall": "smalls/me.png",
+        "flagMedium": "mediums/me.png",
+        "flagLarge": "larges/me.png"
+    },
+    "ms": {
+        "name": "Montserrat",
+        "code": "ms",
+        "flagIcon": "icons/ms.png",
+        "flagSmall": "smalls/ms.png",
+        "flagMedium": "mediums/ms.png",
+        "flagLarge": "larges/ms.png"
+    },
+    "ma": {
+        "name": "Morocco",
+        "code": "ma",
+        "flagIcon": "icons/ma.png",
+        "flagSmall": "smalls/ma.png",
+        "flagMedium": "mediums/ma.png",
+        "flagLarge": "larges/ma.png"
+    },
+    "mz": {
+        "name": "Mozambique",
+        "code": "mz",
+        "flagIcon": "icons/mz.png",
+        "flagSmall": "smalls/mz.png",
+        "flagMedium": "mediums/mz.png",
+        "flagLarge": "larges/mz.png"
+    },
+    "mm": {
+        "name": "Myanmar",
+        "code": "mm",
+        "flagIcon": "icons/mm.png",
+        "flagSmall": "smalls/mm.png",
+        "flagMedium": "mediums/mm.png",
+        "flagLarge": "larges/mm.png"
+    },
+    "na": {
+        "name": "Namibia",
+        "code": "na",
+        "flagIcon": "icons/na.png",
+        "flagSmall": "smalls/na.png",
+        "flagMedium": "mediums/na.png",
+        "flagLarge": "larges/na.png"
+    },
+    "nr": {
+        "name": "Nauru",
+        "code": "nr",
+        "flagIcon": "icons/nr.png",
+        "flagSmall": "smalls/nr.png",
+        "flagMedium": "mediums/nr.png",
+        "flagLarge": "larges/nr.png"
+    },
+    "np": {
+        "name": "Nepal",
+        "code": "np",
+        "flagIcon": "icons/np.png",
+        "flagSmall": "smalls/np.png",
+        "flagMedium": "mediums/np.png",
+        "flagLarge": "larges/np.png"
+    },
+    "nl": {
+        "name": "Netherlands",
+        "code": "nl",
+        "flagIcon": "icons/nl.png",
+        "flagSmall": "smalls/nl.png",
+        "flagMedium": "mediums/nl.png",
+        "flagLarge": "larges/nl.png"
+    },
+    "nc": {
+        "name": "New Caledonia",
+        "code": "nc",
+        "flagIcon": "icons/nc.png",
+        "flagSmall": "smalls/nc.png",
+        "flagMedium": "mediums/nc.png",
+        "flagLarge": "larges/nc.png"
+    },
+    "nz": {
+        "name": "New Zealand",
+        "code": "nz",
+        "flagIcon": "icons/nz.png",
+        "flagSmall": "smalls/nz.png",
+        "flagMedium": "mediums/nz.png",
+        "flagLarge": "larges/nz.png"
+    },
+    "ni": {
+        "name": "Nicaragua",
+        "code": "ni",
+        "flagIcon": "icons/ni.png",
+        "flagSmall": "smalls/ni.png",
+        "flagMedium": "mediums/ni.png",
+        "flagLarge": "larges/ni.png"
+    },
+    "ne": {
+        "name": "Niger",
+        "code": "ne",
+        "flagIcon": "icons/ne.png",
+        "flagSmall": "smalls/ne.png",
+        "flagMedium": "mediums/ne.png",
+        "flagLarge": "larges/ne.png"
+    },
+    "ng": {
+        "name": "Nigeria",
+        "code": "ng",
+        "flagIcon": "icons/ng.png",
+        "flagSmall": "smalls/ng.png",
+        "flagMedium": "mediums/ng.png",
+        "flagLarge": "larges/ng.png"
+    },
+    "nu": {
+        "name": "Niue",
+        "code": "nu",
+        "flagIcon": "icons/nu.png",
+        "flagSmall": "smalls/nu.png",
+        "flagMedium": "mediums/nu.png",
+        "flagLarge": "larges/nu.png"
+    },
+    "nf": {
+        "name": "Norfolk Island",
+        "code": "nf",
+        "flagIcon": "icons/nf.png",
+        "flagSmall": "smalls/nf.png",
+        "flagMedium": "mediums/nf.png",
+        "flagLarge": "larges/nf.png"
+    },
+    "mp": {
+        "name": "Northern Mariana Islands",
+        "code": "mp",
+        "flagIcon": "icons/mp.png",
+        "flagSmall": "smalls/mp.png",
+        "flagMedium": "mediums/mp.png",
+        "flagLarge": "larges/mp.png"
+    },
+    "no": {
+        "name": "Norway",
+        "code": "no",
+        "flagIcon": "icons/no.png",
+        "flagSmall": "smalls/no.png",
+        "flagMedium": "mediums/no.png",
+        "flagLarge": "larges/no.png"
+    },
+    "om": {
+        "name": "Oman",
+        "code": "om",
+        "flagIcon": "icons/om.png",
+        "flagSmall": "smalls/om.png",
+        "flagMedium": "mediums/om.png",
+        "flagLarge": "larges/om.png"
+    },
+    "pk": {
+        "name": "Pakistan",
+        "code": "pk",
+        "flagIcon": "icons/pk.png",
+        "flagSmall": "smalls/pk.png",
+        "flagMedium": "mediums/pk.png",
+        "flagLarge": "larges/pk.png"
+    },
+    "pw": {
+        "name": "Palau",
+        "code": "pw",
+        "flagIcon": "icons/pw.png",
+        "flagSmall": "smalls/pw.png",
+        "flagMedium": "mediums/pw.png",
+        "flagLarge": "larges/pw.png"
+    },
+    "ps": {
+        "name": "State Of Palestine",
+        "code": "ps",
+        "flagIcon": "icons/ps.png",
+        "flagSmall": "smalls/ps.png",
+        "flagMedium": "mediums/ps.png",
+        "flagLarge": "larges/ps.png"
+    },
+    "pa": {
+        "name": "Panama",
+        "code": "pa",
+        "flagIcon": "icons/pa.png",
+        "flagSmall": "smalls/pa.png",
+        "flagMedium": "mediums/pa.png",
+        "flagLarge": "larges/pa.png"
+    },
+    "pg": {
+        "name": "Papua New Guinea",
+        "code": "pg",
+        "flagIcon": "icons/pg.png",
+        "flagSmall": "smalls/pg.png",
+        "flagMedium": "mediums/pg.png",
+        "flagLarge": "larges/pg.png"
+    },
+    "py": {
+        "name": "Paraguay",
+        "code": "py",
+        "flagIcon": "icons/py.png",
+        "flagSmall": "smalls/py.png",
+        "flagMedium": "mediums/py.png",
+        "flagLarge": "larges/py.png"
+    },
+    "pe": {
+        "name": "Peru",
+        "code": "pe",
+        "flagIcon": "icons/pe.png",
+        "flagSmall": "smalls/pe.png",
+        "flagMedium": "mediums/pe.png",
+        "flagLarge": "larges/pe.png"
+    },
+    "ph": {
+        "name": "Philippines",
+        "code": "ph",
+        "flagIcon": "icons/ph.png",
+        "flagSmall": "smalls/ph.png",
+        "flagMedium": "mediums/ph.png",
+        "flagLarge": "larges/ph.png"
+    },
+    "pn": {
+        "name": "Pitcairn",
+        "code": "pn",
+        "flagIcon": "icons/pn.png",
+        "flagSmall": "smalls/pn.png",
+        "flagMedium": "mediums/pn.png",
+        "flagLarge": "larges/pn.png"
+    },
+    "pl": {
+        "name": "Poland",
+        "code": "pl",
+        "flagIcon": "icons/pl.png",
+        "flagSmall": "smalls/pl.png",
+        "flagMedium": "mediums/pl.png",
+        "flagLarge": "larges/pl.png"
+    },
+    "pt": {
+        "name": "Portugal",
+        "code": "pt",
+        "flagIcon": "icons/pt.png",
+        "flagSmall": "smalls/pt.png",
+        "flagMedium": "mediums/pt.png",
+        "flagLarge": "larges/pt.png"
+    },
+    "pr": {
+        "name": "Puerto Rico",
+        "code": "pr",
+        "flagIcon": "icons/pr.png",
+        "flagSmall": "smalls/pr.png",
+        "flagMedium": "mediums/pr.png",
+        "flagLarge": "larges/pr.png"
+    },
+    "qa": {
+        "name": "Qatar",
+        "code": "qa",
+        "flagIcon": "icons/qa.png",
+        "flagSmall": "smalls/qa.png",
+        "flagMedium": "mediums/qa.png",
+        "flagLarge": "larges/qa.png"
+    },
+    "re": {
+        "name": "RÉunion",
+        "code": "re",
+        "flagIcon": "icons/re.png",
+        "flagSmall": "smalls/re.png",
+        "flagMedium": "mediums/re.png",
+        "flagLarge": "larges/re.png"
+    },
+    "ro": {
+        "name": "Romania",
+        "code": "ro",
+        "flagIcon": "icons/ro.png",
+        "flagSmall": "smalls/ro.png",
+        "flagMedium": "mediums/ro.png",
+        "flagLarge": "larges/ro.png"
+    },
+    "ru": {
+        "name": "Russian Federation",
+        "code": "ru",
+        "flagIcon": "icons/ru.png",
+        "flagSmall": "smalls/ru.png",
+        "flagMedium": "mediums/ru.png",
+        "flagLarge": "larges/ru.png"
+    },
+    "rw": {
+        "name": "Rwanda",
+        "code": "rw",
+        "flagIcon": "icons/rw.png",
+        "flagSmall": "smalls/rw.png",
+        "flagMedium": "mediums/rw.png",
+        "flagLarge": "larges/rw.png"
+    },
+    "bl": {
+        "name": "Saint BarthÉlemy",
+        "code": "bl",
+        "flagIcon": "icons/bl.png",
+        "flagSmall": "smalls/bl.png",
+        "flagMedium": "mediums/bl.png",
+        "flagLarge": "larges/bl.png"
+    },
+    "sh": {
+        "name": "Saint Helena, Ascension And Tristan Da Cunha",
+        "code": "sh",
+        "flagIcon": "icons/sh.png",
+        "flagSmall": "smalls/sh.png",
+        "flagMedium": "mediums/sh.png",
+        "flagLarge": "larges/sh.png"
+    },
+    "kn": {
+        "name": "Saint Kitts And Nevis",
+        "code": "kn",
+        "flagIcon": "icons/kn.png",
+        "flagSmall": "smalls/kn.png",
+        "flagMedium": "mediums/kn.png",
+        "flagLarge": "larges/kn.png"
+    },
+    "lc": {
+        "name": "Saint Lucia",
+        "code": "lc",
+        "flagIcon": "icons/lc.png",
+        "flagSmall": "smalls/lc.png",
+        "flagMedium": "mediums/lc.png",
+        "flagLarge": "larges/lc.png"
+    },
+    "mf": {
+        "name": "Saint Martin (french Part)",
+        "code": "mf",
+        "flagIcon": "icons/mf.png",
+        "flagSmall": "smalls/mf.png",
+        "flagMedium": "mediums/mf.png",
+        "flagLarge": "larges/mf.png"
+    },
+    "pm": {
+        "name": "Saint Pierre And Miquelon",
+        "code": "pm",
+        "flagIcon": "icons/pm.png",
+        "flagSmall": "smalls/pm.png",
+        "flagMedium": "mediums/pm.png",
+        "flagLarge": "larges/pm.png"
+    },
+    "vc": {
+        "name": "Saint Vincent And The Grenadines",
+        "code": "vc",
+        "flagIcon": "icons/vc.png",
+        "flagSmall": "smalls/vc.png",
+        "flagMedium": "mediums/vc.png",
+        "flagLarge": "larges/vc.png"
+    },
+    "ws": {
+        "name": "Samoa",
+        "code": "ws",
+        "flagIcon": "icons/ws.png",
+        "flagSmall": "smalls/ws.png",
+        "flagMedium": "mediums/ws.png",
+        "flagLarge": "larges/ws.png"
+    },
+    "sm": {
+        "name": "San Marino",
+        "code": "sm",
+        "flagIcon": "icons/sm.png",
+        "flagSmall": "smalls/sm.png",
+        "flagMedium": "mediums/sm.png",
+        "flagLarge": "larges/sm.png"
+    },
+    "st": {
+        "name": "Sao Tome And Principe",
+        "code": "st",
+        "flagIcon": "icons/st.png",
+        "flagSmall": "smalls/st.png",
+        "flagMedium": "mediums/st.png",
+        "flagLarge": "larges/st.png"
+    },
+    "sa": {
+        "name": "Saudi Arabia",
+        "code": "sa",
+        "flagIcon": "icons/sa.png",
+        "flagSmall": "smalls/sa.png",
+        "flagMedium": "mediums/sa.png",
+        "flagLarge": "larges/sa.png"
+    },
+    "sn": {
+        "name": "Senegal",
+        "code": "sn",
+        "flagIcon": "icons/sn.png",
+        "flagSmall": "smalls/sn.png",
+        "flagMedium": "mediums/sn.png",
+        "flagLarge": "larges/sn.png"
+    },
+    "rs": {
+        "name": "Serbia",
+        "code": "rs",
+        "flagIcon": "icons/rs.png",
+        "flagSmall": "smalls/rs.png",
+        "flagMedium": "mediums/rs.png",
+        "flagLarge": "larges/rs.png"
+    },
+    "sc": {
+        "name": "Seychelles",
+        "code": "sc",
+        "flagIcon": "icons/sc.png",
+        "flagSmall": "smalls/sc.png",
+        "flagMedium": "mediums/sc.png",
+        "flagLarge": "larges/sc.png"
+    },
+    "sl": {
+        "name": "Sierra Leone",
+        "code": "sl",
+        "flagIcon": "icons/sl.png",
+        "flagSmall": "smalls/sl.png",
+        "flagMedium": "mediums/sl.png",
+        "flagLarge": "larges/sl.png"
+    },
+    "sg": {
+        "name": "Singapore",
+        "code": "sg",
+        "flagIcon": "icons/sg.png",
+        "flagSmall": "smalls/sg.png",
+        "flagMedium": "mediums/sg.png",
+        "flagLarge": "larges/sg.png"
+    },
+    "sx": {
+        "name": "Sint Maarten (dutch Part)",
+        "code": "sx",
+        "flagIcon": "icons/sx.png",
+        "flagSmall": "smalls/sx.png",
+        "flagMedium": "mediums/sx.png",
+        "flagLarge": "larges/sx.png"
+    },
+    "sk": {
+        "name": "Slovakia",
+        "code": "sk",
+        "flagIcon": "icons/sk.png",
+        "flagSmall": "smalls/sk.png",
+        "flagMedium": "mediums/sk.png",
+        "flagLarge": "larges/sk.png"
+    },
+    "si": {
+        "name": "Slovenia",
+        "code": "si",
+        "flagIcon": "icons/si.png",
+        "flagSmall": "smalls/si.png",
+        "flagMedium": "mediums/si.png",
+        "flagLarge": "larges/si.png"
+    },
+    "sb": {
+        "name": "Solomon Islands",
+        "code": "sb",
+        "flagIcon": "icons/sb.png",
+        "flagSmall": "smalls/sb.png",
+        "flagMedium": "mediums/sb.png",
+        "flagLarge": "larges/sb.png"
+    },
+    "so": {
+        "name": "Somalia",
+        "code": "so",
+        "flagIcon": "icons/so.png",
+        "flagSmall": "smalls/so.png",
+        "flagMedium": "mediums/so.png",
+        "flagLarge": "larges/so.png"
+    },
+    "za": {
+        "name": "South Africa",
+        "code": "za",
+        "flagIcon": "icons/za.png",
+        "flagSmall": "smalls/za.png",
+        "flagMedium": "mediums/za.png",
+        "flagLarge": "larges/za.png"
+    },
+    "gs": {
+        "name": "South Georgia And The South Sandwich Islands",
+        "code": "gs",
+        "flagIcon": "icons/gs.png",
+        "flagSmall": "smalls/gs.png",
+        "flagMedium": "mediums/gs.png",
+        "flagLarge": "larges/gs.png"
+    },
+    "ss": {
+        "name": "South Sudan",
+        "code": "ss",
+        "flagIcon": "icons/ss.png",
+        "flagSmall": "smalls/ss.png",
+        "flagMedium": "mediums/ss.png",
+        "flagLarge": "larges/ss.png"
+    },
+    "es": {
+        "name": "Spain",
+        "code": "es",
+        "flagIcon": "icons/es.png",
+        "flagSmall": "smalls/es.png",
+        "flagMedium": "mediums/es.png",
+        "flagLarge": "larges/es.png"
+    },
+    "lk": {
+        "name": "Sri Lanka",
+        "code": "lk",
+        "flagIcon": "icons/lk.png",
+        "flagSmall": "smalls/lk.png",
+        "flagMedium": "mediums/lk.png",
+        "flagLarge": "larges/lk.png"
+    },
+    "sd": {
+        "name": "Sudan",
+        "code": "sd",
+        "flagIcon": "icons/sd.png",
+        "flagSmall": "smalls/sd.png",
+        "flagMedium": "mediums/sd.png",
+        "flagLarge": "larges/sd.png"
+    },
+    "sr": {
+        "name": "Suri        name",
+        "code": "sr",
+        "flagIcon": "icons/sr.png",
+        "flagSmall": "smalls/sr.png",
+        "flagMedium": "mediums/sr.png",
+        "flagLarge": "larges/sr.png"
+    },
+    "sj": {
+        "name": "Svalbard And Jan Mayen",
+        "code": "sj",
+        "flagIcon": "icons/sj.png",
+        "flagSmall": "smalls/sj.png",
+        "flagMedium": "mediums/sj.png",
+        "flagLarge": "larges/sj.png"
+    },
+    "sz": {
+        "name": "Swaziland",
+        "code": "sz",
+        "flagIcon": "icons/sz.png",
+        "flagSmall": "smalls/sz.png",
+        "flagMedium": "mediums/sz.png",
+        "flagLarge": "larges/sz.png"
+    },
+    "se": {
+        "name": "Sweden",
+        "code": "se",
+        "flagIcon": "icons/se.png",
+        "flagSmall": "smalls/se.png",
+        "flagMedium": "mediums/se.png",
+        "flagLarge": "larges/se.png"
+    },
+    "ch": {
+        "name": "Switzerland",
+        "code": "ch",
+        "flagIcon": "icons/ch.png",
+        "flagSmall": "smalls/ch.png",
+        "flagMedium": "mediums/ch.png",
+        "flagLarge": "larges/ch.png"
+    },
+    "sy": {
+        "name": "Syrian Arab Republic",
+        "code": "sy",
+        "flagIcon": "icons/sy.png",
+        "flagSmall": "smalls/sy.png",
+        "flagMedium": "mediums/sy.png",
+        "flagLarge": "larges/sy.png"
+    },
+    "tw": {
+        "name": "Taiwan, Province Of China",
+        "code": "tw",
+        "flagIcon": "icons/tw.png",
+        "flagSmall": "smalls/tw.png",
+        "flagMedium": "mediums/tw.png",
+        "flagLarge": "larges/tw.png"
+    },
+    "tj": {
+        "name": "Tajikistan",
+        "code": "tj",
+        "flagIcon": "icons/tj.png",
+        "flagSmall": "smalls/tj.png",
+        "flagMedium": "mediums/tj.png",
+        "flagLarge": "larges/tj.png"
+    },
+    "tz": {
+        "name": "United Republic Of Tanzania",
+        "code": "tz",
+        "flagIcon": "icons/tz.png",
+        "flagSmall": "smalls/tz.png",
+        "flagMedium": "mediums/tz.png",
+        "flagLarge": "larges/tz.png"
+    },
+    "th": {
+        "name": "Thailand",
+        "code": "th",
+        "flagIcon": "icons/th.png",
+        "flagSmall": "smalls/th.png",
+        "flagMedium": "mediums/th.png",
+        "flagLarge": "larges/th.png"
+    },
+    "tl": {
+        "name": "Timor-leste",
+        "code": "tl",
+        "flagIcon": "icons/tl.png",
+        "flagSmall": "smalls/tl.png",
+        "flagMedium": "mediums/tl.png",
+        "flagLarge": "larges/tl.png"
+    },
+    "tg": {
+        "name": "Togo",
+        "code": "tg",
+        "flagIcon": "icons/tg.png",
+        "flagSmall": "smalls/tg.png",
+        "flagMedium": "mediums/tg.png",
+        "flagLarge": "larges/tg.png"
+    },
+    "tk": {
+        "name": "Tokelau",
+        "code": "tk",
+        "flagIcon": "icons/tk.png",
+        "flagSmall": "smalls/tk.png",
+        "flagMedium": "mediums/tk.png",
+        "flagLarge": "larges/tk.png"
+    },
+    "to": {
+        "name": "Tonga",
+        "code": "to",
+        "flagIcon": "icons/to.png",
+        "flagSmall": "smalls/to.png",
+        "flagMedium": "mediums/to.png",
+        "flagLarge": "larges/to.png"
+    },
+    "tt": {
+        "name": "Trinidad And Tobago",
+        "code": "tt",
+        "flagIcon": "icons/tt.png",
+        "flagSmall": "smalls/tt.png",
+        "flagMedium": "mediums/tt.png",
+        "flagLarge": "larges/tt.png"
+    },
+    "tn": {
+        "name": "Tunisia",
+        "code": "tn",
+        "flagIcon": "icons/tn.png",
+        "flagSmall": "smalls/tn.png",
+        "flagMedium": "mediums/tn.png",
+        "flagLarge": "larges/tn.png"
+    },
+    "tr": {
+        "name": "Turkey",
+        "code": "tr",
+        "flagIcon": "icons/tr.png",
+        "flagSmall": "smalls/tr.png",
+        "flagMedium": "mediums/tr.png",
+        "flagLarge": "larges/tr.png"
+    },
+    "tm": {
+        "name": "Turkmenistan",
+        "code": "tm",
+        "flagIcon": "icons/tm.png",
+        "flagSmall": "smalls/tm.png",
+        "flagMedium": "mediums/tm.png",
+        "flagLarge": "larges/tm.png"
+    },
+    "tc": {
+        "name": "Turks And Caicos Islands",
+        "code": "tc",
+        "flagIcon": "icons/tc.png",
+        "flagSmall": "smalls/tc.png",
+        "flagMedium": "mediums/tc.png",
+        "flagLarge": "larges/tc.png"
+    },
+    "tv": {
+        "name": "Tuvalu",
+        "code": "tv",
+        "flagIcon": "icons/tv.png",
+        "flagSmall": "smalls/tv.png",
+        "flagMedium": "mediums/tv.png",
+        "flagLarge": "larges/tv.png"
+    },
+    "ug": {
+        "name": "Uganda",
+        "code": "ug",
+        "flagIcon": "icons/ug.png",
+        "flagSmall": "smalls/ug.png",
+        "flagMedium": "mediums/ug.png",
+        "flagLarge": "larges/ug.png"
+    },
+    "ua": {
+        "name": "Ukraine",
+        "code": "ua",
+        "flagIcon": "icons/ua.png",
+        "flagSmall": "smalls/ua.png",
+        "flagMedium": "mediums/ua.png",
+        "flagLarge": "larges/ua.png"
+    },
+    "ae": {
+        "name": "United Arab Emirates",
+        "code": "ae",
+        "flagIcon": "icons/ae.png",
+        "flagSmall": "smalls/ae.png",
+        "flagMedium": "mediums/ae.png",
+        "flagLarge": "larges/ae.png"
+    },
+    "gb": {
+        "name": "United Kingdom",
+        "code": "gb",
+        "flagIcon": "icons/gb.png",
+        "flagSmall": "smalls/gb.png",
+        "flagMedium": "mediums/gb.png",
+        "flagLarge": "larges/gb.png"
+    },
+    "us": {
+        "name": "United States",
+        "code": "us",
+        "flagIcon": "icons/us.png",
+        "flagSmall": "smalls/us.png",
+        "flagMedium": "mediums/us.png",
+        "flagLarge": "larges/us.png"
+    },
+    "um": {
+        "name": "United States Minor Outlying Islands",
+        "code": "um",
+        "flagIcon": "icons/um.png",
+        "flagSmall": "smalls/um.png",
+        "flagMedium": "mediums/um.png",
+        "flagLarge": "larges/um.png"
+    },
+    "uy": {
+        "name": "Uruguay",
+        "code": "uy",
+        "flagIcon": "icons/uy.png",
+        "flagSmall": "smalls/uy.png",
+        "flagMedium": "mediums/uy.png",
+        "flagLarge": "larges/uy.png"
+    },
+    "uz": {
+        "name": "Uzbekistan",
+        "code": "uz",
+        "flagIcon": "icons/uz.png",
+        "flagSmall": "smalls/uz.png",
+        "flagMedium": "mediums/uz.png",
+        "flagLarge": "larges/uz.png"
+    },
+    "vu": {
+        "name": "Vanuatu",
+        "code": "vu",
+        "flagIcon": "icons/vu.png",
+        "flagSmall": "smalls/vu.png",
+        "flagMedium": "mediums/vu.png",
+        "flagLarge": "larges/vu.png"
+    },
+    "ve": {
+        "name": "Bolivarian Republic Of Venezuela",
+        "code": "ve",
+        "flagIcon": "icons/ve.png",
+        "flagSmall": "smalls/ve.png",
+        "flagMedium": "mediums/ve.png",
+        "flagLarge": "larges/ve.png"
+    },
+    "vn": {
+        "name": "Viet Nam",
+        "code": "vn",
+        "flagIcon": "icons/vn.png",
+        "flagSmall": "smalls/vn.png",
+        "flagMedium": "mediums/vn.png",
+        "flagLarge": "larges/vn.png"
+    },
+    "vg": {
+        "name": "Virgin Islands, British",
+        "code": "vg",
+        "flagIcon": "icons/vg.png",
+        "flagSmall": "smalls/vg.png",
+        "flagMedium": "mediums/vg.png",
+        "flagLarge": "larges/vg.png"
+    },
+    "vi": {
+        "name": "Virgin Islands, U.s.",
+        "code": "vi",
+        "flagIcon": "icons/vi.png",
+        "flagSmall": "smalls/vi.png",
+        "flagMedium": "mediums/vi.png",
+        "flagLarge": "larges/vi.png"
+    },
+    "wf": {
+        "name": "Wallis And Futuna",
+        "code": "wf",
+        "flagIcon": "icons/wf.png",
+        "flagSmall": "smalls/wf.png",
+        "flagMedium": "mediums/wf.png",
+        "flagLarge": "larges/wf.png"
+    },
+    "eh": {
+        "name": "Western Sahara",
+        "code": "eh",
+        "flagIcon": "icons/eh.png",
+        "flagSmall": "smalls/eh.png",
+        "flagMedium": "mediums/eh.png",
+        "flagLarge": "larges/eh.png"
+    },
+    "ye": {
+        "name": "Yemen",
+        "code": "ye",
+        "flagIcon": "icons/ye.png",
+        "flagSmall": "smalls/ye.png",
+        "flagMedium": "mediums/ye.png",
+        "flagLarge": "larges/ye.png"
+    },
+    "zm": {
+        "name": "Zambia",
+        "code": "zm",
+        "flagIcon": "icons/zm.png",
+        "flagSmall": "smalls/zm.png",
+        "flagMedium": "mediums/zm.png",
+        "flagLarge": "larges/zm.png"
+    },
+    "zw": {
+        "name": "Zimbabwe",
+        "code": "zw",
+        "flagIcon": "icons/zw.png",
+        "flagSmall": "smalls/zw.png",
+        "flagMedium": "mediums/zw.png",
+        "flagLarge": "larges/zw.png"
+    }
+}
