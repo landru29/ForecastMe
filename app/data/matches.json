@@ -214,5 +214,142 @@
 			"group2.D"
 		],
 		"location": "Track3"
+	},
+
+	"group4-AD": {
+		"date": "2014-12-05T09:00:00-06:00",
+		"teams": [
+			"group4.A",
+			"group4.D"
+		],
+		"location": "Track1"
+	},
+	"group1-BC": {
+		"date": "2014-12-05T10:20:00-06:00",
+		"teams": [
+			"group1.B",
+			"group1.C"
+		],
+		"location": "Track1"
+	},
+	"group1-AD": {
+		"date": "2014-12-05T11:40:00-06:00",
+		"teams": [
+			"group1.A",
+			"group1.D"
+		],
+		"location": "Track1"
+	},
+	"group4-BC": {
+		"date": "2014-12-05T13:00:00-06:00",
+		"teams": [
+			"group4.B",
+			"group4.C"
+		],
+		"location": "Track1"
+	},
+	"group7-BC": {
+		"date": "2014-12-05T14:20:00-06:00",
+		"teams": [
+			"group7.B",
+			"group7.C"
+		],
+		"location": "Track1"
+	},
+	"consolation4-5": {
+		"date": "2014-12-05T16:00:00-06:00",
+		"teams": [
+			"group4.looser",
+			"group5.looser"
+		],
+		"location": "Track1"
+	},
+	"group5-AD": {
+		"date": "2014-12-05T09:00:00-06:00",
+		"teams": [
+			"group5.A",
+			"group5.D"
+		],
+		"location": "Track2"
+	},
+	"group2-BC": {
+		"date": "2014-12-05T10:20:00-06:00",
+		"teams": [
+			"group2.B",
+			"group2.C"
+		],
+		"location": "Track2"
+	},
+	"group2-AD": {
+		"date": "2014-12-05T11:40:00-06:00",
+		"teams": [
+			"group2.A",
+			"group2.D"
+		],
+		"location": "Track2"
+	},
+	"group5-BC": {
+		"date": "2014-12-05T13:00:00-06:00",
+		"teams": [
+			"group5.B",
+			"group5.C"
+		],
+		"location": "Track2"
+	},
+	"group8-BC": {
+		"date": "2014-12-05T14:20:00-06:00",
+		"teams": [
+			"group8.B",
+			"group8.C"
+		],
+		"location": "Track2"
+	},
+	"consolidation6-1": {
+		"date": "2014-12-05T16:00:00-06:00",
+		"teams": [
+			"group6.looser",
+			"group1.looser"
+		],
+		"location": "Track2"
+	},
+	"group6-AD": {
+		"date": "2014-12-05T09:10:00-06:00",
+		"teams": [
+			"group6.A",
+			"group6.D"
+		],
+		"location": "Track3"
+	},
+	"group3-BC": {
+		"date": "2014-12-05T10:30:00-06:00",
+		"teams": [
+			"group3.B",
+			"group3.C"
+		],
+		"location": "Track3"
+	},
+	"group3-AD": {
+		"date": "2014-12-05T11:50:00-06:00",
+		"teams": [
+			"group3.A",
+			"group3.D"
+		],
+		"location": "Track3"
+	},
+	"group6-BC": {
+		"date": "2014-12-05T13:10:00-06:00",
+		"teams": [
+			"group6.B",
+			"group6.C"
+		],
+		"location": "Track3"
+	},
+	"group3-BD": {
+		"date": "2014-12-05T14:30:00-06:00",
+		"teams": [
+			"group3.B",
+			"group3.D"
+		],
+		"location": "Track3"
 	}
 }
