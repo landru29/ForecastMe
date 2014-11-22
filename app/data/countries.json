@@ -334,11 +334,6 @@
     "code": "eg",
     "class": "flag-icon-eg"
   },
-  "en": {
-    "name": "England",
-    "code": "en",
-    "class": "flag-icon-en"
-  },
   "sv": {
     "name": "El Salvador",
     "code": "sv",
@@ -1253,5 +1248,20 @@
     "name": "Zimbabwe",
     "code": "zw",
     "class": "flag-icon-zw"
+  },
+  "england": {
+    "name": "England",
+    "code": "en",
+    "class": "flag-icon-england"
+  },
+  "scotland": {
+    "name": "Scotland",
+    "code": "sco",
+    "class": "flag-icon-scotland"
+  },
+  "wales": {
+    "name": "Wales",
+    "code": "wal",
+    "class": "flag-icon-wales"
   }
 }

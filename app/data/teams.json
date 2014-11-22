@@ -1,48 +1,181 @@
 {
-	"group1": {
-		"A": "nz",
-		"B": "no",
-		"C": "za",
-		"D": "wales"
+	"ar": {
+		"country": "ar",
+		"icon": "team_ar.jpg",
+		"name": "Team Argentina"
+
 	},
-	"group2": {
-		"A": "fr",
-		"B": "ch",
-		"C": "br",
-		"D": "pt"
+	"au": {
+		"country": "au",
+		"icon": "team_au.jpg",
+		"name": "Team Australia"
+
 	},
-	"group3": {
-		"A": "se",
-		"B": "in",
-		"C": "jp",
-		"D": "cl"
+	"be": {
+		"country": "be",
+		"icon": "team_be.jpg",
+		"name": "Team Belgium"
+
 	},
-	"group4": {
-		"A": "fi",
-		"B": "scotland",
-		"C": "co",
-		"D": "mx"
+	"br": {
+		"country": "br",
+		"icon": "team_br.jpg",
+		"name": "Team Brazil"
+
 	},
-	"group5": {
-		"A": "au",
-		"B": "it",
-		"C": "be",
-		"D": "gr"
+	"ca": {
+		"country": "ca",
+		"icon": "team_ca.jpg",
+		"name": "Team Canada"
+
 	},
-	"group6": {
-		"A": "en",
-		"B": "de",
-		"C": "sp",
-		"D": "ir"
+	"cl": {
+		"country": "cl",
+		"icon": "team_cl.jpg",
+		"name": "Team Chile"
+
 	},
-	"group7": {
-		"A": "ca",
-		"B": "dk",
-		"C": "ar"
+	"co": {
+		"country": "co",
+		"icon": "team_co.jpg",
+		"name": "Team Colombia"
+
 	},
-	"group8": {
-		"A": "us",
-		"B": "pr",
-		"C": "nl"
+	"dk": {
+		"country": "dk",
+		"icon": "team_dk.jpg",
+		"name": "Team Denmark"
+
+	},
+	"england": {
+		"country": "england",
+		"icon": "team_england.jpg",
+		"name": "Team England"
+
+	},
+	"fi": {
+		"country": "fi",
+		"icon": "team_fi.jpg",
+		"name": "Team Finland"
+
+	},
+	"fr": {
+		"country": "fr",
+		"icon": "team_fr.jpg",
+		"name": "Team France"
+
+	},
+	"de": {
+		"country": "de",
+		"icon": "team_de.jpg",
+		"name": "Team Germany"
+
+	},
+	"gr": {
+		"country": "gr",
+		"icon": "team_gr.jpg",
+		"name": "Team Greece"
+
+	},
+	"ir": {
+		"country": "ir",
+		"icon": "team_ir.jpg",
+		"name": "Team Ireland"
+
+	},
+	"it": {
+		"country": "it",
+		"icon": "team_it.jpg",
+		"name": "Team Italy"
+
+	},
+	"jp": {
+		"country": "jp",
+		"icon": "team_jp.jpg",
+		"name": "Team Japan"
+
+	},
+	"mx": {
+		"country": "mx",
+		"icon": "team_mx.jpg",
+		"name": "Team Mexico"
+
+	},
+	"nl": {
+		"country": "nl",
+		"icon": "team_nl.jpg",
+		"name": "Team Netherlands"
+
+	},
+	"nz": {
+		"country": "nz",
+		"icon": "team_nz.jpg",
+		"name": "Team New Zealand"
+
+	},
+	"no": {
+		"country": "no",
+		"icon": "team_no.jpg",
+		"name": "Team Norway"
+
+	},
+	"pt": {
+		"country": "pt",
+		"icon": "team_pt.jpg",
+		"name": "Team Portugal"
+
+	},
+	"pr": {
+		"country": "pr",
+		"icon": "team_pr.jpg",
+		"name": "Team Puerto Rico"
+
+	},
+	"scotland": {
+		"country": "scotland",
+		"icon": "team_scotland.jpg",
+		"name": "Team Scotland"
+
+	},
+	"za": {
+		"country": "za",
+		"icon": "team_za.jpg",
+		"name": "Team South Africa"
+
+	},
+	"sp": {
+		"country": "sp",
+		"icon": "team_sp.jpg",
+		"name": "Team Spain"
+
+	},
+	"se": {
+		"country": "se",
+		"icon": "team_se.jpg",
+		"name": "Team Sweden"
+
+	},
+	"ch": {
+		"country": "ch",
+		"icon": "team_ch.jpg",
+		"name": "Team Switzerland"
+
+	},
+	"wales": {
+		"country": "wales",
+		"icon": "team_walse.jpg",
+		"name": "Team Wales"
+
+	},
+	"in": {
+		"country": "in",
+		"icon": "team_in.jpg",
+		"name": "Team West Indies"
+
+	},
+	"us": {
+		"country": "us",
+		"icon": "team_us.jpg",
+		"name": "Team USA"
 	}
 }
