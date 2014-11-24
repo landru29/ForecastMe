@@ -2,8 +2,10 @@ var express = require('express');
 var path = require('path');
 var fs = require('fs');
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var session = require('cookie-session');
 
-var toLog = function (message) {
+var toLog = function(message) {
 	return (new Date()).toISOString() + '[' + process.pid + ']: ' + message;
 };
 
@@ -37,6 +39,10 @@ var app = express();
 
 // pre treatement
 app.use(expressMiddleware.log(accessLogStream));
+app.use(cookieParser('Et prout! dans ton nez!'));
+app.use(session({
+	secret: 'Justice avec les saucisses'
+}));
 app.use(expressMiddleware.cors);
 app.use(expressMiddleware.fileSystem);
 app.use(expressMiddleware.acl);
