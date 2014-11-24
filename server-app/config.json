@@ -15,7 +15,7 @@
 		"http://localhost:9000"
 	],
 	"public": {
-		"folder": "../dist",
+		"folder": "../client/dist",
 		"default": "index.html"
 	},
 	"resources": {
