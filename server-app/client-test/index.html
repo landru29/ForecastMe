@@ -1,0 +1,193 @@
+<!doctype html>
+    <html>
+        <head>
+            <title>Test requests</title>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+            <script src="node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
+            <style>
+                body {
+                    font-family: "arial", "sans-serif";
+                }
+                ul.field-list {
+                    list-style-type: none;
+                }
+                ul.field-list li input {
+                    display: inline-block;
+                    margin-right: 20px;
+                }
+                li button {
+                    display: inline-block;
+                    margin:0px;
+                }
+                button {
+                    display: block;
+                    margin-top:20px;
+                    margin-bottom:20px;
+                }
+                div.action-bar button {
+                    display: inline-block;
+                    margin-left:10px;
+                    margin-right:10px;
+                }
+                textarea {
+                    display:block;
+                    height:200px;
+                    width:400px;
+                }
+                label {
+                    margin-left:20px;
+                    margin-right:20px;
+                }
+                span.error {
+                    color:red;
+                    font-weight:bold;
+                }
+                fieldset {
+                    margin:20px;
+                }
+                button.submit {
+                    font-weight:bold;
+                    padding:5px;
+                }
+                input.wide {
+                    width: 600px;
+                }
+            </style>
+            <script type="text/javascript">
+                angular.module('myApp', ['LocalStorageModule']);
+                angular.module('myApp').controller('myController', function($scope, $http, localStorageService) {
+                    $scope.methodList = [
+                        {value:'GET', label:'get'},
+                        {value:'POST', label:'post'},
+                        {value:'PUT', label:'put'},
+                        {value:'DELETE', label:'delete'},
+                    ];
+                    $scope.result='';
+                    $scope.error = '';
+
+                    $scope.getFromStorage = function(force) {
+                        if ((localStorageService.isSupported) && (!force)) {
+                            $scope.url = localStorageService.get('url');
+                            $scope.token = localStorageService.get('token');
+                            $scope.method = localStorageService.get('method');
+                            $scope.data = localStorageService.get('data');
+                            if( Object.prototype.toString.call( $scope.data ) !== '[object Array]' ) {
+                                $scope.data = [];
+                            }
+                            $scope.params = localStorageService.get('params');
+                            if( Object.prototype.toString.call( $scope.params ) !== '[object Array]' ) {
+                                $scope.params = [];
+                            }
+                        } else {
+                            $scope.method='GET';
+                            $scope.url='';
+                            $scope.token='';
+                            $scope.data = [];
+                            $scope.params = [];
+                        }
+                    }
+
+                    $scope.deleteElement = function(index, tableName) {
+                        $scope[tableName].splice(index, 1);
+                    };
+                    $scope.addElement = function(table) {
+                        table.push({
+                            name: '',
+                            value:''
+                        });
+                    }
+                    $scope.save = function() {
+                        if(localStorageService.isSupported) {
+                            localStorageService.set('url', $scope.url);
+                            localStorageService.set('token', $scope.token);
+                            localStorageService.set('method', $scope.method);
+                            localStorageService.set('data', $scope.data);
+                            localStorageService.set('params', $scope.params);
+                        }
+                    }
+                    $scope.submit = function() {
+                        $scope.save();
+                        $scope.error = '';
+                        var data = $scope.buildDataObject($scope.data);
+                        var params = $scope.buildDataObject($scope.params);
+                        var option = {
+                            method:$scope.method,
+                            url:$scope.url
+                        };
+                        if (data) {
+                            option.data = data;
+                        }
+                        if (params) {
+                            option.params = params;
+                        }
+                        console.log(option);
+                        if (($scope.token) && ($scope.token.length)) {
+                            $http.defaults.headers.common.Authorization = 'Bearer ' + $scope.token;
+                        } else {
+                            if ($http.defaults.headers.common.Authorization) {
+                                delete $http.defaults.headers.common.Authorization;
+                            }
+                        }
+                        $http(option).then(function(res) {
+                            $scope.result = res.data;
+                        }, function(err) {
+                            $scope.error = 'Error ! check the console.';
+                        });
+                    };
+                    $scope.buildDataObject = function(table) {
+                        var data = {};
+                        var one = false;
+                        for (i in table) {
+                            if (table[i].name) {
+                                one = true;
+                                data[table[i].name] = table[i].value;
+                            }
+                        }
+                        if (one) {
+                            return data;
+                        }
+                        return null;
+                    };
+                    $scope.getFromStorage();
+                });
+            </script>
+        </head>
+        <body ng-app="myApp" ng-controller="myController">
+            <h1>Test Request</h1>
+            <div class='action-bar'>
+                <button ng-click="getFromStorage()">Re-init</button>
+                <button ng-click="getFromStorage(true)">Reset</button>
+                <button ng-click="save()">save</button>
+                <button class="submit" ng-click="submit()">Save and submit</button>
+            </div>
+            <label>Server to request:</label>
+            <input class="wide" type="text" ng-model="url" placeholder="URL" /><br/>
+            <label>Request token:</label>
+            <input class="wide" type="text" ng-model="token" placeholder="JWT token" /><br/>
+            <label>Method:</label>
+            <select ng-options="methodObj.value as methodObj.label for methodObj in methodList" ng-model="method">
+            </select>
+            <fieldset>
+                <legend>params (in url):</legend><a href="#" ng-click="addElement(params)">Add</a>
+                <ul class="field-list">
+                    <li ng-repeat="element in params">
+                        <input type="text" ng-model="element.name" placeholder="Name" />
+                        <input type="text" ng-model="element.value" placeholder="Value" />
+                        <button ng-click="deleteElement($index, 'params')">Delete</button>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>data (in body):</legend><a href="#" ng-click="addElement(data)">Add</a>
+                <ul class="field-list">
+                    <li ng-repeat="element in data">
+                        <input type="text" ng-model="element.name" placeholder="Name" />
+                        <input type="text" ng-model="element.value" placeholder="Value" />
+                        <button ng-click="deleteElement($index, 'data')">Delete</button>
+                    </li>
+                </ul>
+            </fieldset>
+            <textarea>{{result}}</textarea>
+            <span class="error">{{error}}</span>
+        </body>
+    </html>

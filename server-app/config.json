@@ -1,0 +1,29 @@
+{
+	"process": {
+		"nb-forks": "2",
+		"binding-port": "3000"
+	},
+	"db": {
+		"host": "localhost",
+		"port": "27017",
+		"database": "forecastmenow"
+	},
+	"log": {
+		"file": "access.log"
+	},
+	"cors": [
+		"http://localhost:9000"
+	],
+	"public": {
+		"folder": "../dist",
+		"default": "index.html"
+	},
+	"resources": {
+		"user-login": {
+			"controller": "resources/user-login",
+			"acl": {
+				"GET": "guest"
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+var conf = require('../config.json');
+conf.basePath = __dirname + '/..';
+var jwtService = require('../service/jwt-service')(conf);
+
+var jwtToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpZCI6IjUwMjJmYWQ1NjI1NjRjZGUxOTdmODUwMzI3N2JkMTM3NmFiYjRkN2MiLCJzdWIiOiJjaGFybGVtYWduZSIsImV4cCI6MTQxMzM4MDg2MCwiaWF0IjoxNDEzMzc3MjYwLCJ1aWQiOiIxNjEiLCJjaWQiOiIxNjciLCJ0aWQiOiIwMDAwMSIsInJvbCI6InVzZXIiLCJhaWQiOiIxIiwiaXNzIjoibWFya2V0ZW8ifQ.kbBgVdDwSuGn9UNOooP34yCcueHqjnt4YppQaXgfd_FydaOnQCgM21dWTA8BAh29z--Gvc6xMC6pf06q5TO7PntOf1wEOz2h_dkGf1IAhY9dw2H2mbD2Amdh4OgKEhaKkExRZ7UDXAX8aE0xe74VKxxfMd0V69Ckk6-RaEFz680abUNlvXa338_wrhxgBoq2X_AJjXoP5Wfx4WGWJC_EqZCBuNZ4k3mNW0p7F907SwVEjmocRZX2_qKXlqJqLwJR9juxiPfV3qpBRkCrka5gKOH7ZqS3dgIwqSWM6ed1lX4uNidnCg1XTbc4JO51JqdlOLB3dc93s918X2CU9U-xcQ';
+
+console.log(jwtService.decodeToken(jwtToken));
+console.log(jwtService.getUserId(jwtToken));
+console.log(jwtService.getContractId(jwtToken));

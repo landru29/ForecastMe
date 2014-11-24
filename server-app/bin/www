@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+
+var cluster = require('cluster');
+var config = require('../config.json');
+
+if (cluster.isMaster) {
+	var nbProcesses = parseInt(config.process['nb-forks'], 10);
+
+	console.log('######################################');
+	console.log('############## API REST ##############');
+	console.log('######################################' + "\n");
+	console.log('Creating ' + nbProcesses + ' processes');
+
+	/* Launching processes */
+	for (var i = 0; i < nbProcesses; i++) {
+		cluster.fork();
+	}
+
+	/* relaunch process if dying */
+	cluster.on('exit', function (worker) {
+		var d = new Date();
+		console.log(d.toISOString() + '[' + process.pid + ']: > Worker ' + worker.process.pid + ' died :(');
+		cluster.fork();
+	});
+} else {
+	var app = require('../app');
+	app.set('port', process.env.PORT || config.process['binding-port']);
+
+	/* Binding */
+	var server = app.listen(app.get('port'), function () {
+		var d = new Date();
+		console.log(d.toISOString() + '[' + process.pid + ']: > Express server listening on port ' + server.address().port);
+	});
+}

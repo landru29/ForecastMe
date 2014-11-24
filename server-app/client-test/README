@@ -1,0 +1,11 @@
+INSTALL
+-------
+
+npm install
+npm install -g grunt-cli
+
+
+LAUNCH
+------
+
+grunt
