@@ -18,6 +18,9 @@
 		"folder": "../client/dist",
 		"default": "index.html"
 	},
+	"session": {
+		"timeout": "10"
+	},
 	"resources": {
 		"user-login": {
 			"controller": "resources/user-login",
