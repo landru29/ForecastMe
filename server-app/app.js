@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('cookie-session');
 
-var toLog = function (message) {
+var toLog = function(message) {
 	return (new Date()).toISOString() + '[' + process.pid + ']: ' + message;
 };
 
@@ -33,6 +33,7 @@ var db = utils.getDatabase(conf.db);
 
 // load resources
 var resourceDef = utils.loadResources(conf.resources, conf);
+var loginCallbacks = require(__dirname + '/service/login')(db, conf);
 
 // Initialize the API
 var app = express();
@@ -43,8 +44,11 @@ app.use(cookieParser('Et prout! dans ton nez!'));
 app.use(session({
 	secret: 'Justice avec les saucisses'
 }));
-app.use(expressMiddleware.session);
 //app.use(expressMiddleware.cors);
+app.use(expressMiddleware.session({
+	login: loginCallbacks.login,
+	logout: loginCallbacks.logout
+}));
 app.use(expressMiddleware.fileSystem);
 app.use(expressMiddleware.acl);
 app.use(bodyParser.json());
