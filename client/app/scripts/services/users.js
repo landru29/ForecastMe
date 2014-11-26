@@ -5,16 +5,16 @@
  * @name forecastMeNow.parse
  * @description
  * # parse
- * Provider in the forecastMeNow.
+ * Provider in the forecastMeNowApp.
  */
-angular.module('forecastMeNow')
-	.factory('users', ['$http', '$q', function($http, $q) {
+angular.module('forecastMeNowApp')
+	.factory('users', ['$http', '$q', 'registry', function($http, $q, registry) {
 		var connected = false;
 		var userKey = null;
 		return {
 			logIn: function(login, password) {
 				var deferred = $q.defer();
-				$http.post('http://localhost:3000/login', {
+				$http.post(registry.get('apiUrl') + 'login', {
 					user: login,
 					password: password
 				}).then(function(response) {

@@ -1,18 +1,18 @@
 'use strict';
 
-describe('Service: users', function() {
+describe('Service: registry', function() {
 
   // load the service's module
   beforeEach(module('forecastMeNowApp'));
 
   // instantiate service
-  var users;
-  beforeEach(inject(function(_users_) {
-    users = _users_;
+  var registry;
+  beforeEach(inject(function(_registry_) {
+    registry = _registry_;
   }));
 
   it('should do something', function() {
-    expect(!!users).toBe(true);
+    expect(!!registry).toBe(true);
   });
 
 });

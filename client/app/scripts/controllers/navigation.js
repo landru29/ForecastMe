@@ -7,7 +7,7 @@
  * # NavigationCtrl
  * Controller of the forecastMeNow
  */
-angular.module('forecastMeNow')
+angular.module('forecastMeNowApp')
 	.controller('NavigationCtrl', ['$scope', '$location', '$modal', 'users', function($scope, $location, $modal, users) {
 
 		$scope.getConnectionCaption = function() {
@@ -84,7 +84,7 @@ angular.module('forecastMeNow')
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-angular.module('forecastMeNow').controller('ModalConnectCtrl', ['$scope', '$modalInstance', 'data', '$http', 'users', function($scope, $modalInstance, data, $http, users) {
+angular.module('forecastMeNowApp').controller('ModalConnectCtrl', ['$scope', '$modalInstance', 'data', '$http', 'users', function($scope, $modalInstance, data, $http, users) {
 
 	$scope.data = data;
 	$scope.label = (users.isConnected() ? 'Disconnect' : 'Connect');

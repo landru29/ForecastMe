@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the ForecastMeNow
  */
-angular.module('forecastMeNow')
+angular.module('forecastMeNowApp')
 	.controller('MainCtrl', function($scope) {
 		$scope.awesomeThings = [
 			'HTML5 Boilerplate',

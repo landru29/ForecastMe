@@ -3,7 +3,7 @@
 describe('Controller: NavigationCtrl', function() {
 
   // load the controller's module
-  beforeEach(module('forecastMeNow'));
+  beforeEach(module('forecastMeNowApp'));
 
   var NavigationCtrl,
     scope;
