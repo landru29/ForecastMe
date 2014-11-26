@@ -1,18 +1,18 @@
 'use strict';
 
-describe('Service: parse', function() {
+describe('Service: users', function() {
 
   // load the service's module
   beforeEach(module('forecastMeNow'));
 
   // instantiate service
-  var parse;
-  beforeEach(inject(function(_parse_) {
-    parse = _parse_;
+  var users;
+  beforeEach(inject(function(_users_) {
+    users = _users_;
   }));
 
   it('should do something', function() {
-    expect(!!parse).toBe(true);
+    expect(!!users).toBe(true);
   });
 
 });

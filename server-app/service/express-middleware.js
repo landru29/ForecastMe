@@ -207,7 +207,13 @@
 								status: response.status,
 								data: response.response
 							});
-						}, function() {});
+						}, function(response) {
+							req.session = newSession();
+							res.send({
+								status: response.status,
+								data: response.response
+							});
+						});
 						return;
 					}
 				}
