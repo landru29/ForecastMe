@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('cookie-session');
 
-var toLog = function(message) {
+var toLog = function (message) {
 	return (new Date()).toISOString() + '[' + process.pid + ']: ' + message;
 };
 
@@ -45,7 +45,7 @@ app.use(session({
 	secret: 'Justice avec les saucisses'
 }));
 app.use(bodyParser.json());
-//app.use(expressMiddleware.cors);
+app.use(expressMiddleware.cors);
 app.use(expressMiddleware.session({
 	login: loginCallbacks.login,
 	logout: loginCallbacks.logout

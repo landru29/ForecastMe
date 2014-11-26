@@ -18,7 +18,7 @@ angular
     'ngTouch',
     'ui.bootstrap'
   ])
-  .config(['$routeProvider', 'parseProvider', function($routeProvider, parseProvider) {
+  .config(['$routeProvider' /*, 'parseProvider'*/ , function ($routeProvider /*, parseProvider*/ ) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -31,6 +31,6 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-    parseProvider.setApiId('BVUAfb1sw3eTrz198EmacBkMJcT6soN2ttNzroaO');
-    parseProvider.setApiKey('0q6aejp6bIo76xl9Rdis7Xr2i8ZqOaOIs7RFxshP');
+    /*parseProvider.setApiId('BVUAfb1sw3eTrz198EmacBkMJcT6soN2ttNzroaO');
+    parseProvider.setApiKey('0q6aejp6bIo76xl9Rdis7Xr2i8ZqOaOIs7RFxshP');*/
   }]);
