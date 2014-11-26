@@ -159,11 +159,13 @@
 	 *
 	 * @param  {object}     callbacks object:
 	 *     { resource1: function(req, res) {
-	 *             return {
+	 *             var defered = q.defer();
+	 *             defered.resolve({
 	 *                 status: ...,
 	 *                 session: ...,
 	 *                 response: ...
-	 *             }
+	 *             });
+	 *             return defered.promise;
 	 *         }
 	 *     }
 	 * @return {middleware}
@@ -199,12 +201,13 @@
 				for (var resource in resourcesCallback) {
 					if (currentResource === resource) {
 						res.log('Resource interception: ' + resource);
-						var response = (resourcesCallback[resource])(req, res);
-						req.session = newSession(response.session);
-						res.send({
-							status: response.status,
-							data: response.response
-						});
+						(resourcesCallback[resource])(req, res).then(function(response) {
+							req.session = newSession(response.session);
+							res.send({
+								status: response.status,
+								data: response.response
+							});
+						}, function() {});
 						return;
 					}
 				}

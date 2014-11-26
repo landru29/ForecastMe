@@ -44,6 +44,7 @@ app.use(cookieParser('Et prout! dans ton nez!'));
 app.use(session({
 	secret: 'Justice avec les saucisses'
 }));
+app.use(bodyParser.json());
 //app.use(expressMiddleware.cors);
 app.use(expressMiddleware.session({
 	login: loginCallbacks.login,
@@ -51,7 +52,6 @@ app.use(expressMiddleware.session({
 }));
 app.use(expressMiddleware.fileSystem);
 app.use(expressMiddleware.acl);
-app.use(bodyParser.json());
 
 // Define the routes
 app.use('/', resourceDef.defaultRoute);

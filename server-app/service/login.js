@@ -2,29 +2,45 @@
 
 	var configuration = null;
 	var database = null;
+	var q = require('q');
 
 	var login = function(req, res) {
+		defered = q.defer();
 		res.log('Trying to login ...');
-		return {
-			status: 'connected',
-			response: {
-				username: 'cool'
-			},
-			session: {
-				username: 'cool'
-			}
+		if ((req.body.user) && ((req.body.password))) {
+			database.find({
+				login: req.body.user,
+				password: req.body.password
+			}).then(function(data) {
+				defered.resolve({
+					status: 'connected',
+					response: data,
+					session: data
+				});
+			}, function(message) {});
+		} else {
+			defered.resolve({
+				status: 'disconnected',
+				response: {
+					username: 'You are offline'
+				},
+				session: null
+			});
 		}
+		return defered.promise;
 	};
 
 	var logout = function(req, res) {
+		defered = q.defer();
 		res.log('Disconnecting.');
-		return {
+		defered.resolve({
 			status: 'disconnected',
 			response: {
 				username: 'You are offline'
 			},
 			session: null
-		}
+		});
+		return defered.promise;
 	};
 
 	module.exports = function(db, config) {
