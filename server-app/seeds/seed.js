@@ -20,12 +20,19 @@ var generateUUID = function() {
 };
 
 
-var firstUser = {
+var usersToInsert = [{
 	login: 'admin',
 	password: crypto.createHash('sha256').update('password').digest('hex'),
 	key: generateUUID(),
-	email: 'nobody@free.fr'
-}
+	email: 'nobody@free.fr',
+	role: 'admin'
+}, {
+	login: 'usr1',
+	password: crypto.createHash('sha256').update('password').digest('hex'),
+	key: generateUUID(),
+	email: 'nobody@free.fr',
+	role: 'user'
+}];
 
 var addUserIndex = function() {
 	console.log('> Unique index on users.login');
@@ -51,7 +58,7 @@ var addUser = function(user) {
 var userInit = function() {
 	var defered = q.defer();
 	addUserIndex().then(function() {
-		addUser(firstUser).then(function() {
+		addUser(usersToInsert).then(function() {
 			defered.resolve('Success');
 		}, function() {
 			defered.resolve('  => No user inserted');

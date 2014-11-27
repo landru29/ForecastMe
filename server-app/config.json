@@ -21,13 +21,12 @@
 	"session": {
 		"timeout": "10"
 	},
+	"acl": {
+		"guest": [],
+		"user": ["guest", "connected"],
+		"admin": ["guest", "connected", "user"]
+	},
 	"resources": {
-		"user-login": {
-			"controller": "resources/user-login",
-			"acl": {
-				"GET": "guest"
-			}
-		},
 		"team": {
 			"controller": "resources/team",
 			"acl": {

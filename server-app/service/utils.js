@@ -1,4 +1,4 @@
-(function () {
+(function() {
 
 	var configuration = null;
 	var database = null;
@@ -8,7 +8,7 @@
 	 * @param  {object} configuration Whole configuration
 	 * @return {object}               Resource descriptor
 	 */
-	var loadResources = function (resourceList, configuration) {
+	var loadResources = function(resourceList, configuration) {
 		var defaultRoute = require(configuration.basePath + '/resources/default')(database, configuration);
 		var resources = {};
 		for (var route in resourceList) {
@@ -25,7 +25,7 @@
 	 * @param  {object} configuration database configuration
 	 * @return {object}               Monk object pointing on the database
 	 */
-	var getDatabase = function (configuration) {
+	var getDatabase = function(configuration) {
 		//var mongo = require('mongodb');
 		var monk = require('monk');
 		database = monk(configuration.host + ':' + configuration.port + '/' + configuration.database);
@@ -38,7 +38,7 @@
 	 * @param  {object} filter mapping for extraction
 	 * @return {object}        extracted data
 	 */
-	var filterObject = function (object, filter) {
+	var filterObject = function(object, filter) {
 		var filtered = {};
 		for (var i in filter) {
 			if ((filter[i]) && (object[i])) {
@@ -49,7 +49,7 @@
 	};
 
 
-	module.exports = function (config) {
+	module.exports = function(config) {
 		configuration = config;
 		return {
 			loadResources: loadResources,

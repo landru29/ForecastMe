@@ -15,7 +15,7 @@ conf.basePath = __dirname;
 
 var utils = require(__dirname + '/service/utils')(conf);
 var db = utils.getDatabase(conf.db);
-var expressMiddleware = require(__dirname + '/service/express-middleware')(conf);
+var expressMiddleware = require(__dirname + '/service/express-middleware')(conf, db);
 
 // log stream
 var accessLogStream = fs.createWriteStream(__dirname + '/' + conf.log.file, {

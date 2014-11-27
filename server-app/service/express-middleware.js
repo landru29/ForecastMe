@@ -1,5 +1,6 @@
 (function() {
 	var configuration = null;
+	var database = null;
 	var fs = require('fs');
 	var jwtService;
 
@@ -128,29 +129,56 @@
 	 * @return {void}
 	 */
 	var aclMiddleware = function(req, res, next) {
-		var method = getMethod(req);
-		switch (method) {
-			case 'GET':
-			case 'POST':
-			case 'PUT':
-			case 'DELETE':
-				var resource = getResourceName(req);
-				var role = ((req.identity) && (req.identity.userRole) ? req.identity.userRole : 'guest');
-				if ((configuration.resources[resource]) && (configuration.resources[resource].acl[method]) && (configuration.resources[resource].acl[method] == role)) {
+		var getRoles = function(role) {
+			var theseRoles = (configuration.acl[role] ? configuration.acl[role] : []);
+			theseRoles.push(role);
+			return theseRoles;
+		};
+		var userKey = req.query.key;
+		database.get('users').findOne({
+			key: userKey
+		}).then(function(data) {
+			var roles;
+			if (!data) {
+				roles = ["guest"];
+			} else {
+				roles = getRoles(data.role);
+			}
+			var method = getMethod(req);
+			switch (method) {
+				case 'GET':
+				case 'POST':
+				case 'PUT':
+				case 'DELETE':
+					var resource = getResourceName(req);
+					if (
+						(configuration.resources[resource]) &&
+						(configuration.resources[resource].acl[method]) &&
+						(roles.indexOf(configuration.resources[resource].acl[method]) > -1)
+					) {
+						next();
+					} else {
+						res.status(405);
+						console.log(configuration.resources[resource]);
+						res.send({
+							status: 'error',
+							message: 'resource ' + resource + ' not allowed to ' + roles.join('/') + ' ' + method
+						});
+						res.log('resource ' + resource + ' not allowed to ' + roles.join('/'));
+						return;
+					}
+					break;
+				default:
 					next();
-				} else {
-					res.status(405);
-					console.log(configuration.resources[resource]);
-					res.send({
-						status: 'error',
-						message: 'resource ' + resource + ' not allowed to ' + role + ' ' + method
-					});
-					res.log('resource ' + resource + ' not allowed to ' + role);
-				}
-				break;
-			default:
-				next();
-		}
+			}
+		}, function(err) {
+			console.log('Could not load ACL');
+			console.log(err);
+			res.send({
+				status: 'error',
+				message: 'ACL not available'
+			});
+		});
 	};
 
 	/**
@@ -243,8 +271,9 @@
 		};
 	};
 
-	module.exports = function(config) {
+	module.exports = function(config, db) {
 		configuration = config;
+		database = db;
 		return {
 			cors: corsMiddleware,
 			fileSystem: fileSystemMiddleware,
