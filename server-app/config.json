@@ -27,6 +27,30 @@
 			"acl": {
 				"GET": "guest"
 			}
+		},
+		"team": {
+			"controller": "resources/team",
+			"acl": {
+				"GET": "guest"
+			}
+		},
+		"team-collection": {
+			"controller": "resources/team-collection",
+			"acl": {
+				"GET": "guest"
+			}
+		},
+		"pool": {
+			"controller": "resources/pool",
+			"acl": {
+				"GET": "guest"
+			}
+		},
+		"pool-collection": {
+			"controller": "resources/pool-collection",
+			"acl": {
+				"GET": "guest"
+			}
 		}
 	}
 }

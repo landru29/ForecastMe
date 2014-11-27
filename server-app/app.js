@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('cookie-session');
 
-var toLog = function (message) {
+var toLog = function(message) {
 	return (new Date()).toISOString() + '[' + process.pid + ']: ' + message;
 };
 
@@ -14,6 +14,7 @@ var conf = require('./config.json');
 conf.basePath = __dirname;
 
 var utils = require(__dirname + '/service/utils')(conf);
+var db = utils.getDatabase(conf.db);
 var expressMiddleware = require(__dirname + '/service/express-middleware')(conf);
 
 // log stream
@@ -24,9 +25,6 @@ accessLogStream.write((new Date()).toISOString() + ' : PID ' + process.pid + " s
 
 accessLogStream.write(toLog('** Initialize Express **') + "\n");
 console.log(toLog('** Initialize Express **'));
-
-// Database connection
-var db = utils.getDatabase(conf.db);
 
 // Configure ACL
 //apiAcl = utils.aclConfiguration(conf, db);
