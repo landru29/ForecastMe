@@ -3,6 +3,13 @@
 		"nb-forks": "2",
 		"binding-port": "3000"
 	},
+	"email": {
+		"service": "Gmail",
+		"auth": {
+			"user": "forecastmenow@gmail.com",
+			"pass": "cassoulet2castelnaudary"
+		}
+	},
 	"db": {
 		"host": "localhost",
 		"port": "27017",
@@ -27,6 +34,20 @@
 		"admin": ["guest", "connected", "user"]
 	},
 	"resources": {
+		"login": {
+			"controller": "resources/login.js",
+			"acl": {
+				"POST": "guest",
+				"GET": "guest",
+				"PUT": "guest"
+			}
+		},
+		"user-create": {
+			"controller": "resources/user-create.js",
+			"acl": {
+				"POST": "guest"
+			}
+		},
 		"team": {
 			"controller": "resources/team",
 			"acl": {

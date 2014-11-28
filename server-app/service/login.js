@@ -4,18 +4,16 @@
 	var users = null;
 	var q = require('q');
 	var crypto = require('crypto');
+	var service = null;
 
 
 	var login = function(req, res) {
 		defered = q.defer();
 		res.log('Trying to login ...');
-		res.log('login: ' + req.body.user);
-		res.log('password: ' + crypto.createHash('sha256').update(req.body.password).digest('hex'));
 		if ((req.body.user) && ((req.body.password))) {
-			users.findOne({
-				login: req.body.user,
-				password: crypto.createHash('sha256').update(req.body.password).digest('hex')
-			}).then(function(data) {
+			res.log('login: ' + req.body.user);
+			res.log('password: ' + crypto.createHash('sha256').update(req.body.password).digest('hex'));
+			service.checkUser(req.body.user, req.body.password).then(function(data) {
 				if (data) {
 					defered.resolve({
 						status: 'connected',
@@ -56,6 +54,7 @@
 	module.exports = function(db, config) {
 		configuration = config;
 		users = db.get('users');
+		service = require('./users')(db);
 		return {
 			login: login,
 			logout: logout

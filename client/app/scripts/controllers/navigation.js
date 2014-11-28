@@ -8,9 +8,9 @@
  * Controller of the forecastMeNow
  */
 angular.module('forecastMeNowApp')
-	.controller('NavigationCtrl', ['$scope', '$location', '$modal', 'users', function ($scope, $location, $modal, users) {
+	.controller('NavigationCtrl', ['$scope', '$location', '$modal', 'users', function($scope, $location, $modal, users) {
 
-		$scope.getConnectionCaption = function () {
+		$scope.getConnectionCaption = function() {
 			return (users.isConnected() ? 'Disconnect' : 'Connect');
 		};
 
@@ -36,7 +36,7 @@ angular.module('forecastMeNowApp')
 			}
 		};
 
-		$scope.getCurrentMenu = function () {
+		$scope.getCurrentMenu = function() {
 			for (var i in $scope.menu) {
 				if ($scope.menu[i].route === $location.path()) {
 					return i;
@@ -45,23 +45,25 @@ angular.module('forecastMeNowApp')
 			return '';
 		};
 
-		$scope.notSorted = function (obj) {
+		$scope.notSorted = function(obj) {
 			if (!obj) {
 				return [];
 			}
 			return Object.keys(obj);
 		};
 
-		$scope.changeRoute = function (key) {
+		$scope.changeRoute = function(key) {
 			$location.path($scope.menu[key].route);
 		};
 
-		$scope.openConnectDialog = function () {
+		$scope.openConnectDialog = function() {
 			if (users.isConnected()) {
-				users.logOut().then(function () {
+				users.logOut().then(function() {
 					$scope.menu.connect.caption = $scope.getConnectionCaption();
-				}, function () {
+					$scope.username = users.getName();
+				}, function() {
 					$scope.menu.connect.caption = $scope.getConnectionCaption();
+					$scope.username = users.getName();
 				});
 
 			} else {
@@ -70,42 +72,49 @@ angular.module('forecastMeNowApp')
 					controller: 'ModalConnectCtrl',
 					size: 'sm',
 					resolve: {
-						data: function () {
+						data: function() {
 							return null;
 						}
 					}
 				});
 
-				modalInstance.result.then(function () {
+				modalInstance.result.then(function() {
 					$scope.menu.connect.caption = $scope.getConnectionCaption();
-				}, function () {
+					$scope.username = users.getName();
+				}, function() {
 					//$log.info('Modal dismissed at: ' + new Date());
 				});
 			}
 		};
+
+		$scope.$on('check-session', function() {
+			console.log('recieved');
+			$scope.menu.connect.caption = $scope.getConnectionCaption();
+			$scope.username = users.getName();
+		});
 
 	}]);
 
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-angular.module('forecastMeNowApp').controller('ModalConnectCtrl', ['$scope', '$modalInstance', 'data', '$http', 'users', function ($scope, $modalInstance, data, $http, users) {
+angular.module('forecastMeNowApp').controller('ModalConnectCtrl', ['$scope', '$modalInstance', 'data', '$http', 'users', function($scope, $modalInstance, data, $http, users) {
 
 	$scope.data = data;
 	$scope.label = (users.isConnected() ? 'Disconnect' : 'Connect');
 	$scope.connected = users.isConnected();
 	$scope.connecting = false;
 
-	$scope.ok = function () {
+	$scope.ok = function() {
 		$scope.connecting = true;
-		users.logIn($scope.user, $scope.password).then(function () {
+		users.logIn($scope.user, $scope.password).then(function() {
 			$modalInstance.close(true);
-		}, function () {
+		}, function() {
 			$scope.connecting = false;
 		});
 	};
 
-	$scope.cancel = function () {
+	$scope.cancel = function() {
 		$modalInstance.dismiss('cancel');
 	};
 }]);

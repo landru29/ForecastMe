@@ -31,7 +31,7 @@ console.log(toLog('** Initialize Express **'));
 
 // load resources
 var resourceDef = utils.loadResources(conf.resources, conf);
-var loginCallbacks = require(__dirname + '/service/login')(db, conf);
+//var loginCallbacks = require(__dirname + '/service/login')(db, conf);
 
 // Initialize the API
 var app = express();
@@ -39,15 +39,15 @@ var app = express();
 // pre treatement
 app.use(expressMiddleware.log(accessLogStream));
 app.use(cookieParser('Et prout! dans ton nez!'));
-app.use(session({
+/*app.use(session({
 	secret: 'Justice avec les saucisses'
-}));
+}));*/
 app.use(bodyParser.json());
 app.use(expressMiddleware.cors);
-app.use(expressMiddleware.session({
+/*app.use(expressMiddleware.session({
 	login: loginCallbacks.login,
 	logout: loginCallbacks.logout
-}));
+}));*/
 app.use(expressMiddleware.fileSystem);
 app.use(expressMiddleware.acl);
 

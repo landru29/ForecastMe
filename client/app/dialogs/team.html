@@ -1,0 +1,12 @@
+<div class="modal-header">
+    <h3 class="modal-title"><span class="flag-icon {{team.country.class}}"></span> {{team.name}} </span><span class="flag-icon {{team.country.class}}"></h3>
+</div>
+<div class="modal-body">
+    <img ng-src="images/{{team.icon}}" />
+    <div>
+        <label>Country:</label> <span>{{team.country.name}}</span>
+    </div>
+</div>
+<div class="modal-footer" ng-hide="connecting">
+    <button class="btn btn-warning" ng-click="close()">Close</button>
+</div>
