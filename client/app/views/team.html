@@ -1,0 +1,22 @@
+<ul class="nav nav-pills">
+  <li ng-class="{active:(poolView===true)}"><a class="clickable" ng-click="showPool()">Pools</a></li>
+  <li ng-class="{active:(countryView===true)}"><a class="clickable" ng-click="showCountry()">Countries</a></li>
+</ul>
+
+<div ng-show="countryView">
+	<div class="jumbotron" ng-repeat='team in teams'>
+		<h2><span class="flag-icon {{team.country.class}}"></span> {{team.name}} </span><span class="flag-icon {{team.country.class}}"></h2>
+		<img ng-src="images/{{team.icon}}" />
+	</div>
+</div>
+
+<div ng-show="poolView">
+	<div class="jumbotron" ng-repeat='group in pools'>
+		<h2></span> {{group.name}} </span></h2>
+		<div class="team-list">
+			<div ng-repeat="team in group.pool" ng-click="detail(team)">
+				<span>{{$index}} - </span><span class="flag-icon {{team.country.class}}"></span> {{team.name}}
+			</div>
+		</div>
+	</div>
+</div>

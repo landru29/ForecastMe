@@ -94,3 +94,17 @@ body {
     cursor:pointer;
   }
 }
+
+div.team-list {
+  text-align: left;
+  font-size: 20px;
+}
+
+div.team-list div {
+  cursor:pointer;
+  padding: 0px 0px 0px 20px;
+}
+
+div.team-list div:hover {
+  background-color:#337ab7;
+}
