@@ -47,7 +47,7 @@ angular.module('forecastMeNowApp')
 
 		$scope.detail = function (team) {
 			console.log(team);
-		}
+		};
 
 		$scope.loadPools();
 		$scope.loadTeams();
