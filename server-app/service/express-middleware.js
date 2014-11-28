@@ -134,9 +134,9 @@
 			theseRoles.push(role);
 			return theseRoles;
 		};
-		var userKey = req.query.key;
+		var userKey = (req.body.key ? req.body.key : req.query.key);
 		database.get('users').findOne({
-			key: userKey
+			key: (userKey ? userKey : 'no-key')
 		}).then(function(data) {
 			var roles;
 			if (!data) {

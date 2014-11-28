@@ -3,6 +3,7 @@ var utils = require('../service/utils')(conf);
 var db = utils.getDatabase(conf.db);
 var crypto = require('crypto');
 var q = require('q');
+var users = require('../service/users')(db);
 
 var teams = require('./teams.json');
 var pools = require('./pools.json');
@@ -35,18 +36,15 @@ var usersToInsert = [{
 }];
 
 var addUserIndex = function() {
-	console.log('> Unique index on users.login');
-	return db.get('users').index('login', {
-		unique: true
-	}); // unique
-};
-
+	console.log('> Unique index on users.login and users.key');
+	return users.addIndexes();
+}
 
 var addUser = function(user) {
 	var defered = q.defer();
 	console.log('> Insert user');
-	db.get('users').insert(user).then(function(data) {
-		console.log(data);
+	users.create(user).then(function(data) {
+		console.log('  => ' + data + ' user(s) added');
 		defered.resolve(data);
 	}, function(err) {
 		console.log('  => No user added');
