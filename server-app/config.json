@@ -83,6 +83,18 @@
 			"acl": {
 				"GET": "connected"
 			}
+		},
+		"forecast": {
+			"controller": "resources/forecast",
+			"acl": {
+				"POST": "connected"
+			}
+		},
+		"forecast-collection": {
+			"controller": "resources/forecast-collection",
+			"acl": {
+				"GET": "connected"
+			}
 		}
 	}
 }

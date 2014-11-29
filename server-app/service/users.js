@@ -46,6 +46,27 @@
 		return defered.promise;
 	};
 
+	var getUserByKey = function(userKey) {
+		var defered = q.defer();
+		users.findOne({
+			key: userKey
+		}, {
+			fields: {
+				password: false,
+				_id: false
+			}
+		}).then(function(data) {
+			if (data) {
+				defered.resolve(data);
+			} else {
+				defered.reject('Bad key');
+			}
+		}, function(message) {
+			defered.reject(message)
+		});
+		return defered.promise;
+	}
+
 	var checkUser = function(login, password) {
 		var defered = q.defer();
 		users.findOne({
@@ -161,7 +182,8 @@
 			userAvailable: userAvailable,
 			sendConfirmation: sendConfirmation,
 			createFromLink: createFromLink,
-			generateUUID: generateUUID
+			generateUUID: generateUUID,
+			getUserByKey: getUserByKey
 		};
 	};
 })();
