@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ngStorage'
   ])
   .config(['$routeProvider',
     'registryProvider',
@@ -33,6 +34,10 @@ angular
         .when('/teams', {
           templateUrl: 'views/team.html',
           controller: 'TeamCtrl'
+        })
+        .when('/forecast', {
+          templateUrl: 'views/forecast.html',
+          controller: 'ForecastCtrl'
         })
         .when('/user-create/user/:user/key/:key/email/:email', {
           templateUrl: 'views/user-create.html',

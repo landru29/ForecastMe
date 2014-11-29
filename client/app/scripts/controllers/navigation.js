@@ -14,6 +14,8 @@ angular.module('forecastMeNowApp')
 			return (users.isConnected() ? 'Disconnect' : 'Connect');
 		};
 
+		$scope.username = users.getName();
+
 		$scope.menu = {
 			'home': {
 				'caption': 'Home',
@@ -25,6 +27,12 @@ angular.module('forecastMeNowApp')
 				'onClick': 'changeRoute(\'teams\')',
 				'route': '/teams'
 			},
+			'forecast': {
+				'caption': 'Forecast',
+				'onClick': 'changeRoute(\'forecast\')',
+				'route': '/forecast',
+				'role': 'connected'
+			},
 			'about': {
 				'caption': 'About',
 				'onClick': 'changeRoute(\'about\')',
@@ -34,6 +42,18 @@ angular.module('forecastMeNowApp')
 				'caption': $scope.getConnectionCaption(),
 				'onClick': 'openConnectDialog'
 			}
+		};
+
+		$scope.getMenuItems = function() {
+			var thisMenu = [];
+			var keys = Object.keys($scope.menu);
+			for (var index in keys) {
+				var key = keys[index];
+				if ((!$scope.menu[key].role) || (($scope.menu[key].role) && (users.hasRole($scope.menu[key].role)))) {
+					thisMenu.push($scope.menu[key]);
+				}
+			}
+			return thisMenu;
 		};
 
 		$scope.getCurrentMenu = function() {

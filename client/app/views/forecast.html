@@ -1,0 +1,8 @@
+<ul class="nav nav-pills">
+  <li ng-repeat="(key, menuItem) in menu" ng-class="{active:menuItem.active}"><a class="clickable" ng-click="setMenu(key)">{{menuItem.caption}}</a></li>
+</ul>
+<div ng-show="menu.myForecast.active">
+</div>
+
+<div ng-show="menu.results.active">
+</div>

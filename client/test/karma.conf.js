@@ -27,6 +27,7 @@ module.exports = function(config) {
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+      'bower_components/ngstorage/ngStorage.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js',

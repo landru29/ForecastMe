@@ -8,7 +8,7 @@
  * Controller of the ForecastMeNow
  */
 angular.module('forecastMeNowApp')
-	.controller('MainCtrl', ['$scope', '$modal', '$http', 'registry', function($scope, $modal, $http, registry) {
+	.controller('MainCtrl', ['$scope', '$modal', '$http', 'registry', 'users', function($scope, $modal, $http, registry, users) {
 		$scope.alert = null;
 
 		$scope.signup = function() {
@@ -44,6 +44,10 @@ angular.module('forecastMeNowApp')
 					};
 				});
 			}, function() {});
+		};
+
+		$scope.isConnected = function() {
+			return users.isConnected();
 		};
 
 		$scope.closeAlert = function() {

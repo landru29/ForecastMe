@@ -15,6 +15,12 @@
 		})]);
 	};
 
+	var getRoles = function(role) {
+		var theseRoles = (configuration.acl[role] ? configuration.acl[role] : []);
+		theseRoles.push(role);
+		return theseRoles;
+	};
+
 	var generateUUID = function() {
 		var d = new Date().getTime();
 		var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -45,8 +51,14 @@
 		users.findOne({
 			login: login,
 			password: crypto.createHash('sha256').update(password).digest('hex')
+		}, {
+			fields: {
+				password: false,
+				_id: false
+			}
 		}).then(function(data) {
 			if (data) {
+				data.role = getRoles(data.role);
 				defered.resolve(data);
 			} else {
 				defered.reject('Bad login/password');
@@ -63,17 +75,19 @@
 			userAvailable(user).then(function() {
 				console.log('Creating user');
 				var uuid = generateUUID();
+				role = 'user';
 				createUser({
 					login: user,
 					password: crypto.createHash('sha256').update(password).digest('hex'),
 					key: uuid,
 					email: email,
-					role: 'user'
+					role: role
 				}).then(function() {
 					defered.resolve({
 						status: 'done',
 						key: uuid,
-						user: user
+						user: user,
+						role: getRoles(role)
 					});
 				}, function() {
 					defered.reject({

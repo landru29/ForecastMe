@@ -25,9 +25,9 @@
     <div class="container">
       <div class="header" ng-controller="NavigationCtrl">
         <ul class="nav nav-pills pull-right">
-          <li ng-repeat="key in notSorted(menu)" ng-class="{active:(key===getCurrentMenu())}"><a class="clickable" ng-click="{{menu[key].onClick}}()">{{menu[key].caption}}</a></li>
+          <li ng-repeat="menuItem in getMenuItems()" ng-class="{active:(key===getCurrentMenu())}"><a class="clickable" ng-click="{{menuItem.onClick}}()">{{menuItem.caption}}</a></li>
         </ul>
-        <h3 class="text-muted">Bet Me Now !</h3>
+        <h3 class="text-muted">Forecast Me Now !</h3>
         <span ng-show="username">{{username}} is connected</span>
       </div>
 
@@ -82,6 +82,7 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -94,6 +95,7 @@
         <script src="scripts/services/registry.js"></script>
         <script src="scripts/controllers/team.js"></script>
         <script src="scripts/controllers/usercreate.js"></script>
+        <script src="scripts/controllers/forecast.js"></script>
         <!-- endbuild -->
 </body>
 </html>

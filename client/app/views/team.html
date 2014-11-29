@@ -14,8 +14,8 @@
 	<div class="jumbotron" ng-repeat='group in pools'>
 		<h2></span> {{group.name}} </span></h2>
 		<div class="team-list">
-			<div ng-repeat="team in group.pool" ng-click="detail(team)">
-				<span>{{$index}} - </span><span class="flag-icon {{team.country.class}}"></span> {{team.name}}
+			<div ng-repeat="(key, team) in group.pool" ng-click="detail(team)">
+				<span>{{key}} - </span><span class="flag-icon {{team.country.class}}"></span> {{team.name}}
 			</div>
 		</div>
 	</div>
