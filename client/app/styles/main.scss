@@ -122,3 +122,32 @@ img.landru {
   padding: 20px;
   margin: 20px;
 }
+
+span.team-name-left {
+  width:200px;
+  display: inline-block;
+  text-align:left;
+}
+
+span.team-name-right {
+  width:200px;
+  display: inline-block;
+  text-align:right;
+}
+
+div.score-line:hover {
+  background-color:#337ab7;
+}
+
+div.score-line {
+  padding:1px;
+  margin:1px;
+}
+
+input.score {
+  width:45px;
+}
+
+ul.sub-menu {
+  padding:5px;
+}

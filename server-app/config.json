@@ -71,6 +71,18 @@
 			"acl": {
 				"GET": "guest"
 			}
+		},
+		"match-collection": {
+			"controller": "resources/match-collection",
+			"acl": {
+				"GET": "connected"
+			}
+		},
+		"match": {
+			"controller": "resources/match",
+			"acl": {
+				"GET": "connected"
+			}
 		}
 	}
 }

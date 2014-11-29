@@ -121,7 +121,7 @@ var matchInit = function() {
 	var defered = q.defer();
 	console.log('> Insert matches');
 	db.get('matches').remove({}).then(function() {
-		db.get('matches').insert(countryArray).then(function(data) {
+		db.get('matches').insert(matchArray).then(function(data) {
 			console.log('  => Matches added');
 			defered.resolve(data);
 		}, function(err) {
@@ -161,9 +161,13 @@ var computeGames = function() {
 	}
 
 	matchArray = [];
-	for (var name in matches) {
-		matches[name].id = name;
-		matchArray.push(matches[name]);
+	for (var group in matches) {
+		for (var matchName in matches[group]) {
+			var thisMatch = matches[group][matchName];
+			thisMatch.name = group + '.' + matchName;
+			thisMatch.group = group;
+			matchArray.push(thisMatch);
+		}
 	}
 };
 

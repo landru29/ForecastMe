@@ -86,6 +86,14 @@ angular.module('forecastMeNowApp')
 				} else {
 					return false;
 				}
+			},
+			getKey: function() {
+				var thisUser = getSession();
+				if ((thisUser) && (thisUser.userKey)) {
+					return (thisUser.userKey);
+				} else {
+					return '';
+				}
 			}
 		};
 

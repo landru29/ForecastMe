@@ -1,7 +1,19 @@
-<ul class="nav nav-pills">
+<ul class="nav nav-pills sub-menu">
   <li ng-repeat="(key, menuItem) in menu" ng-class="{active:menuItem.active}"><a class="clickable" ng-click="setMenu(key)">{{menuItem.caption}}</a></li>
 </ul>
 <div ng-show="menu.myForecast.active">
+	<div class="jumbotron" ng-repeat='group in matches'>
+		<h2></span> {{group.groupName}} </span></h2>
+		<div>
+			<div ng-repeat="match in group.matches" class="score-line">
+				<span class="team-name-right"><span class="flag-icon {{getTeamClass(match.teams[0])}}"></span> {{getTeamName(match.teams[0])}} <img ng-if="getTeamImg(match.teams[0])" ng-src="images/{{getTeamImg(match.teams[0])}}" height="20px"/></span>
+				<input type="number" ngMaxlength="3" class="score" ng-model="match.teams[0].score"/>
+				-
+				<input type="number" ngMaxlength="3" class="score" ng-model="match.teams[1].score"/>
+				<span class="team-name-left"><img ng-if="getTeamImg(match.teams[1])" ng-src="images/{{getTeamImg(match.teams[1])}}" height="20px"/> {{getTeamName(match.teams[1])}} <span class="flag-icon {{getTeamClass(match.teams[1])}}"></span></span>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div ng-show="menu.results.active">
