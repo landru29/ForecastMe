@@ -11,18 +11,20 @@ var matches = require('./matches.json');
 var countries = require('./countries.json');
 
 var usersToInsert = [{
-	login: 'admin',
-	password: crypto.createHash('sha256').update('password').digest('hex'),
-	key: users.generateUUID(),
-	email: 'nobody@free.fr',
-	role: 'admin'
-}, {
-	login: 'usr1',
-	password: crypto.createHash('sha256').update('password').digest('hex'),
-	key: users.generateUUID(),
-	email: 'nobody@free.fr',
-	role: 'user'
-}];
+		login: 'admin',
+		password: crypto.createHash('sha256').update('password').digest('hex'),
+		key: users.generateUUID(),
+		email: 'nobody@free.fr',
+		role: 'admin'
+	}
+	/*, {
+		login: 'usr1',
+		password: crypto.createHash('sha256').update('password').digest('hex'),
+		key: users.generateUUID(),
+		email: 'nobody@free.fr',
+		role: 'user'
+	}*/
+];
 
 var addUserIndex = function() {
 	console.log('> Unique index on users.login and users.key');
