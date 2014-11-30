@@ -1,13 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var configuration = null;
-var forecasts = null;
+var scores = null;
 
 
 router.get('/', function(req, res) {
 	var userKey = req.query.key;
-
-	forecasts.find({
+	scores.find({
 		key: userKey
 	}, {
 		fields: {
@@ -21,7 +20,7 @@ router.get('/', function(req, res) {
 	}, function() {
 		res.send({
 			status: 'error',
-			message: 'Database error on forecasts'
+			message: 'Database error on scores'
 		});
 	});
 
@@ -29,6 +28,6 @@ router.get('/', function(req, res) {
 
 module.exports = function(db, config) {
 	configuration = config;
-	forecasts = db.get('forecasts');
+	scores = db.get('scores');
 	return router;
 };

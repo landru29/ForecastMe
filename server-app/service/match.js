@@ -10,13 +10,15 @@
 	var findScore = function(match) {
 		var defered = q.defer();
 		scores.findOne({
-			"match": match.name
+			"matchName": match.name
 		}, {
 			fields: {
 				_id: false
 			}
 		}).then(function(score) {
-			match.score = score;
+			if (score) {
+				match.score = [score.team0.score, score.team0.score];
+			}
 			defered.resolve(match);
 		}, function(err) {
 			defered.reject('Database error on scores: ' + err);

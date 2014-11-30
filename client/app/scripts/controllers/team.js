@@ -38,7 +38,6 @@ angular.module('forecastMeNowApp')
 			$http.get(registry.get('apiUrl') + '/pool-collection').then(function(data) {
 				if (data.data.status === 'ok') {
 					$scope.pools = data.data.data;
-					console.log($scope.pools);
 				}
 			}, function(err) {
 				console.log(err);

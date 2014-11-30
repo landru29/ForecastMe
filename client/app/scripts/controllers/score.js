@@ -2,38 +2,19 @@
 
 /**
  * @ngdoc function
- * @name forecastMeNowApp.controller:ForecastCtrl
+ * @name forecastMeNowApp.controller:ScoreCtrl
  * @description
- * # ForecastCtrl
+ * # ScoreCtrl
  * Controller of the forecastMeNowApp
  */
 angular.module('forecastMeNowApp')
-	.controller('ForecastCtrl', ['$scope', '$http', 'registry', 'users', '$q', 'match', function($scope, $http, registry, users, $q, match) {
+	.controller('ScoreCtrl', ['$scope', '$http', 'registry', 'users', '$q', 'match', function($scope, $http, registry, users, $q, match) {
 		$scope.matches = [];
-		$scope.menu = {
-			myForecast: {
-				caption: 'My forecast',
-				active: true
-			},
-			results: {
-				caption: 'Global results',
-				active: false
-			}
-		};
 
 		$scope.alert = null;
 
 		$scope.closeAlert = function() {
 			$scope.alert = null;
-		};
-
-		$scope.setMenu = function(element) {
-			for (var i in $scope.menu) {
-				$scope.menu[i].active = false;
-			}
-			if ($scope.menu[element]) {
-				$scope.menu[element].active = true;
-			}
 		};
 
 		$scope.getTeamName = function(teamObj) {
@@ -61,8 +42,9 @@ angular.module('forecastMeNowApp')
 		};
 
 		$scope.getMatches = function() {
-			match.getForecastedMatches().then(function(data) {
+			match.getMatches().then(function(data) {
 				$scope.matches = data;
+				console.log(data);
 			}, function(err) {
 				$scope.alert = {
 					type: 'danger',
@@ -72,7 +54,7 @@ angular.module('forecastMeNowApp')
 		};
 
 		$scope.save = function(thisMatch) {
-			match.saveForecast(thisMatch).then(function(response) {
+			match.saveScore(thisMatch).then(function(response) {
 				$scope.alert = {
 					type: 'success',
 					message: response
@@ -86,5 +68,4 @@ angular.module('forecastMeNowApp')
 		};
 
 		$scope.getMatches();
-
 	}]);

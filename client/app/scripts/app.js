@@ -39,6 +39,10 @@ angular
           templateUrl: 'views/forecast.html',
           controller: 'ForecastCtrl'
         })
+        .when('/score', {
+          templateUrl: 'views/score.html',
+          controller: 'ScoreCtrl'
+        })
         .when('/user-create/user/:user/key/:key/email/:email', {
           templateUrl: 'views/user-create.html',
           controller: 'UsercreateCtrl'

@@ -93,7 +93,19 @@
 		"forecast-collection": {
 			"controller": "resources/forecast-collection",
 			"acl": {
-				"GET": "connected"
+				"GET": "guest"
+			}
+		},
+		"score": {
+			"controller": "resources/score",
+			"acl": {
+				"POST": "admin"
+			}
+		},
+		"score-collection": {
+			"controller": "resources/score-collection",
+			"acl": {
+				"GET": "guest"
 			}
 		}
 	}

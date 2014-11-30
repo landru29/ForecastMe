@@ -25,7 +25,7 @@
     <div class="container">
       <div class="header" ng-controller="NavigationCtrl">
         <ul class="nav nav-pills pull-right">
-          <li ng-repeat="menuItem in getMenuItems()" ng-class="{active:(key===getCurrentMenu())}"><a class="clickable" ng-click="{{menuItem.onClick}}()">{{menuItem.caption}}</a></li>
+          <li ng-repeat="menuItem in getMenuItems()" ng-class="{active:(menuItem.key===getCurrentMenu())}"><a class="clickable" ng-click="{{menuItem.onClick}}()">{{menuItem.caption}}</a></li>
         </ul>
         <h3 class="text-muted">Forecast Me Now !</h3>
         <span ng-show="username">{{username}} is connected</span>
@@ -96,6 +96,8 @@
         <script src="scripts/controllers/team.js"></script>
         <script src="scripts/controllers/usercreate.js"></script>
         <script src="scripts/controllers/forecast.js"></script>
+        <script src="scripts/controllers/score.js"></script>
+        <script src="scripts/services/match.js"></script>
         <!-- endbuild -->
 </body>
 </html>

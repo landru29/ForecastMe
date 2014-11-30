@@ -33,6 +33,12 @@ angular.module('forecastMeNowApp')
 				'route': '/forecast',
 				'role': 'connected'
 			},
+			'score': {
+				'caption': 'Scores',
+				'onClick': 'changeRoute(\'score\')',
+				'route': '/score',
+				'role': 'admin'
+			},
 			'about': {
 				'caption': 'About',
 				'onClick': 'changeRoute(\'about\')',
@@ -49,6 +55,7 @@ angular.module('forecastMeNowApp')
 			var keys = Object.keys($scope.menu);
 			for (var index in keys) {
 				var key = keys[index];
+				$scope.menu[key].key = key;
 				if ((!$scope.menu[key].role) || (($scope.menu[key].role) && (users.hasRole($scope.menu[key].role)))) {
 					thisMenu.push($scope.menu[key]);
 				}
@@ -81,9 +88,11 @@ angular.module('forecastMeNowApp')
 				users.logOut().then(function() {
 					$scope.menu.connect.caption = $scope.getConnectionCaption();
 					$scope.username = users.getName();
+					$location.path('/');
 				}, function() {
 					$scope.menu.connect.caption = $scope.getConnectionCaption();
 					$scope.username = users.getName();
+					$location.path('/');
 				});
 
 			} else {

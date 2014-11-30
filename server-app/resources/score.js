@@ -1,22 +1,23 @@
 var express = require('express');
 var router = express.Router();
 var configuration = null;
-var forecasts = null;
+var scores = null;
 
 
-router.get('/', function(req, res) {
-	var userKey = req.query.key;
-
-	forecasts.find({
-		key: userKey
-	}, {
-		fields: {
-			_id: false
-		}
+router.post('/', function(req, res) {
+	var score = req.body.score;
+	var toSave = {
+		matchName: score.match,
+		team0: score.team0,
+		team1: score.team1,
+	};
+	scores.update({
+		matchName: score.match
+	}, toSave, {
+		upsert: true
 	}).then(function(data) {
 		res.send({
 			status: 'ok',
-			data: data
 		});
 	}, function() {
 		res.send({
@@ -24,11 +25,10 @@ router.get('/', function(req, res) {
 			message: 'Database error on forecasts'
 		});
 	});
-
 });
 
 module.exports = function(db, config) {
 	configuration = config;
-	forecasts = db.get('forecasts');
+	scores = db.get('scores');
 	return router;
 };
