@@ -33,6 +33,11 @@
 		"user": ["guest", "connected"],
 		"admin": ["guest", "connected", "user"]
 	},
+	"scoring": {
+		"winner": 100,
+		"diff": 30,
+		"factor": 10
+	},
 	"resources": {
 		"login": {
 			"controller": "resources/login.js",

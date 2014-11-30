@@ -17,7 +17,7 @@
 			}
 		}).then(function(score) {
 			if (score) {
-				match.score = [score.team0.score, score.team0.score];
+				match.score = [score.team0.score, score.team1.score];
 			}
 			defered.resolve(match);
 		}, function(err) {

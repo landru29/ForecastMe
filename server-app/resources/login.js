@@ -58,8 +58,7 @@ router.get('/', function(req, res) {
 
 router.put('/', function(req, res) {
 	res.log('Sending confirmation email ...');
-	console.log(res);
-	var url = req.headers.origin + '/#/user-create';
+	var url = req.headers.referer + '#/user-create';
 	if ((req.body.user) && ((req.body.email))) {
 		res.log('login: ' + req.body.user);
 		userService.sendConfirmation(url, req.body.user, req.body.email).then(function(data) {

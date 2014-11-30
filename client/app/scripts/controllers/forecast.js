@@ -13,11 +13,13 @@ angular.module('forecastMeNowApp')
 		$scope.menu = {
 			myForecast: {
 				caption: 'My forecast',
-				active: true
+				active: true,
+				callback: 'getMatches'
 			},
 			results: {
 				caption: 'Global results',
-				active: false
+				active: false,
+				callback: 'getRanking'
 			}
 		};
 
@@ -35,6 +37,9 @@ angular.module('forecastMeNowApp')
 			}
 			if ($scope.menu[element]) {
 				$scope.menu[element].active = true;
+				if (($scope.menu[element].callback) && ($scope[$scope.menu[element].callback])) {
+					($scope[$scope.menu[element].callback])();
+				}
 			}
 		};
 
