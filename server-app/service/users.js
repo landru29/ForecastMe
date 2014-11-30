@@ -65,7 +65,24 @@
 			defered.reject(message)
 		});
 		return defered.promise;
-	}
+	};
+
+	var getUserByRole = function(role) {
+		var defered = q.defer();
+		users.find({
+			role: role
+		}, {
+			fields: {
+				password: false,
+				_id: false
+			}
+		}).then(function(data) {
+			defered.resolve(data);
+		}, function(message) {
+			defered.reject(message)
+		});
+		return defered.promise;
+	};
 
 	var checkUser = function(login, password) {
 		var defered = q.defer();
@@ -183,7 +200,8 @@
 			sendConfirmation: sendConfirmation,
 			createFromLink: createFromLink,
 			generateUUID: generateUUID,
-			getUserByKey: getUserByKey
+			getUserByKey: getUserByKey,
+			getUserByRole: getUserByRole
 		};
 	};
 })();

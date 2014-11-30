@@ -41,7 +41,7 @@ angular.module('forecastMeNowApp')
 			$scope.alert = null;
 			$http.post(registry.get('apiUrl') + '/user-create', $scope.data).then(function(data) {
 				if (data.data.status === 'done') {
-					users.setSession(data.data.key, data.data.user);
+					users.setSession(data.data.key, data.data.user, data.data.role);
 					$rootScope.$broadcast('check-session');
 					$location.path('/');
 				} else {

@@ -5,7 +5,7 @@ var forecastService = null;
 
 
 router.get('/', function(req, res) {
-	forecastService.getAll(req.query.key).then(function(data) {
+	forecastService.getRanking().then(function(data) {
 		res.send({
 			status: 'ok',
 			data: data

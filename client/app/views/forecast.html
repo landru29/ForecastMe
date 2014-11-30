@@ -25,4 +25,14 @@
 </div>
 
 <div ng-show="menu.results.active">
+	<div class="jumbotron">
+		<div class="rank-header">
+			<span class="rank-login">Friends</span>
+			<span class="rank-point">Points</span>
+		</div>
+		<div ng-repeat="rank in ranking" class="rank">
+			<span class="rank-login">{{rank.login}}</span>
+			<span class="rank-point">{{rank.points}}</span>
+		</div>
+	</div>
 </div>

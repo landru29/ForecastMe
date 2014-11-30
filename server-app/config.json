@@ -96,6 +96,12 @@
 				"GET": "guest"
 			}
 		},
+		"ranking-collection": {
+			"controller": "resources/ranking-collection",
+			"acl": {
+				"GET": "connected"
+			}
+		},
 		"score": {
 			"controller": "resources/score",
 			"acl": {

@@ -21,6 +21,8 @@ angular.module('forecastMeNowApp')
 			}
 		};
 
+		$scope.ranking = [];
+
 		$scope.alert = null;
 
 		$scope.closeAlert = function() {
@@ -85,6 +87,26 @@ angular.module('forecastMeNowApp')
 			});
 		};
 
+		$scope.getRanking = function() {
+			$http.get(registry.get('apiUrl') + '/ranking-collection/?key=' + users.getKey()).then(function(response) {
+				if (response.data.status === 'ok') {
+					$scope.ranking = response.data.data;
+					console.log($scope.ranking);
+				} else {
+					$scope.alert = {
+						type: 'danger',
+						message: response.data.data
+					};
+				}
+			}, function() {
+				$scope.alert = {
+					type: 'danger',
+					message: 'Server error'
+				};
+			});
+		};
+
 		$scope.getMatches();
+		$scope.getRanking();
 
 	}]);

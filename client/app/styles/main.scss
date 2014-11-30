@@ -175,3 +175,26 @@ span.looser {
 span.winner {
   color: green;
 }
+
+span.rank-login {
+  display:inline-block;
+  width:200px;
+}
+
+span.rank-points {
+  display:inline-block;
+  width:200px;
+}
+
+div.rank-header {
+  font-weight: bold;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+div.rank {
+
+}
+
+div.rank:hover {
+  background-color:#337ab7;
+}
