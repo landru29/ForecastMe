@@ -32,7 +32,6 @@
 		var toSave;
 		userService.getUserByKey(userKey).then(function(user) {
 			if (Object.prototype.toString.call(forecast) === '[object Array]') {
-				console.log('Many forecasts');
 				var promises = [];
 				for (var i in forecast) {
 					promises.push(insertOne(user, forecast[i]));
@@ -43,7 +42,6 @@
 					defered.reject('Database error on forecasts');
 				});
 			} else {
-				console.log('One forecast');
 				insertOne(user, forecast).then(function(data) {
 					defered.resolve();
 				}, function() {
