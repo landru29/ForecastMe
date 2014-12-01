@@ -26,52 +26,52 @@ var usersToInsert = [{
 	}*/
 ];
 
-var addUserIndex = function() {
+var addUserIndex = function () {
 	console.log('> Unique index on users.login and users.key');
 	return users.addIndexes();
 }
 
-var addUser = function(user) {
+var addUser = function (user) {
 	var defered = q.defer();
 	console.log('> Insert user');
-	users.create(user).then(function(data) {
+	users.create(user).then(function (data) {
 		console.log('  => ' + data + ' user(s) added');
 		defered.resolve(data);
-	}, function(err) {
+	}, function (err) {
 		console.log('  => No user added');
 		defered.resolve(null);
 	});
 	return defered.promise;
 };
 
-var userInit = function() {
+var userInit = function () {
 	var defered = q.defer();
-	addUserIndex().then(function() {
-		addUser(usersToInsert).then(function() {
+	addUserIndex().then(function () {
+		addUser(usersToInsert).then(function () {
 			defered.resolve('Success');
-		}, function() {
+		}, function () {
 			defered.resolve('  => No user inserted');
 		});
-	}, function() {
+	}, function () {
 		console.log('ERROR');
 		defered.reject('Error: user init');
 	});
 	return defered.promise;
 };
 
-var teamInit = function() {
+var teamInit = function () {
 	var defered = q.defer();
 	console.log('> Insert teams');
-	db.get('teams').remove({}).then(function() {
-		db.get('teams').insert(teamArray).then(function(data) {
+	db.get('teams').remove({}).then(function () {
+		db.get('teams').insert(teamArray).then(function (data) {
 			console.log('  => Teams added');
 			defered.resolve(data);
-		}, function(err) {
+		}, function (err) {
 			console.log('  => error while adding teams');
 			console.log(err);
 			defered.reject(err);
 		});
-	}, function(err) {
+	}, function (err) {
 		console.log('  => error while droping teams');
 		console.log(err);
 		defered.reject(err);
@@ -79,19 +79,19 @@ var teamInit = function() {
 	return defered.promise;
 };
 
-var poolInit = function() {
+var poolInit = function () {
 	var defered = q.defer();
 	console.log('> Insert pools');
-	db.get('pools').remove({}).then(function() {
-		db.get('pools').insert(poolArray).then(function(data) {
+	db.get('pools').remove({}).then(function () {
+		db.get('pools').insert(poolArray).then(function (data) {
 			console.log('  => Pools added');
 			defered.resolve(data);
-		}, function(err) {
+		}, function (err) {
 			console.log('  => error while adding pools');
 			console.log(err);
 			defered.reject(err);
 		});
-	}, function(err) {
+	}, function (err) {
 		console.log('  => error while droping pools');
 		console.log(err);
 		defered.reject(err);
@@ -99,19 +99,19 @@ var poolInit = function() {
 	return defered.promise;
 };
 
-var countryInit = function() {
+var countryInit = function () {
 	var defered = q.defer();
 	console.log('> Insert countries');
-	db.get('countries').remove({}).then(function() {
-		db.get('countries').insert(countryArray).then(function(data) {
+	db.get('countries').remove({}).then(function () {
+		db.get('countries').insert(countryArray).then(function (data) {
 			console.log('  => Countries added');
 			defered.resolve(data);
-		}, function(err) {
+		}, function (err) {
 			console.log('  => error while adding countries');
 			console.log(err);
 			defered.reject(err);
 		});
-	}, function(err) {
+	}, function (err) {
 		console.log('  => error while droping countries');
 		console.log(err);
 		defered.reject(err);
@@ -119,19 +119,19 @@ var countryInit = function() {
 	return defered.promise;
 };
 
-var matchInit = function() {
+var matchInit = function () {
 	var defered = q.defer();
 	console.log('> Insert matches');
-	db.get('matches').remove({}).then(function() {
-		db.get('matches').insert(matchArray).then(function(data) {
+	db.get('matches').remove({}).then(function () {
+		db.get('matches').insert(matchArray).then(function (data) {
 			console.log('  => Matches added');
 			defered.resolve(data);
-		}, function(err) {
+		}, function (err) {
 			console.log('  => error while adding matches');
 			console.log(err);
 			defered.reject(err);
 		});
-	}, function(err) {
+	}, function (err) {
 		console.log('  => error while droping matches');
 		console.log(err);
 		defered.reject(err);
@@ -139,7 +139,7 @@ var matchInit = function() {
 	return defered.promise;
 };
 
-var computeGames = function() {
+var computeGames = function () {
 	countryArray = [];
 	for (var code in countries) {
 		countryArray.push(countries[code]);
@@ -168,6 +168,7 @@ var computeGames = function() {
 			var thisMatch = matches[group][matchName];
 			thisMatch.name = group + '.' + matchName;
 			thisMatch.group = group;
+			thisMatch.date = new Date(thisMatch.date);
 			matchArray.push(thisMatch);
 		}
 	}
@@ -177,8 +178,8 @@ var computeGames = function() {
 
 computeGames();
 
-q.all([userInit(), teamInit(), poolInit(), countryInit(), matchInit()]).then(function(data) {
+q.all([userInit(), teamInit(), poolInit(), countryInit(), matchInit()]).then(function (data) {
 	db.close();
-}, function(error) {
+}, function (error) {
 	db.close();
 });

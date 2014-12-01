@@ -8,6 +8,7 @@
 		<div>
 			<div ng-repeat="match in group.matches">
 				<div class="score-line">
+					<div style="display:inline-block;font-size:10px;width:50px">{{match.date | date:"dd/MM/yy hh:mm"}}</div>
 					<span class="team-name-right" ng-class="{filled:(match.forecast0), winner:(match.forecast0>match.forecast1), looser:(match.forecast0<match.forecast1)}">
 						<span class="flag-icon {{getTeamClass(match.teams[0])}}"></span> {{getTeamName(match.teams[0])}} <img ng-if="getTeamImg(match.teams[0])" ng-src="/images/{{getTeamImg(match.teams[0])}}" height="20px"/>
 					</span>
@@ -18,7 +19,7 @@
 						<img ng-if="getTeamImg(match.teams[1])" ng-src="/images/{{getTeamImg(match.teams[1])}}" height="20px"/> {{getTeamName(match.teams[1])}} <span class="flag-icon {{getTeamClass(match.teams[1])}}"></span>
 					</span>
 				</div>
-				<span class="clickable smart-button" ng-click="save(match)">save</span>
+				<span class="glyphicon glyphicon-floppy-disk save clickable" ng-click="save(match)"></span>
 			</div>
 		</div>
 	</div>

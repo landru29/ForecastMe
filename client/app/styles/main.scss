@@ -88,6 +88,8 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+    padding-left:30px;
+    padding-right:30px;
   }
 
   .clickable {
@@ -124,13 +126,13 @@ img.landru {
 }
 
 span.team-name-left {
-  width:200px;
+  width:170px;
   display: inline-block;
   text-align:left;
 }
 
 span.team-name-right {
-  width:200px;
+  width:170px;
   display: inline-block;
   text-align:right;
 }
@@ -143,7 +145,7 @@ div.score-line {
   padding:1px;
   margin:1px;
   display:inline-block;
-  width:520px;
+  width:550px;
 }
 
 input.score {
@@ -162,6 +164,10 @@ span.smart-button {
 
 span.smart-button:hover {
   border: 1px solid blue;
+}
+
+span.save:hover {
+  color:#337ab7;
 }
 
 span.filled {
