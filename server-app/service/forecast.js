@@ -1,4 +1,6 @@
-(function () {
+(function() {
+
+	"use strict";
 
 	var configuration = null;
 	var users = null;
@@ -8,64 +10,67 @@
 	var userService = null;
 	var scores = null;
 
-	var add = function (userKey, forecast) {
+	var insertOne = function(user, forecast) {
+		var now = new Date();
+		var toSave = {
+			login: user.login,
+			key: user.key,
+			matchName: forecast.match,
+			team0: forecast.team0,
+			team1: forecast.team1,
+		};
+		return forecasts.update({
+			key: user.key,
+			matchName: forecast.match
+		}, toSave, {
+			upsert: true
+		});
+	};
+
+	var add = function(userKey, forecast) {
 		var defered = q.defer();
 		var toSave;
-		userService.getUserByKey(userKey).then(function (user) {
-			if (Object.prototype.toString.call(someVar) === '[object Array]') {
-				toSave = [];
+		userService.getUserByKey(userKey).then(function(user) {
+			if (Object.prototype.toString.call(forecast) === '[object Array]') {
+				console.log('Many forecasts');
+				var promises = [];
 				for (var i in forecast) {
-					toSave.push({
-						login: user.login,
-						key: user.key,
-						matchName: forecast[i].match,
-						team0: forecast[i].team0,
-						team1: forecast[i].team1,
-					});
-					//upsert many
-					dfgfddfg
-
+					promises.push(insertOne(user, forecast[i]));
 				}
-			} else {
-				toSave = {
-					login: user.login,
-					key: user.key,
-					matchName: forecast.match,
-					team0: forecast.team0,
-					team1: forecast.team1,
-				};
-				forecasts.update({
-					key: user.key,
-					matchName: forecast.match
-				}, toSave, {
-					upsert: true
-				}).then(function (data) {
+				q.all(promises).then(function(data) {
 					defered.resolve();
-				}, function () {
+				}, function() {
+					defered.reject('Database error on forecasts');
+				});
+			} else {
+				console.log('One forecast');
+				insertOne(user, forecast).then(function(data) {
+					defered.resolve();
+				}, function() {
 					defered.reject('Database error on forecasts');
 				});
 			}
-		}, function (err) {
+		}, function(err) {
 			defered.reject('Database error on users');
 		});
 		return defered.promise;
 	};
 
-	var getAllScores = function () {
+	var getAllScores = function() {
 		var defered = q.defer();
 		scores.find({}, {
 			fields: {
 				_id: false
 			}
-		}).then(function (scoreData) {
+		}).then(function(scoreData) {
 			defered.resolve(scoreData);
-		}, function (err) {
+		}, function(err) {
 			defered.reject('Database error on scores: ' + err);
 		});
 		return defered.promise;
 	};
 
-	var getAll = function (userKey) {
+	var getAll = function(userKey) {
 		var defered = q.defer();
 		forecasts.find({
 			key: userKey
@@ -73,16 +78,16 @@
 			fields: {
 				_id: false
 			}
-		}).then(function (data) {
+		}).then(function(data) {
 			defered.resolve(data);
-		}, function () {
+		}, function() {
 			defered.reject('Database error on forecasts');
 		});
 		return defered.promise;
 	};
 
-	var computePoints = function (userKey) {
-		var _normalize = function (result) {
+	var computePoints = function(userKey) {
+		var _normalize = function(result) {
 			if ('undefined' === typeof result.team0.score) {
 				result.team0.value = result.team0.forecast;
 			} else {
@@ -95,7 +100,7 @@
 			}
 			return result;
 		};
-		var _getScore = function (allScores, matchName) {
+		var _getScore = function(allScores, matchName) {
 			for (var i in allScores) {
 				if (allScores[i].matchName === matchName) {
 					return _normalize(allScores[i]);
@@ -103,7 +108,7 @@
 			}
 			return null;
 		};
-		var _getWinner = function (result) {
+		var _getWinner = function(result) {
 			if (result.team0.value > result.team1.value) {
 				return 0;
 			}
@@ -112,12 +117,12 @@
 			}
 			return null;
 		};
-		var _getDiff = function (result) {
+		var _getDiff = function(result) {
 			var diff = Math.round((result.team0.value - result.team1.value) / configuration.scoring.factor);
 			return Math.abs(diff);
 		};
 		var defered = q.defer();
-		q.all([getAll(userKey), getAllScores()]).then(function (data) {
+		q.all([getAll(userKey), getAllScores()]).then(function(data) {
 			console.log('Calculating ' + userKey + '...');
 			var points = 0;
 			var allForecasts = data[0];
@@ -135,15 +140,15 @@
 				}
 			}
 			defered.resolve(points);
-		}, function (err) {
+		}, function(err) {
 			console.log('reject');
 			defered.reject(err);
 		});
 		return defered.promise;
 	}
 
-	var getRanking = function () {
-		var mySorting = function (a, b) {
+	var getRanking = function() {
+		var mySorting = function(a, b) {
 			if (a.points < b.points)
 				return 1;
 			if (a.points > b.points)
@@ -151,7 +156,7 @@
 			return 0;
 		};
 		var defered = q.defer();
-		userService.getUserByRole('user').then(function (data) {
+		userService.getUserByRole('user').then(function(data) {
 			var rank = [];
 			var computers = [];
 			for (var i in data) {
@@ -162,22 +167,22 @@
 				});
 				computers.push(thisCompute);
 			}
-			q.all(computers).then(function (allScores) {
+			q.all(computers).then(function(allScores) {
 				for (var i in rank) {
 					rank[i].points = allScores[i];
 				}
 				console.log(rank);
 				defered.resolve(rank.sort(mySorting));
-			}, function (err) {
+			}, function(err) {
 				defered.reject(err)
 			});
-		}, function (err) {
+		}, function(err) {
 			defered.reject(err);
 		});
 		return defered.promise;
 	}
 
-	module.exports = function (db, config) {
+	module.exports = function(db, config) {
 		configuration = config;
 		forecasts = db.get('forecasts');
 		userService = require('../service/users')(db, config);

@@ -1,9 +1,10 @@
+
 <alert ng-show="alert" type="{{alert.type}}" close="closeAlert()">{{alert.message}}</alert>
 <ul class="nav nav-pills sub-menu">
   <li ng-repeat="(key, menuItem) in menu" ng-class="{active:menuItem.active}"><a class="clickable" ng-click="setMenu(key)">{{menuItem.caption}}</a></li>
-</ul>
+</ul><span ng-show="saving" style="float:left">saving ...</span>
 <div ng-show="menu.myForecast.active">
-	<div class="jumbotron" ng-repeat='group in matches'>
+	<div class="jumbotron" ng-repeat='group in matches' ng-class="{notSaved:(saveRequired)}">
 		<h2></span> {{group.groupName}} </span></h2>
 		<div>
 			<div ng-repeat="match in group.matches">
@@ -12,14 +13,14 @@
 					<span class="team-name-right" ng-class="{filled:(match.forecast0), winner:(match.forecast0>match.forecast1), looser:(match.forecast0<match.forecast1)}">
 						<span class="flag-icon {{getTeamClass(match.teams[0])}}"></span> {{getTeamName(match.teams[0])}} <img ng-if="getTeamImg(match.teams[0])" ng-src="/images/{{getTeamImg(match.teams[0])}}" height="20px"/>
 					</span>
-					<input type="number" ngMaxlength="3" class="score" ng-model="match.forecast[0]" min="0"/>
+					<input type="number" ngMaxlength="3" class="score" ng-model="match.forecast[0]" min="0" ng-change="change(true)"/>
 					-
-					<input type="number" ngMaxlength="3" class="score" ng-model="match.forecast[1]" min="0"/>
+					<input type="number" ngMaxlength="3" class="score" ng-model="match.forecast[1]" min="0" ng-change="change(true)"/>
 					<span class="team-name-left" ng-class="{filled:(match.forecast1), winner:(match.forecast1>match.forecast0), looser:(match.forecast1<match.forecast0)}">
 						<img ng-if="getTeamImg(match.teams[1])" ng-src="/images/{{getTeamImg(match.teams[1])}}" height="20px"/> {{getTeamName(match.teams[1])}} <span class="flag-icon {{getTeamClass(match.teams[1])}}"></span>
 					</span>
 				</div>
-				<span class="glyphicon glyphicon-floppy-disk save clickable" ng-click="save(match)"></span>
+				<span class="glyphicon glyphicon-floppy-disk save clickable" ng-click="saveAll()"></span>
 			</div>
 		</div>
 	</div>

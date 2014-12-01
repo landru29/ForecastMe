@@ -154,6 +154,9 @@
 		matches.find({}, {
 			fields: {
 				_id: false
+			},
+			sort: {
+				order: 1
 			}
 		}).then(function(allMatches) {
 			var completionPromises = [];

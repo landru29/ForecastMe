@@ -8,7 +8,7 @@
  * Controller of the forecastMeNowApp
  */
 angular.module('forecastMeNowApp')
-	.controller('ForecastCtrl', ['$scope', '$http', 'registry', 'users', '$q', 'match', function($scope, $http, registry, users, $q, match) {
+	.controller('ForecastCtrl', ['$scope', '$http', '$interval', 'registry', 'users', '$q', 'match', function($scope, $http, $interval, registry, users, $q, match) {
 		$scope.matches = [];
 		$scope.menu = {
 			myForecast: {
@@ -69,6 +69,7 @@ angular.module('forecastMeNowApp')
 
 		$scope.getMatches = function() {
 			match.getForecastedMatches().then(function(data) {
+				console.log(data);
 				$scope.matches = data;
 			}, function(err) {
 				$scope.alert = {
@@ -92,6 +93,23 @@ angular.module('forecastMeNowApp')
 			});
 		};
 
+		$scope.saveAll = function() {
+			$scope.saving = true;
+			var allMatches = [];
+			for (var gp in $scope.matches) {
+				for (var index in $scope.matches[gp].matches) {
+					allMatches.push($scope.matches[gp].matches[index]);
+				}
+			}
+			match.saveForecast(allMatches).then(function() {
+				$scope.saving = false;
+				$scope.change(false);
+			}, function() {
+				$scope.saving = false;
+				$scope.change(false);
+			});
+		};
+
 		$scope.getRanking = function() {
 			$http.get(registry.get('apiUrl') + '/ranking-collection/?key=' + users.getKey()).then(function(response) {
 				if (response.data.status === 'ok') {
@@ -110,6 +128,14 @@ angular.module('forecastMeNowApp')
 				};
 			});
 		};
+
+		$scope.change = function(bool) {
+			$scope.saveRequired = bool;
+		};
+
+		$interval(function() {
+			$scope.saveAll();
+		}, 8000);
 
 		$scope.getMatches();
 		$scope.getRanking();
