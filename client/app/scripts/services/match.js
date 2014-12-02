@@ -8,9 +8,9 @@
  * Factory in the forecastMeNowApp.
  */
 angular.module('forecastMeNowApp')
-  .factory('match', ['$http', '$q', 'users', 'registry', function($http, $q, users, registry) {
+  .factory('match', ['$http', '$q', 'users', 'registry', function ($http, $q, users, registry) {
 
-    var getMatchByName = function(matches, name) {
+    var getMatchByName = function (matches, name) {
       for (var gp in matches) {
         for (var matchIndex in matches[gp].matches) {
           if (matches[gp].matches[matchIndex].name === name) {
@@ -21,12 +21,12 @@ angular.module('forecastMeNowApp')
       return null;
     };
 
-    var getMatches = function() {
+    var getMatches = function () {
       var matches = [];
       var defered = $q.defer();
       var matchPromise = $http.get(registry.get('apiUrl') + '/match-collection/?key=' + users.getKey());
 
-      matchPromise.then(function(response) {
+      matchPromise.then(function (response) {
         if (response.data.status === 'ok') {
           matches = [];
           var keys = Object.keys(response.data.data);
@@ -45,6 +45,11 @@ angular.module('forecastMeNowApp')
               if (!matches[gp].matches[matchIndex].forecast) {
                 matches[gp].matches[matchIndex].forecast = [null, null];
               }
+              if (new Date(matches[gp].matches[matchIndex].date) < new Date()) {
+                matches[gp].matches[matchIndex].expired = true;
+              } else {
+                matches[gp].matches[matchIndex].expired = false;
+              }
             }
           }
 
@@ -52,28 +57,28 @@ angular.module('forecastMeNowApp')
           matches = [];
         }
         defered.resolve(matches);
-      }, function() {
+      }, function () {
         defered.reject('server error');
       });
       return defered.promise;
     };
 
-    var getForecasts = function() {
+    var getForecasts = function () {
       var forecasts = [];
       var defered = $q.defer();
       var forecastPromise = $http.get(registry.get('apiUrl') + '/forecast-collection?key=' + users.getKey());
-      forecastPromise.then(function(response) {
+      forecastPromise.then(function (response) {
         forecasts = response.data.data;
         defered.resolve(forecasts);
-      }, function() {
+      }, function () {
         defered.reject('server error');
       });
       return defered.promise;
     };
 
-    var getForecastedMatches = function() {
+    var getForecastedMatches = function () {
       var defered = $q.defer();
-      $q.all([getMatches(), getForecasts()]).then(function(result) {
+      $q.all([getMatches(), getForecasts()]).then(function (result) {
         var matches = result[0];
         var forecasts = result[1];
         for (var index in forecasts) {
@@ -93,13 +98,13 @@ angular.module('forecastMeNowApp')
           }
         }
         defered.resolve(matches);
-      }, function(err) {
+      }, function (err) {
         defered.reject(err);
       });
       return defered.promise;
     };
 
-    var buildForecastToSave = function(thisMatch) {
+    var buildForecastToSave = function (thisMatch) {
       if ((thisMatch.forecast[0] === null) && (thisMatch.forecast[1] === null)) {
         return null;
       }
@@ -116,7 +121,7 @@ angular.module('forecastMeNowApp')
       };
     };
 
-    var saveForecast = function(thisMatch) {
+    var saveForecast = function (thisMatch) {
       var defered = $q.defer();
       var forecast;
       if (Object.prototype.toString.call(thisMatch) === '[object Array]') {
@@ -142,19 +147,19 @@ angular.module('forecastMeNowApp')
       $http.post(registry.get('apiUrl') + '/forecast', {
         key: users.getKey(),
         forecast: forecast
-      }).then(function(response) {
+      }).then(function (response) {
         if ((response.data.status) && (response.data.status === 'ok')) {
           defered.resolve('Forecast saved');
         } else {
           defered.reject('Can not update your forecast');
         }
-      }, function() {
+      }, function () {
         defered.reject('Server error');
       });
       return defered.promise;
     };
 
-    var saveScore = function(thisMatch) {
+    var saveScore = function (thisMatch) {
       var defered = $q.defer();
       var score = {
         match: thisMatch.name,
@@ -170,13 +175,13 @@ angular.module('forecastMeNowApp')
       $http.post(registry.get('apiUrl') + '/score', {
         key: users.getKey(),
         score: score
-      }).then(function(response) {
+      }).then(function (response) {
         if ((response.data.status) && (response.data.status === 'ok')) {
           defered.resolve('Score saved');
         } else {
           defered.reject('Can not update your score');
         }
-      }, function() {
+      }, function () {
         defered.reject('Server error');
       });
       return defered.promise;

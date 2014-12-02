@@ -126,13 +126,13 @@ img.landru {
 }
 
 span.team-name-left {
-  width:170px;
+  width:175px;
   display: inline-block;
   text-align:left;
 }
 
 span.team-name-right {
-  width:170px;
+  width:175px;
   display: inline-block;
   text-align:right;
 }
@@ -207,4 +207,16 @@ div.rank:hover {
 
 .notSaved {
   border: 1px solid red;
+}
+
+div.match-done {
+  font-weight:bold;
+  font-size: 16px;
+}
+
+div.match-done span.team-name-right {
+  width:200px;
+}
+
+span.final-score {
 }
