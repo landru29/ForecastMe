@@ -1,0 +1,548 @@
+{
+	"group1": {
+		"AB": {
+			"date": "2014-12-01T09:00:00-06:00",
+			"teams": [
+				"group1.A",
+				"group1.B"
+			],
+			"location": "Track1"
+		},
+		"CD": {
+			"date": "2014-12-04T10:20:00-06:00",
+			"teams": [
+				"group1.C",
+				"group1.D"
+			],
+			"location": "Track1"
+		},
+		"AC": {
+			"date": "2014-12-04T17:00:00-06:00",
+			"teams": [
+				"group1.A",
+				"group1.C"
+			],
+			"location": "Track2"
+		},
+		"BD": {
+			"date": "2014-12-04T18:20:00-06:00",
+			"teams": [
+				"group1.B",
+				"group1.D"
+			],
+			"location": "Track2"
+		},
+		"BC": {
+			"date": "2014-12-05T10:20:00-06:00",
+			"teams": [
+				"group1.B",
+				"group1.C"
+			],
+			"location": "Track1"
+		},
+		"AD": {
+			"date": "2014-12-05T11:40:00-06:00",
+			"teams": [
+				"group1.A",
+				"group1.D"
+			],
+			"location": "Track1"
+		}
+	},
+	"group2": {
+		"AB": {
+			"date": "2014-12-04T11:40:00-06:00",
+			"teams": [
+				"group2.A",
+				"group2.B"
+			],
+			"location": "Track1"
+		},
+		"CD": {
+			"date": "2014-12-04T13:00:00-06:00",
+			"teams": [
+				"group2.C",
+				"group2.D"
+			],
+			"location": "Track1"
+		},
+		"AC": {
+			"date": "2014-12-04T19:40:00-06:00",
+			"teams": [
+				"group2.A",
+				"group2.C"
+			],
+			"location": "Track1"
+		},
+		"BD": {
+			"date": "2014-12-04T19:50:00-06:00",
+			"teams": [
+				"group2.B",
+				"group2.D"
+			],
+			"location": "Track3"
+		},
+		"BC": {
+			"date": "2014-12-05T10:20:00-06:00",
+			"teams": [
+				"group2.B",
+				"group2.C"
+			],
+			"location": "Track2"
+		},
+		"AD": {
+			"date": "2014-12-05T11:40:00-06:00",
+			"teams": [
+				"group2.A",
+				"group2.D"
+			],
+			"location": "Track2"
+		}
+	},
+	"group3": {
+		"AB": {
+			"date": "2014-12-04T14:20:00-06:00",
+			"teams": [
+				"group3.A",
+				"group3.B"
+			],
+			"location": "Track1"
+		},
+		"CD": {
+			"date": "2014-12-04T15:40:00-06:00",
+			"teams": [
+				"group3.C",
+				"group3.D"
+			],
+			"location": "Track1"
+		},
+		"AC": {
+			"date": "2014-12-04T19:40:00-06:00",
+			"teams": [
+				"group3.A",
+				"group3.C"
+			],
+			"location": "Track2"
+		},
+		"BC": {
+			"date": "2014-12-05T10:30:00-06:00",
+			"teams": [
+				"group3.B",
+				"group3.C"
+			],
+			"location": "Track3"
+		},
+		"AD": {
+			"date": "2014-12-05T11:50:00-06:00",
+			"teams": [
+				"group3.A",
+				"group3.D"
+			],
+			"location": "Track3"
+		},
+		"BD": {
+			"date": "2014-12-05T14:30:00-06:00",
+			"teams": [
+				"group3.B",
+				"group3.D"
+			],
+			"location": "Track3"
+		}
+	},
+	"group4": {
+		"AB": {
+			"date": "2014-12-04T17:00:00-06:00",
+			"teams": [
+				"group4.A",
+				"group4.B"
+			],
+			"location": "Track1"
+		},
+		"CD": {
+			"date": "2014-12-04T18:20:00-06:00",
+			"teams": [
+				"group4.C",
+				"group4.D"
+			],
+			"location": "Track1"
+		},
+		"AC": {
+			"date": "2014-12-04T11:50:00-06:00",
+			"teams": [
+				"group4.A",
+				"group4.C"
+			],
+			"location": "Track3"
+		},
+		"BD": {
+			"date": "2014-12-04T13:10:00-06:00",
+			"teams": [
+				"group4.B",
+				"group4.D"
+			],
+			"location": "Track3"
+		},
+		"AD": {
+			"date": "2014-12-05T09:00:00-06:00",
+			"teams": [
+				"group4.A",
+				"group4.D"
+			],
+			"location": "Track1"
+		},
+		"BC": {
+			"date": "2014-12-05T13:00:00-06:00",
+			"teams": [
+				"group4.B",
+				"group4.C"
+			],
+			"location": "Track1"
+		}
+	},
+	"group5": {
+		"AB": {
+			"date": "2014-12-04T09:00:00-06:00",
+			"teams": [
+				"group5.A",
+				"group5.B"
+			],
+			"location": "Track2"
+		},
+		"CD": {
+			"date": "2014-12-04T10:20:00-06:00",
+			"teams": [
+				"group5.C",
+				"group5.D"
+			],
+			"location": "Track2"
+		},
+		"AC": {
+			"date": "2014-12-04T14:30:00-06:00",
+			"teams": [
+				"group5.A",
+				"group5.C"
+			],
+			"location": "Track3"
+		},
+		"BD": {
+			"date": "2014-12-04T15:50:00-06:00",
+			"teams": [
+				"group5.B",
+				"group5.D"
+			],
+			"location": "Track3"
+		},
+		"AD": {
+			"date": "2014-12-05T09:00:00-06:00",
+			"teams": [
+				"group5.A",
+				"group5.D"
+			],
+			"location": "Track2"
+		},
+		"BC": {
+			"date": "2014-12-05T13:00:00-06:00",
+			"teams": [
+				"group5.B",
+				"group5.C"
+			],
+			"location": "Track2"
+		}
+	},
+	"group6": {
+		"AB": {
+			"date": "2014-12-04T11:40:00-06:00",
+			"teams": [
+				"group6.A",
+				"group6.B"
+			],
+			"location": "Track2"
+		},
+		"CD": {
+			"date": "2014-12-04T13:00:00-06:00",
+			"teams": [
+				"group6.C",
+				"group6.D"
+			],
+			"location": "Track2"
+		},
+		"AC": {
+			"date": "2014-12-04T17:10:00-06:00",
+			"teams": [
+				"group6.A",
+				"group6.C"
+			],
+			"location": "Track3"
+		},
+		"BD": {
+			"date": "2014-12-04T18:30:00-06:00",
+			"teams": [
+				"group6.B",
+				"group6.D"
+			],
+			"location": "Track3"
+		},
+		"AD": {
+			"date": "2014-12-05T09:10:00-06:00",
+			"teams": [
+				"group6.A",
+				"group6.D"
+			],
+			"location": "Track3"
+		},
+		"BC": {
+			"date": "2014-12-05T13:10:00-06:00",
+			"teams": [
+				"group6.B",
+				"group6.C"
+			],
+			"location": "Track3"
+		}
+	},
+	"group7": {
+		"AB": {
+			"date": "2014-12-04T14:20:00-06:00",
+			"teams": [
+				"group7.A",
+				"group7.B"
+			],
+			"location": "Track2"
+		},
+		"AC": {
+			"date": "2014-12-04T09:10:00-06:00",
+			"teams": [
+				"group7.A",
+				"group7.C"
+			],
+			"location": "Track3"
+		},
+		"BC": {
+			"date": "2014-12-05T14:20:00-06:00",
+			"teams": [
+				"group7.B",
+				"group7.C"
+			],
+			"location": "Track1"
+		}
+	},
+	"group8": {
+		"AB": {
+			"date": "2014-12-04T15:40:00-06:00",
+			"teams": [
+				"group8.A",
+				"group8.B"
+			],
+			"location": "Track2"
+		},
+		"AC": {
+			"date": "2014-12-04T10:30:00-06:00",
+			"teams": [
+				"group8.A",
+				"group8.C"
+			],
+			"location": "Track3"
+		},
+		"BC": {
+			"date": "2014-12-05T14:20:00-06:00",
+			"teams": [
+				"group8.B",
+				"group8.C"
+			],
+			"location": "Track2"
+		}
+	},
+	"consolations": {
+		"consolation4-5": {
+			"date": "2014-12-05T16:00:00-06:00",
+			"teams": [
+				"group4.2",
+				"group5.2"
+			],
+			"location": "Track1"
+		},
+		"consolidation6-1": {
+			"date": "2014-12-05T16:00:00-06:00",
+			"teams": [
+				"group6.2",
+				"group1.2"
+			],
+			"location": "Track2"
+		},
+		"consolation3-4": {
+			"date": "2014-12-06T09:10:00-06:00",
+			"teams": [
+				"group3.2",
+				"group4.2"
+			],
+			"location": "Track3"
+		},
+		"consolation2-5": {
+			"date": "2014-12-06T11:10:00-06:00",
+			"teams": [
+				"group2.2",
+				"group5.2"
+			],
+			"location": "Track3"
+		},
+		"consolation1-8": {
+			"date": "2014-12-06T13:10:00-06:00",
+			"teams": [
+				"group1.2",
+				"group8.2"
+			],
+			"location": "Track3"
+		},
+		"consolation2-7": {
+			"date": "2014-12-06T15:10:00-06:00",
+			"teams": [
+				"group2.2",
+				"group7.2"
+			],
+			"location": "Track3"
+		},
+		"consolation3-6": {
+			"date": "2014-12-06T17:10:00-06:00",
+			"teams": [
+				"group3.2",
+				"group6.2"
+			],
+			"location": "Track3"
+		},
+		"consolation7-8": {
+			"date": "2014-12-06T19:10:00-06:00",
+			"teams": [
+				"group7.2",
+				"group8.2"
+			],
+			"location": "Track3"
+		}
+	},
+	"eliminatories": {
+		"group1-8": {
+			"date": "2014-12-06T11:00:00-06:00",
+			"teams": [
+				"group1.1",
+				"group8.2"
+			],
+			"location": "Track1"
+		},
+		"group2-7": {
+			"date": "2014-12-06T13:00:00-06:00",
+			"teams": [
+				"group2.1",
+				"group7.2"
+			],
+			"location": "Track1"
+		},
+		"group3-6": {
+			"date": "2014-12-06T09:00:00-06:00",
+			"teams": [
+				"group3.1",
+				"group6.2"
+			],
+			"location": "Track2"
+		},
+		"group4-5": {
+			"date": "2014-12-06T13:00:00-06:00",
+			"teams": [
+				"group4.1",
+				"group5.2"
+			],
+			"location": "Track2"
+		},
+		"group5-4": {
+			"date": "2014-12-06T15:00:00-06:00",
+			"teams": [
+				"group5.1",
+				"group4.2"
+			],
+			"location": "Track1"
+		},
+		"group6-3": {
+			"date": "2014-12-06T15:00:00-06:00",
+			"teams": [
+				"group6.1",
+				"group3.2"
+			],
+			"location": "Track2"
+		},
+		"group7-2": {
+			"date": "2014-12-06T09:00:00-06:00",
+			"teams": [
+				"group7.1",
+				"group2.2"
+			],
+			"location": "Track1"
+		},
+		"group8-2": {
+			"date": "2014-12-06T11:00:00-06:00",
+			"teams": [
+				"group8.1",
+				"group2.2"
+			],
+			"location": "Track2"
+		}
+	},
+	"teams": {
+		"team1-8": {
+			"date": "2014-12-06T17:00:00-06:00",
+			"teams": [
+				"eliminatories.group1-8",
+				"eliminatories.group8-2"
+			],
+			"location": "Track1"
+		},
+		"team2-7": {
+			"date": "2014-12-06T17:00:00-06:00",
+			"teams": [
+				"eliminatories.group2-7",
+				"eliminatories.group7-2"
+			],
+			"location": "Track2"
+		},
+		"team3-6": {
+			"date": "2014-12-06T19:00:00-06:00",
+			"teams": [
+				"eliminatories.group3-6",
+				"eliminatories.group6-3"
+			],
+			"location": "Track1"
+		},
+		"team4-5": {
+			"date": "2014-12-06T19:00:00-06:00",
+			"teams": [
+				"eliminatories.group4-5",
+				"eliminatories.group5-4"
+			],
+			"location": "Track2"
+		}
+	},
+	"semifinal": {
+		"semifinal1": {
+			"date": "2014-12-07T10:00:00-06:00",
+			"teams": [
+				"team1-8",
+				"team3-6"
+			],
+			"location": "Track1"
+		},
+		"semifinal2": {
+			"date": "2014-12-07T12:00:00-06:00",
+			"teams": [
+				"team2-7",
+				"team4-5"
+			],
+			"location": "Track1"
+		}
+	},
+	"final": {
+		"final": {
+			"date": "2014-12-07T17:00:00-06:00",
+			"teams": [
+				"semifinal1",
+				"semifinal2"
+			],
+			"location": "Track1"
+		}
+	}
+}
