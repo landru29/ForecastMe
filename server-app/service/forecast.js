@@ -9,8 +9,10 @@
 	var forecasts = null;
 	var userService = null;
 	var scores = null;
+	var matches = null;
 
 	var insertOne = function(user, forecast) {
+		var defered = q.defer();
 		var now = new Date();
 		var toSave = {
 			login: user.login,
@@ -19,11 +21,41 @@
 			team0: forecast.team0,
 			team1: forecast.team1,
 		};
-		return forecasts.update({
-			key: user.key,
-			matchName: forecast.match
-		}, toSave, {
-			upsert: true
+
+		getForecastableMatch(forecast.match).then(function(data) {
+			if (data !== null) {
+				console.log('Found ' + forecast.match);
+				forecasts.update({
+					key: user.key,
+					matchName: forecast.match
+				}, toSave, {
+					upsert: true
+				}).then(function() {
+					defered.resolve();
+				}, function(err) {
+					defered.reject(err);
+				});
+			} else {
+				console.log('Not found ' + forecast.match);
+				defered.resolve();
+			}
+		}, function(err) {
+			defered.reject(err);
+		});
+		return defered.promise;
+	};
+
+	var getForecastableMatch = function(name) {
+		return matches.findOne({
+			name: name,
+			date: {
+				$gt: new Date()
+			}
+		}, {
+			fields: {
+				name: true,
+				_id: false
+			}
 		});
 	};
 
@@ -185,6 +217,7 @@
 		forecasts = db.get('forecasts');
 		userService = require('../service/users')(db, config);
 		scores = db.get('scores');
+		matches = db.get('matches');
 		return {
 			add: add,
 			getAll: getAll,

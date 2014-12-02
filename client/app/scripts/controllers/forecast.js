@@ -69,7 +69,6 @@ angular.module('forecastMeNowApp')
 
 		$scope.getMatches = function() {
 			match.getForecastedMatches().then(function(data) {
-				console.log(data);
 				$scope.matches = data;
 			}, function(err) {
 				$scope.alert = {
@@ -114,7 +113,6 @@ angular.module('forecastMeNowApp')
 			$http.get(registry.get('apiUrl') + '/ranking-collection/?key=' + users.getKey()).then(function(response) {
 				if (response.data.status === 'ok') {
 					$scope.ranking = response.data.data;
-					console.log($scope.ranking);
 				} else {
 					$scope.alert = {
 						type: 'danger',
@@ -133,9 +131,13 @@ angular.module('forecastMeNowApp')
 			$scope.saveRequired = bool;
 		};
 
-		$interval(function() {
+		$scope.autoSave = $interval(function() {
 			$scope.saveAll();
 		}, 8000);
+
+		$scope.$on('$destroy', function() {
+			$interval.cancel($scope.autoSave);
+		});
 
 		$scope.getMatches();
 		$scope.getRanking();

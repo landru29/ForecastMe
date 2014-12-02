@@ -44,7 +44,6 @@ angular.module('forecastMeNowApp')
 		$scope.getMatches = function() {
 			match.getMatches().then(function(data) {
 				$scope.matches = data;
-				console.log(data);
 			}, function(err) {
 				$scope.alert = {
 					type: 'danger',
