@@ -521,16 +521,16 @@
 		"semifinal1": {
 			"date": "2014-12-07T10:00:00-06:00",
 			"teams": [
-				"team1-8",
-				"team3-6"
+				"teams.team1-8",
+				"teams.team3-6"
 			],
 			"location": "Track1"
 		},
 		"semifinal2": {
 			"date": "2014-12-07T12:00:00-06:00",
 			"teams": [
-				"team2-7",
-				"team4-5"
+				"teams.team2-7",
+				"teams.team4-5"
 			],
 			"location": "Track1"
 		}
@@ -539,8 +539,8 @@
 		"final": {
 			"date": "2014-12-07T17:00:00-06:00",
 			"teams": [
-				"semifinal1",
-				"semifinal2"
+				"semifinal.semifinal1",
+				"semifinal.semifinal2"
 			],
 			"location": "Track1"
 		}

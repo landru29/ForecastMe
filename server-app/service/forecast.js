@@ -24,7 +24,6 @@
 
 		getForecastableMatch(forecast.match).then(function(data) {
 			if (data !== null) {
-				console.log('Found ' + forecast.match);
 				forecasts.update({
 					key: user.key,
 					matchName: forecast.match
@@ -36,7 +35,6 @@
 					defered.reject(err);
 				});
 			} else {
-				console.log('Not found ' + forecast.match);
 				defered.resolve();
 			}
 		}, function(err) {

@@ -1,0 +1,521 @@
+[{
+	"matchName": "group1.AB",
+	"team0": {
+		"score": 218
+	},
+	"team1": {
+		"score": 186
+	}
+}, {
+	"matchName": "group1.CD",
+	"team0": {
+		"score": 243
+	},
+	"team1": {
+		"score": 174
+	}
+}, {
+	"matchName": "group1.AC",
+	"team0": {
+		"score": 225
+	},
+	"team1": {
+		"score": 239
+	}
+}, {
+	"matchName": "group1.BD",
+	"team0": {
+		"score": 177
+	},
+	"team1": {
+		"score": 184
+	}
+}, {
+	"matchName": "group1.BC",
+	"team0": {
+		"score": 157
+	},
+	"team1": {
+		"score": 170
+	}
+}, {
+	"matchName": "group1.AD",
+	"team0": {
+		"score": 230
+	},
+	"team1": {
+		"score": 226
+	}
+}, {
+	"matchName": "group2.AB",
+	"team0": {
+		"score": 220
+	},
+	"team1": {
+		"score": 162
+	}
+}, {
+	"matchName": "group2.CD",
+	"team0": {
+		"score": 235
+	},
+	"team1": {
+		"score": 203
+	}
+}, {
+	"matchName": "group2.AC",
+	"team0": {
+		"score": 172
+	},
+	"team1": {
+		"score": 160
+	}
+}, {
+	"matchName": "group2.BD",
+	"team0": {
+		"score": 173
+	},
+	"team1": {
+		"score": 211
+	}
+}, {
+	"matchName": "group2.BC",
+	"team0": {
+		"score": 209
+	},
+	"team1": {
+		"score": 171
+	}
+}, {
+	"matchName": "group2.AD",
+	"team0": {
+		"score": 164
+	},
+	"team1": {
+		"score": 177
+	}
+}, {
+	"matchName": "group3.AB",
+	"team0": {
+		"score": 176
+	},
+	"team1": {
+		"score": 216
+	}
+}, {
+	"matchName": "group3.CD",
+	"team0": {
+		"score": 199
+	},
+	"team1": {
+		"score": 180
+	}
+}, {
+	"matchName": "group3.AC",
+	"team0": {
+		"score": 249
+	},
+	"team1": {
+		"score": 196
+	}
+}, {
+	"matchName": "group3.BC",
+	"team0": {
+		"score": 247
+	},
+	"team1": {
+		"score": 200
+	}
+}, {
+	"matchName": "group3.AD",
+	"team0": {
+		"score": 172
+	},
+	"team1": {
+		"score": 249
+	}
+}, {
+	"matchName": "group3.BD",
+	"team0": {
+		"score": 165
+	},
+	"team1": {
+		"score": 190
+	}
+}, {
+	"matchName": "group4.AB",
+	"team0": {
+		"score": 234
+	},
+	"team1": {
+		"score": 168
+	}
+}, {
+	"matchName": "group4.CD",
+	"team0": {
+		"score": 156
+	},
+	"team1": {
+		"score": 223
+	}
+}, {
+	"matchName": "group4.AC",
+	"team0": {
+		"score": 238
+	},
+	"team1": {
+		"score": 173
+	}
+}, {
+	"matchName": "group4.BD",
+	"team0": {
+		"score": 234
+	},
+	"team1": {
+		"score": 245
+	}
+}, {
+	"matchName": "group4.AD",
+	"team0": {
+		"score": 243
+	},
+	"team1": {
+		"score": 165
+	}
+}, {
+	"matchName": "group4.BC",
+	"team0": {
+		"score": 201
+	},
+	"team1": {
+		"score": 164
+	}
+}, {
+	"matchName": "group5.AB",
+	"team0": {
+		"score": 185
+	},
+	"team1": {
+		"score": 166
+	}
+}, {
+	"matchName": "group5.CD",
+	"team0": {
+		"score": 231
+	},
+	"team1": {
+		"score": 230
+	}
+}, {
+	"matchName": "group5.AC",
+	"team0": {
+		"score": 202
+	},
+	"team1": {
+		"score": 205
+	}
+}, {
+	"matchName": "group5.BD",
+	"team0": {
+		"score": 225
+	},
+	"team1": {
+		"score": 218
+	}
+}, {
+	"matchName": "group5.AD",
+	"team0": {
+		"score": 207
+	},
+	"team1": {
+		"score": 235
+	}
+}, {
+	"matchName": "group5.BC",
+	"team0": {
+		"score": 204
+	},
+	"team1": {
+		"score": 225
+	}
+}, {
+	"matchName": "group6.AB",
+	"team0": {
+		"score": 164
+	},
+	"team1": {
+		"score": 197
+	}
+}, {
+	"matchName": "group6.CD",
+	"team0": {
+		"score": 245
+	},
+	"team1": {
+		"score": 221
+	}
+}, {
+	"matchName": "group6.AC",
+	"team0": {
+		"score": 207
+	},
+	"team1": {
+		"score": 195
+	}
+}, {
+	"matchName": "group6.BD",
+	"team0": {
+		"score": 164
+	},
+	"team1": {
+		"score": 174
+	}
+}, {
+	"matchName": "group6.AD",
+	"team0": {
+		"score": 229
+	},
+	"team1": {
+		"score": 161
+	}
+}, {
+	"matchName": "group6.BC",
+	"team0": {
+		"score": 194
+	},
+	"team1": {
+		"score": 234
+	}
+}, {
+	"matchName": "group7.AB",
+	"team0": {
+		"score": 196
+	},
+	"team1": {
+		"score": 166
+	}
+}, {
+	"matchName": "group7.AC",
+	"team0": {
+		"score": 176
+	},
+	"team1": {
+		"score": 210
+	}
+}, {
+	"matchName": "group7.BC",
+	"team0": {
+		"score": 172
+	},
+	"team1": {
+		"score": 189
+	}
+}, {
+	"matchName": "group8.AB",
+	"team0": {
+		"score": 207
+	},
+	"team1": {
+		"score": 172
+	}
+}, {
+	"matchName": "group8.AC",
+	"team0": {
+		"score": 229
+	},
+	"team1": {
+		"score": 217
+	}
+}, {
+	"matchName": "group8.BC",
+	"team0": {
+		"score": 191
+	},
+	"team1": {
+		"score": 152
+	}
+}, {
+	"matchName": "consolations.consolation4-5",
+	"team0": {
+		"score": 160
+	},
+	"team1": {
+		"score": 197
+	}
+}, {
+	"matchName": "consolations.consolidation6-1",
+	"team0": {
+		"score": 187
+	},
+	"team1": {
+		"score": 208
+	}
+}, {
+	"matchName": "consolations.consolation3-4",
+	"team0": {
+		"score": 199
+	},
+	"team1": {
+		"score": 232
+	}
+}, {
+	"matchName": "consolations.consolation2-5",
+	"team0": {
+		"score": 178
+	},
+	"team1": {
+		"score": 211
+	}
+}, {
+	"matchName": "consolations.consolation1-8",
+	"team0": {
+		"score": 152
+	},
+	"team1": {
+		"score": 205
+	}
+}, {
+	"matchName": "consolations.consolation2-7",
+	"team0": {
+		"score": 160
+	},
+	"team1": {
+		"score": 182
+	}
+}, {
+	"matchName": "consolations.consolation3-6",
+	"team0": {
+		"score": 211
+	},
+	"team1": {
+		"score": 189
+	}
+}, {
+	"matchName": "consolations.consolation7-8",
+	"team0": {
+		"score": 208
+	},
+	"team1": {
+		"score": 183
+	}
+}, {
+	"matchName": "eliminatories.group1-8",
+	"team0": {
+		"score": 203
+	},
+	"team1": {
+		"score": 161
+	}
+}, {
+	"matchName": "eliminatories.group2-7",
+	"team0": {
+		"score": 193
+	},
+	"team1": {
+		"score": 196
+	}
+}, {
+	"matchName": "eliminatories.group3-6",
+	"team0": {
+		"score": 216
+	},
+	"team1": {
+		"score": 151
+	}
+}, {
+	"matchName": "eliminatories.group4-5",
+	"team0": {
+		"score": 153
+	},
+	"team1": {
+		"score": 185
+	}
+}, {
+	"matchName": "eliminatories.group5-4",
+	"team0": {
+		"score": 217
+	},
+	"team1": {
+		"score": 244
+	}
+}, {
+	"matchName": "eliminatories.group6-3",
+	"team0": {
+		"score": 155
+	},
+	"team1": {
+		"score": 237
+	}
+}, {
+	"matchName": "eliminatories.group7-2",
+	"team0": {
+		"score": 178
+	},
+	"team1": {
+		"score": 218
+	}
+}, {
+	"matchName": "eliminatories.group8-2",
+	"team0": {
+		"score": 208
+	},
+	"team1": {
+		"score": 194
+	}
+}, {
+	"matchName": "teams.team1-8",
+	"team0": {
+		"score": 216
+	},
+	"team1": {
+		"score": 248
+	}
+}, {
+	"matchName": "teams.team2-7",
+	"team0": {
+		"score": 154
+	},
+	"team1": {
+		"score": 243
+	}
+}, {
+	"matchName": "teams.team3-6",
+	"team0": {
+		"score": 183
+	},
+	"team1": {
+		"score": 212
+	}
+}, {
+	"matchName": "teams.team4-5",
+	"team0": {
+		"score": 155
+	},
+	"team1": {
+		"score": 163
+	}
+}, {
+	"matchName": "semifinal.semifinal1",
+	"team0": {
+		"score": 223
+	},
+	"team1": {
+		"score": 196
+	}
+}, {
+	"matchName": "semifinal.semifinal2",
+	"team0": {
+		"score": 179
+	},
+	"team1": {
+		"score": 178
+	}
+}, {
+	"matchName": "final.final",
+	"team0": {
+		"score": 160
+	},
+	"team1": {
+		"score": 179
+	}
+}]
