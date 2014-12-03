@@ -10,10 +10,13 @@
 
 	var computeTeam = function (name) {
 		var defered = q.defer();
+		//console.log('     - Dealing with ' + name);
 		tournamentService.getTeam(name).then(function (team) {
 			if (team) {
+				console.log('Found (' + team.name + ') ' + name);
 				defered.resolve(team);
 			} else {
+				console.log('Not found ' + name);
 				defered.resolve(name);
 			}
 		}, function (err) {
@@ -24,29 +27,34 @@
 
 	var computeOneMatch = function (match) {
 		var defered = q.defer();
-		var matchName = allMatches[i].name;
-		allMatches[i].computedTeams = [];
-		for (var j in allMatches[i].teams) {}
+		var promises = [];
+		//console.log(' * computing ' + match.name);
+		for (var i in match.teams) {
+			promises.push(computeTeam(match.teams[i]));
+		}
+		q.all(promises).then(function (teams) {
+			match.computed = teams;
+			//console.log(teams);
+			defered.resolve(match);
+		}, function (err) {
+			defered.reject(err);
+		});
 		return defered.promise;
-	}
+	};
 
 	var computeAllMatches = function () {
 		var defered = q.defer();
 		matchService.getAllMatchTeam().then(function (allMatches) {
-			//console.log(allMatches);
+			//console.log('computing ' + allMatches.length + ' matches');
+			var promises = [];
 			for (var i in allMatches) {
-				var matchName = allMatches[i].name;
-				allMatches[i].computedTeams = [];
-				for (var j in allMatches[i].teams) {
-					computeTeam(allMatches[i].teams[j]).then(function (team) {
-						console.log(i + ' - ' + team);
-						allMatches[i].computedTeams.push(team);
-					}, function (err) {
-						console.log(err);
-					});
-				}
+				promises.push(computeOneMatch(allMatches[i]));
 			}
-			defered.resolve(allMatches);
+			q.all(promises).then(function (computedMatches) {
+				defered.resolve(computedMatches);
+			}, function (err) {
+				defered.reject(err);
+			});
 		}, function (err) {
 			defered.reject(err);
 		});
