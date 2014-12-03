@@ -23,6 +23,25 @@ router.post('/', function(req, res) {
 	}
 });
 
+router.post('/reset', function(req, res) {
+	res.log('check username for update ...');
+	if ((req.body.user) && (req.body.key) && (req.body.email) && (req.body.password)) {
+		res.log('check: ' + req.body.user);
+		userService.updateFromLink(req.body.user, req.body.key, req.body.email, req.body.password).then(function(data) {
+			res.send(data);
+		}, function(message) {
+			res.send({
+				status: 'error',
+				message: message
+			});
+		});
+	} else {
+		res.send({
+			status: 'What do you want ?'
+		});
+	}
+});
+
 
 
 module.exports = function(db, config) {

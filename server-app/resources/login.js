@@ -78,6 +78,28 @@ router.put('/', function(req, res) {
 	}
 });
 
+router.put('/reset', function(req, res) {
+	res.log('Sending reset password email ...');
+	var url = req.headers.referer + '#/user-reset';
+	if (req.body.email) {
+		res.log('email: ' + req.body.email);
+		userService.sendReset(url, req.body.email).then(function(data) {
+			res.send({
+				status: 'ok'
+			});
+
+		}, function(message) {
+			res.send({
+				status: 'ko'
+			});
+		});
+	} else {
+		res.send({
+			status: 'What do you want ?'
+		});
+	}
+});
+
 module.exports = function(db, config) {
 	configuration = config;
 	teams = db.get('teams');

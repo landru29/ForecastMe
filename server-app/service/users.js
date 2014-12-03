@@ -143,7 +143,45 @@
 			});
 		}
 		return defered.promise;
-	}
+	};
+
+	var updateFromLink = function(user, key, email, password) {
+		var defered = q.defer();
+		console.log('Encrypt :' + user + salt + email);
+		if (crypto.createHash('sha256').update(user + salt + email).digest('hex') === key) {
+			users.update({
+				email: email,
+				login: user
+			}, {
+				$set: {
+					password: crypto.createHash('sha256').update(password).digest('hex')
+				}
+			}).then(function(data) {
+				users.findOne({
+					email: email,
+					login: user
+				}).then(function(data) {
+					defered.resolve({
+						status: 'done',
+						key: data.key,
+						user: data.login,
+						role: getRoles(data.role)
+					});
+				}, function() {
+					defered.reject('Error on user Database')
+				});
+			}, function() {
+				defered.reject({
+					status: 'database error'
+				});
+			});
+		} else {
+			defered.reject({
+				status: 'bad request'
+			});
+		}
+		return defered.promise;
+	};
 
 	var userAvailable = function(login) {
 		var defered = q.defer();
@@ -188,6 +226,50 @@
 		return defered.promise;
 	};
 
+	var sendReset = function(baseUrl, email) {
+		var defered = q.defer();
+		users.findOne({
+			email: email
+		}, {
+			fields: {
+				password: false,
+				_id: false
+			}
+		}).then(function(data) {
+			var user = data.login;
+			console.log('Encrypt :' + user + salt + email);
+			href = baseUrl + '/user/' +
+				encodeURIComponent(user) + '/key/' + encodeURIComponent(crypto.createHash('sha256').update(user + salt + email).digest('hex')) +
+				'/email/' + encodeURIComponent(email)
+			var mailOptions = {
+				from: 'ForecastMeNow ! <noreply@gmail.com>', // sender address
+				to: email, // list of receivers
+				subject: 'Reset your password', // Subject line
+				text: 'Copy / paste this link: ' + href, // plaintext body
+				html: '<b>Click on the link:</b><br/><a href="' + href + '">' + href + '</a>' // html body
+			};
+			console.log('Sending Reset password to ' + email);
+
+
+			var transporter = nodemailer.createTransport(configuration.email);
+			transporter.sendMail(mailOptions, function(error, info) {
+				if (error) {
+					defered.reject(error);
+				} else {
+					console.log('Mail sent');
+					defered.resolve(true);
+				}
+			});
+
+
+		}, function(err) {
+			defered.reject(err);
+		});
+
+
+		return defered.promise;
+	};
+
 	module.exports = function(db, conf) {
 		users = db.get('users');
 		configuration = conf;
@@ -199,9 +281,11 @@
 			userAvailable: userAvailable,
 			sendConfirmation: sendConfirmation,
 			createFromLink: createFromLink,
+			updateFromLink: updateFromLink,
 			generateUUID: generateUUID,
 			getUserByKey: getUserByKey,
-			getUserByRole: getUserByRole
+			getUserByRole: getUserByRole,
+			sendReset: sendReset
 		};
 	};
 })();

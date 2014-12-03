@@ -127,12 +127,29 @@ angular.module('forecastMeNowApp')
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-angular.module('forecastMeNowApp').controller('ModalConnectCtrl', ['$scope', '$modalInstance', 'data', '$http', 'users', function($scope, $modalInstance, data, $http, users) {
+angular.module('forecastMeNowApp').controller('ModalConnectCtrl', ['$scope', '$modalInstance', 'data', '$http', 'users', 'registry', function($scope, $modalInstance, data, $http, users, registry) {
 
 	$scope.data = data;
 	$scope.label = (users.isConnected() ? 'Disconnect' : 'Connect');
 	$scope.connected = users.isConnected();
 	$scope.connecting = false;
+	$scope.resetPanel = false;
+
+	$scope.toggleResetPanel = function() {
+		$scope.resetPanel = !$scope.resetPanel;
+	};
+
+
+	$scope.send = function() {
+		$scope.reseting = true;
+		$http.put(registry.get('apiUrl') + '/login/reset', {
+			email: $scope.email
+		}).then(function() {
+			$modalInstance.dismiss('cancel');
+		}, function() {
+			$modalInstance.dismiss('cancel');
+		});
+	};
 
 	$scope.ok = function() {
 		$scope.connecting = true;

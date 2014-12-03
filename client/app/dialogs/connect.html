@@ -1,17 +1,27 @@
 <div class="modal-header">
     <h3 class="modal-title">Connect</h3>
 </div>
-<div class="modal-body" ng-hide="connecting">
+<div class="modal-body" ng-hide="connecting || reseting">
     <div class="form-group">
         <input type="text" ng-model="user" placeholder="User"/>
     </div>
     <div class="form-group">
         <input type="password" ng-model="password" placeholder="Password" />
     </div>
+    <a ng-click="toggleResetPanel()" class="clickable">Reset password</a>
+    <div ng-show="resetPanel">
+    <div class="form-group">
+        <input type="email" ng-model="email" placeholder="email"/>
+    </div>
+    <button class="btn btn-primary" ng-click="send()">Send</button>
+    </div>
 </div>
 <div class="modal-body" ng-show="connecting">
     Connecting ...
-    </div>
+</div>
+<div class="modal-body" ng-show="reseting">
+    Sending email ...
+</div>
 <div class="modal-footer" ng-hide="connecting">
     <button class="btn btn-primary" ng-click="ok()">{{label}}</button>
     <button class="btn btn-warning" ng-click="cancel()">Cancel</button>

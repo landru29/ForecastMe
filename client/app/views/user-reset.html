@@ -1,0 +1,17 @@
+
+<alert ng-show="alert" type="{{alert.type}}" close="closeAlert()">{{alert.message}}</alert>
+<div class="jumbotron">
+	<div class="form-group">
+        <input type="text" value="{{data.user}}" readonly/>
+    </div>
+    <div class="form-group">
+        <input type="email" value="{{data.email}}" readonly/>
+    </div>
+    <div class="form-group">
+        <input type="password" ng-model="data.password" placeholder="password"/>
+    </div>
+    <div class="form-group">
+        <input type="password" ng-class="{error:(data.password !== password)}" ng-model="password" placeholder="confirm password"/>
+    </div>
+    <button class="btn btn-primary" ng-click="send()">Update account</button>
+</div>

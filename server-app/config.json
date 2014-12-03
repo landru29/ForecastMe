@@ -54,7 +54,8 @@
 		"user-create": {
 			"controller": "resources/user-create.js",
 			"acl": {
-				"POST": "guest"
+				"POST": "guest",
+				"PUT": "guest"
 			}
 		},
 		"team": {

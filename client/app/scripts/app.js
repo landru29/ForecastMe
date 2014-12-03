@@ -47,6 +47,10 @@ angular
           templateUrl: 'views/user-create.html',
           controller: 'UsercreateCtrl'
         })
+        .when('/user-reset/user/:user/key/:key/email/:email', {
+          templateUrl: 'views/user-reset.html',
+          controller: 'UserresetCtrl'
+        })
         .otherwise({
           redirectTo: '/'
         });
