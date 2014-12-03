@@ -38,6 +38,9 @@
 		"diff": 30,
 		"factor": 10
 	},
+	"daemon": {
+		"cron": "*/2 * * * * *"
+	},
 	"resources": {
 		"login": {
 			"controller": "resources/login.js",
