@@ -11,24 +11,54 @@ if (cluster.isMaster) {
 	console.log('######################################' + "\n");
 	console.log('Creating ' + nbProcesses + ' processes');
 
-	/* Launching processes */
+	// Launch server processes
+	var serverProcesses = [];
 	for (var i = 0; i < nbProcesses; i++) {
-		cluster.fork();
+		serverProcesses.push(cluster.fork({
+			task: 'server'
+		}).process.pid);
 	}
 
+	// Launch deamon process
+	var deamonProcess = cluster.fork({
+		task: 'deamon'
+	}).process.pid;
+
 	/* relaunch process if dying */
-	cluster.on('exit', function (worker) {
+	cluster.on('exit', function(worker) {
 		var d = new Date();
 		console.log(d.toISOString() + '[' + process.pid + ']: > Worker ' + worker.process.pid + ' died :(');
-		cluster.fork();
+		// check if this is a server process
+		var index = serverProcesses.indexOf(worker.process.pid);
+		if (index > -1) {
+			serverProcesses[index] = cluster.fork({
+				task: 'server'
+			});
+		}
+		// check if this a th deamon server
+		if (deamonProcess === worker.process.pid) {
+			deamonProcess = cluster.fork({
+				task: 'deamon'
+			}).process.pid;
+		}
 	});
-} else {
-	var app = require('../app');
-	app.set('port', process.env.PORT || config.process['binding-port']);
 
-	/* Binding */
-	var server = app.listen(app.get('port'), function () {
-		var d = new Date();
-		console.log(d.toISOString() + '[' + process.pid + ']: > Express server listening on port ' + server.address().port);
-	});
+} else {
+	switch (process.env.task) {
+		case 'server':
+			var app = require('../app');
+			app.set('port', process.env.PORT || config.process['binding-port']);
+
+			/* Binding */
+			var server = app.listen(app.get('port'), function() {
+				var d = new Date();
+				console.log(d.toISOString() + '[' + process.pid + ']: > Express server listening on port ' + server.address().port);
+			});
+			break;
+		case 'deamon':
+			var deamon = require('../deamon');
+			break;
+		default:
+			break;
+	}
 }

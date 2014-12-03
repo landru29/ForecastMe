@@ -7,7 +7,7 @@ var service = require('../service/tournament')(test.database, test.config);
 	console.log(JSON.stringify(team));
 });*/
 
-service.getTeam('final.1').then(function(scores) {
+service.getTeam('group5.A').then(function(scores) {
 	console.log(JSON.stringify(scores));
 	test.database.close();
 }, function(err) {

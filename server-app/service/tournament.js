@@ -220,7 +220,7 @@
 				if (_group) {
 					var teams = Object.keys(_group.pool);
 					var i = teams.indexOf(decomposed.qualifier);
-					if (i > 0) {
+					if (i > -1) {
 						return _group.pool[teams[i]];
 					}
 				}

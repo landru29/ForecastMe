@@ -145,6 +145,9 @@
 			}
 			return null;
 		};
+		var _getPoints = function(result) {
+			return result.team0.value + result.team1.value
+		};
 		var _getDiff = function(result) {
 			var diff = Math.round((result.team0.value - result.team1.value) / configuration.scoring.factor);
 			return Math.abs(diff);
@@ -164,6 +167,9 @@
 					}
 					if (_getDiff(thisForecast) === _getDiff(matchScore)) {
 						points += configuration.scoring.diff;
+					}
+					if (Math.abs(_getPoints(matchScore) - _getPoints(thisForecast)) <= configuration.scoring.factor) {
+						points += configuration.scoring.total;
 					}
 				}
 			}

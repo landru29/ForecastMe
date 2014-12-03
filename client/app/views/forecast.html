@@ -10,7 +10,7 @@
 			<div ng-repeat="match in group.matches">
 				
 				<div class="score-line" ng-if="!match.expired">
-					<div style="display:inline-block;font-size:10px;width:50px">{{match.date | date:"dd/MM/yy hh:mm"}}</div>
+					<div style="display:inline-block;font-size:10px;width:50px">{{match.date | date:"dd/MM/yy HH:mm"}}</div>
 					<span class="team-name-right" ng-class="{filled:(match.forecast[0]), winner:(match.forecast[0]>match.forecast[1]), looser:(match.forecast[0]<match.forecast[1])}">
 						<span class="flag-icon {{getTeamClass(match.teams[0])}}"></span> {{getTeamName(match.teams[0])}} <img ng-if="getTeamImg(match.teams[0])" ng-src="/images/{{getTeamImg(match.teams[0])}}" height="20px"/>
 					</span>

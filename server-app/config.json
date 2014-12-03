@@ -36,10 +36,11 @@
 	"scoring": {
 		"winner": 100,
 		"diff": 30,
+		"total": 30,
 		"factor": 10
 	},
 	"daemon": {
-		"cron": "*/2 * * * * *"
+		"cron": "0 * * * * *"
 	},
 	"resources": {
 		"login": {
