@@ -86,12 +86,12 @@
 		var getTeams = function(result) {
 			return Object.keys(result);
 		};
-		var getWinner = function(result) {
+		var getWinnerLooser = function(result, looser) {
 			var teams = getTeams(result);
 			if (result[teams[0]] > result[teams[1]]) {
-				return teams[0];
+				return teams[(looser ? 1 : 0)];
 			} else {
-				return teams[1]
+				return teams[(looser ? 0 : 1)]
 			}
 		};
 		var getDiff = function(result) {
@@ -101,14 +101,17 @@
 		getGroupScores(groupName).then(function(groupScore) {
 			var result = {};
 			for (var i in groupScore) {
-				var winner = getWinner(groupScore[i]);
+				var winner = getWinnerLooser(groupScore[i], false);
+				var looser = getWinnerLooser(groupScore[i], true);
 				var teams = getTeams(groupScore[i]);
 				for (var n in teams) {
 					if ('undefined' === typeof result[teams[n]]) {
 						result[teams[n]] = 0;
 					}
 				}
-				result[winner] += 1 + getDiff(groupScore[i]) / 10000;
+				//result[winner] += 1 + getDiff(groupScore[i]) / 10000;
+				result[winner] += getDiff(groupScore[i]);
+				result[looser] -= getDiff(groupScore[i]);
 			}
 			defered.resolve(result);
 		}, function(err) {
@@ -279,8 +282,8 @@
 		return {
 			/*getGroupScores: getGroupScores,
 			getRanking: getRanking,
-			getGroupPoints: getGroupPoints,
 			parseTeamName: parseTeamName,*/
+			getGroupPoints: getGroupPoints,
 			getTeam: getTeam
 		};
 	};
