@@ -23,15 +23,19 @@
 				</div>
 
 				<div class="score-line match-done" ng-if="match.expired">
+					<span class="little">{{match.forecast[0]}}</span>
 					<span class="team-name-right" ng-class="{winner:(match.score[0]>match.score[1]), looser:(match.score[0]<match.score[1])}">
-						<span class="flag-icon {{getTeamClass(match.teams[0])}}"></span> {{getTeamName(match.teams[0])}} <img ng-if="getTeamImg(match.teams[0])" ng-src="/images/{{getTeamImg(match.teams[0])}}" height="20px"/>
+						 {{getTeamName(match.teams[0])}} 
 					</span>
+					<span class="flag-icon {{getTeamClass(match.teams[0])}}"></span>
 					<span class="final-score" >{{match.score[0]}}</span>
 					-
 					<span class="final-score" >{{match.score[1]}}</span>
+					<span class="flag-icon {{getTeamClass(match.teams[1])}}"></span>
 					<span class="team-name-left" ng-class="{winner:(match.score[1]>match.score[0]), looser:(match.score[1]<match.score[0])}">
-						<img ng-if="getTeamImg(match.teams[1])" ng-src="/images/{{getTeamImg(match.teams[1])}}" height="20px"/> {{getTeamName(match.teams[1])}} <span class="flag-icon {{getTeamClass(match.teams[1])}}"></span>
+						{{getTeamName(match.teams[1])}} 
 					</span>
+					<span class="little">{{match.forecast[1]}}</span>
 				</div>
 
 

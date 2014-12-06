@@ -19,16 +19,19 @@ router.get('/', function(req, res) {
 			GroupScorePromises.push(tournament.getGroupPoints(data[i].name));
 		}
 		console.log(GroupScorePromises.length);
-		q.all(GroupScorePromises).then(function(points) {
+		q.all(GroupScorePromises).then(function(results) {
 			var thesePoints = {};
-			for (var i in points) {
-				for (var j in points[i]) {
-					thesePoints[j] = points[i][j];
+			var theseWons = {};
+			for (var i in results) {
+				for (var j in results[i]) {
+					thesePoints[j] = results[i][j].points;
+					theseWons[j] = results[i][j].win;
 				}
 			}
 			for (var gp in data) {
 				for (var t in data[gp].pool) {
 					data[gp].pool[t].points = thesePoints[data[gp].name + '.' + t];
+					data[gp].pool[t].win = theseWons[data[gp].name + '.' + t];
 				}
 			}
 			res.send({

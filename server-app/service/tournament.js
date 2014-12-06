@@ -106,12 +106,16 @@
 				var teams = getTeams(groupScore[i]);
 				for (var n in teams) {
 					if ('undefined' === typeof result[teams[n]]) {
-						result[teams[n]] = 0;
+						result[teams[n]] = {
+							points: 0,
+							win: 0
+						};
 					}
 				}
 				//result[winner] += 1 + getDiff(groupScore[i]) / 10000;
-				result[winner] += getDiff(groupScore[i]);
-				result[looser] -= getDiff(groupScore[i]);
+				result[winner].points += getDiff(groupScore[i]);
+				result[looser].points -= getDiff(groupScore[i]);
+				result[winner].win += 1;
 			}
 			defered.resolve(result);
 		}, function(err) {
@@ -130,7 +134,7 @@
 			for (team in groupPoints) {
 				pointsArray.push({
 					team: team,
-					points: groupPoints[team]
+					points: groupPoints[team].points / 1000 + groupPoints[team].win
 				});
 			}
 			var sorted = pointsArray.sort(function(a, b) {

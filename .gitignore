@@ -35,3 +35,4 @@ dist
 bower_components
 
 deploy.sh
+seeds.sh

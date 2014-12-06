@@ -15,7 +15,7 @@
 		<h2></span> {{group.name}} </span></h2>
 		<div class="team-list">
 			<div ng-repeat="(key, team) in group.pool" ng-click="detail(team)">
-				<span>{{key}} - </span><span class="flag-icon {{team.country.class}}"></span> {{team.name}} <span  class="points">{{team.points}}</span>
+				<span>{{key}} - </span><span class="flag-icon {{team.country.class}}"></span><span class="team-name">{{team.name}} </span><span  class="points">{{team.points}}</span> <span >win: {{team.win}}</span>
 			</div>
 		</div>
 	</div>

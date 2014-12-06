@@ -371,7 +371,7 @@
 		"consolation3-4": {
 			"date": "2014-12-06T09:10:00-06:00",
 			"teams": [
-				"group3.4",
+				"group3.3",
 				"group4.4"
 			],
 			"location": "Track3"
@@ -403,7 +403,7 @@
 		"consolation3-6": {
 			"date": "2014-12-06T17:10:00-06:00",
 			"teams": [
-				"group3.3",
+				"group3.4",
 				"group6.3"
 			],
 			"location": "Track3"
