@@ -121,6 +121,9 @@
 	 * Update the computed teams of a match
 	 */
 	var updateComputedTeams = function(name, data) {
+		console.log('Updating ' + name);
+		console.log(' => ' + data.computed[0].name);
+		console.log(' => ' + data.computed[1].name);
 		var defered = q.defer();
 		matches.update({
 			name: name

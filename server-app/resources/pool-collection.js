@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var q = require('q');
 var configuration = null;
 var teams = null;
 var pools = null;
@@ -17,11 +18,22 @@ router.get('/', function(req, res) {
 		for (var i in data) {
 			GroupScorePromises.push(tournament.getGroupPoints(data[i].name));
 		}
+		console.log(GroupScorePromises.length);
 		q.all(GroupScorePromises).then(function(points) {
+			var thesePoints = {};
+			for (var i in points) {
+				for (var j in points[i]) {
+					thesePoints[j] = points[i][j];
+				}
+			}
+			for (var gp in data) {
+				for (var t in data[gp].pool) {
+					data[gp].pool[t].points = thesePoints[data[gp].name + '.' + t];
+				}
+			}
 			res.send({
 				status: 'ok',
-				data: data,
-				points: points
+				data: data
 			});
 		}, function(gpErr) {
 			res.send({

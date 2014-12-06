@@ -126,7 +126,7 @@ img.landru {
 }
 
 span.team-name-left {
-  width:175px;
+  width:195px;
   display: inline-block;
   text-align:left;
 }
@@ -219,4 +219,11 @@ div.match-done span.team-name-right {
 }
 
 span.final-score {
+}
+
+span.points {
+  border: 1px solid gray;
+  padding-left:5px;
+  padding-right:5px;
+  margin-left:20px;
 }

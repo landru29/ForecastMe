@@ -59,6 +59,7 @@
 		computeAllMatches().then(function(allMatches) {
 			var promises = [];
 			for (var i in allMatches) {
+				console.log('Update ' + allMatches[i].name);
 				promises.push(matchService.updateComputedTeams(allMatches[i].name, allMatches[i]));
 			}
 			q.all(promises).then(function(data) {

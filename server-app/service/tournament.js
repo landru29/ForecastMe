@@ -142,7 +142,8 @@
 			for (var i in sorted) {
 				result.push(sorted[i].team);
 			}
-			if (debug) console.log(sorted);
+			/*console.log(groupName);
+			console.log(sorted);*/
 			defered.resolve(result);
 		}, function(err) {
 			defered.reject(err);
